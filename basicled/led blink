@@ -1,0 +1,26 @@
+#include <xc.h>
+
+// Configuration bits: selected in the GUI or manually defined
+#pragma config FOSC = XT // Oscillator Selection bits (XT oscillator)
+#pragma config WDTE = OFF // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = OFF // Power-up Timer Enable bit (PWRT disabled)
+#pragma config BOREN = ON // Brown-out Reset Enable bit (BOR enabled)
+#pragma config LVP = OFF // Low-Voltage (single-supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+#pragma config CPD = OFF // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+#pragma config WRT = OFF // Flash Program Memory Write Enable bits (Write protection off)
+#pragma config CP = OFF // Flash Program Memory Code Protection bit (Code protection off)
+
+#define _XTAL_FREQ 4000000 // Define oscillator frequency (4MHz for XT)
+
+void main(void) {
+    // Initialize RD0 as output
+    TRISD0 = 0; // Set RD0 as output
+    RD0 = 0; // Initially turn off the LED
+
+    while(1) {
+        RD0 = 1; // Turn on the LED
+        __delay_ms(500); // Delay for 500 milliseconds
+        RD0 = 0; // Turn off the LED
+        __delay_ms(500); // Delay for 500 milliseconds
+    }
+}
