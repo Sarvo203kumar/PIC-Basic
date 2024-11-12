@@ -1,0 +1,19 @@
+#include <pic.h>
+void Timer2_Delay()
+{
+T2CON=0x7B;
+PR2=100;
+TMR2ON=1;
+while(TMR2IF==0);
+TMR2IF=0;
+TMR2ON=0;
+}
+void main()
+{
+TRISB=0X00;
+while(1)
+{
+PORTB=0XFF;Timer2_Delay();
+PORTB=0X00;Timer2_Delay();
+}
+}
