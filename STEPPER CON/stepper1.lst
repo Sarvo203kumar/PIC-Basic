@@ -1,0 +1,1565 @@
+
+
+HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
+                                                      Sat Jan 06 15:18:18 2024
+
+HI-TECH Software Omniscient Code Generator build 3884
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code 
+                                 Generator build 3884"
+     2                           
+     3                           	processor	16F877A
+     4                           clrc	macro
+     5                           	bcf	status,0
+     6  0000                     	endm
+     7                           clrz	macro
+     8                           	bcf	status,2
+     9  0000                     	endm
+    10                           setc	macro
+    11                           	bsf	status,0
+    12  0000                     	endm
+    13                           setz	macro
+    14                           	bsf	status,2
+    15  0000                     	endm
+    16                           skipc	macro
+    17                           	btfss	status,0
+    18  0000                     	endm
+    19                           skipz	macro
+    20                           	btfss	status,2
+    21  0000                     	endm
+    22                           skipnc	macro
+    23                           	btfsc	status,0
+    24  0000                     	endm
+    25                           skipnz	macro
+    26                           	btfsc	status,2
+    27  0000                     	endm
+    28  0000                     indf	equ	0
+    29  0000                     indf0	equ	0
+    30  0000                     pc	equ	2
+    31  0000                     pcl	equ	2
+    32  0000                     status	equ	3
+    33  0000                     fsr	equ	4
+    34  0000                     fsr0	equ	4
+    35  0000                     c	equ	1
+    36  0000                     z	equ	0
+    37  0000                     pclath	equ	10
+    38                           global __tempreg
+    39  0000                     __tempreg	set	112
+    40                           global __Lrdata_0, __Hrdata_0
+    41  0000                     __Lrdata_0	equ	0x0
+    42  0000                     __Hrdata_0	equ	0x1
+    43                           global __Lramdata, __Lrdata_0, __Hramdata, __Hr
+                                 data_0
+    44  0000                     __Lramdata	set	__Lrdata_0
+    45  0000                     __Hramdata	set	__Hrdata_0
+    46                           	GLOBAL	__databank
+    47  0000                     __databank	EQU	0
+    48  0000                     _main_k	equ	??_main+0
+    49                           	global	_main_k
+    50  0000                     _delay_k	equ	?_delay+0
+    51                           	global	_delay_k
+    52                           ;Data sizes: Strings 0, constant 0, data 0, bss
+                                  0, persistent 0 stack 7
+    53                           	global	_main
+    54                           	global	??_main
+    55                           	global	?_main
+    56                           
+    57                           ; *************** function _main **************
+                                 *
+    58                           ; Defined at:
+    59                           ;		line 8 in file "C:\Users\HP\Desktop\pic cont
+                                 roller,PIC16F877A\STEPPER CON\attempt1.c"
+    60                           ; Parameters:
+    61                           ;		None
+    62                           ; Auto variables:
+    63                           ;		k           	       	type: int 
+    64                           ; Return value:
+    65                           ;		type: void 
+    66                           ;		size: 0
+    67                           ; Registers used:
+    68                           ;		wreg, status,2, status,0, pclath, cstack
+    69                           ; Tracked objects:
+    70                           ;		On entry : BFF/0
+    71                           ;		On exit  : 0/0
+    72                           ;		Unchanged: 0/0
+    73                           ; Data sizes:
+    74                           ;		Autos:    2
+    75                           ;		Params:   0
+    76                           ;		Temp:     1
+    77                           ;		Total:    3
+    78                           ; This function calls:
+    79                           ;		_delay
+    80                           ; This function is called by:
+    81                           ;		Startup code after reset
+    82                           ; This function uses a non-reentrant model
+    83                           ; 
+    84                           	psect	maintext,class=CODE,delta=2
+    85                           	file	"C:\Users\HP\Desktop\pic controller,PIC16
+                                 F877A\STEPPER CON\attempt1.c"
+    86                           	line	8
+    87                           ;pic168xa.h: 19: volatile unsigned char INDF @ 
+                                 0x00;
+    88                           ;pic168xa.h: 20: volatile unsigned char TMR0 @ 
+                                 0x01;
+    89                           ;pic168xa.h: 21: volatile unsigned char PCL @ 0
+                                 x02;
+    90                           ;pic168xa.h: 22: volatile unsigned char STATUS 
+                                 @ 0x03;
+    91                           ;pic168xa.h: 23: unsigned char FSR @ 0x04;
+    92                           ;pic168xa.h: 24: volatile unsigned char PORTA @
+                                  0x05;
+    93                           ;pic168xa.h: 25: volatile unsigned char PORTB @
+                                  0x06;
+    94                           ;pic168xa.h: 26: volatile unsigned char PORTC @
+                                  0x07;
+    95                           ;pic168xa.h: 28: volatile unsigned char PORTD @
+                                  0x08;
+    96                           ;pic168xa.h: 29: volatile unsigned char PORTE @
+                                  0x09;
+    97                           	
+    98  0003                     _main:	
+    99                           ; Regs used in _main: [wreg+status,2+status,0+p
+                                 clath+cstack]
+   100                           	line	9
+   101                           ;attempt1.c: 9: TRISB = 0xf0;
+   102  0003  30F0               	movlw	(0F0h)
+   103  0004  1683               	bsf	status, 5	;RP0=1, select bank1
+   104  0005  1303               	bcf	status, 6	;RP2=0, select bank1
+   105                           	
+   106  0006  0086               	movwf	(134)^080h	;volatile
+   107                           	line	11
+   108                           ;attempt1.c: 11: while(1)
+   109                           	
+   110  0007                     l3:	
+   111                           	line	13
+   112                           ;attempt1.c: 12: {
+   113                           ;attempt1.c: 13: for(int k=0;k<4;k++)
+   114  0007  3000               	movlw	low(0)
+   115                           	
+   116  0008  00F0               	movwf	(_main_k)
+   117  0009  3000               	movlw	high(0)
+   118  000A  00F1               	movwf	((_main_k))+1
+   119  000B  280C               	goto	l5
+   120                           	line	14
+   121                           	
+   122  000C                     l5:	
+   123                           	line	15
+   124                           ;attempt1.c: 14: {
+   125                           ;attempt1.c: 15: PORTB = 0x01 << k;
+   126  000C  3001               	movlw	(01h)
+   127  000D  00F2               	movwf	(??_main+2+0)
+   128                           	
+   129  000E  0A70               	incf	(_main_k),w
+   130  000F  2812               	goto	u64
+   131  0010                     u65:
+   132  0010  1003               	clrc
+   133  0011  0DF2               	rlf	(??_main+2+0),f
+   134  0012                     u64:
+   135  0012  3EFF               	addlw	-1
+   136  0013  1D03               	skipz
+   137  0014  2810               	goto	u65
+   138  0015  0872               	movf	0+(??_main+2+0),w
+   139                           	
+   140  0016  1283               	bcf	status, 5	;RP0=0, select bank0
+   141  0017  1303               	bcf	status, 6	;RP2=0, select bank0
+   142                           	
+   143  0018  0086               	movwf	(6)	;volatile
+   144                           	line	16
+   145                           ;attempt1.c: 16: delay(10000);
+   146                           	
+   147  0019  3000               	movlw	0
+   148  001A  00F6               	movwf	(?_delay+3)
+   149  001B  3000               	movlw	0
+   150  001C  00F5               	movwf	(?_delay+2)
+   151  001D  3027               	movlw	027h
+   152  001E  00F4               	movwf	(?_delay+1)
+   153  001F  3010               	movlw	010h
+   154  0020  00F3               	movwf	(?_delay)
+   155                           
+   156  0021  120A  118A  27D8   	fcall	_delay
+              120A  118A         
+   157                           	line	13
+   158                           	
+   159  0026  3001               	movlw	low(01h)
+   160  0027  07F0               	addwf	(_main_k),f
+   161  0028  1803               	skipnc
+   162  0029  0AF1               	incf	(_main_k+1),f
+   163  002A  3000               	movlw	high(01h)
+   164  002B  07F1               	addwf	(_main_k+1),f
+   165                           	
+   166  002C  0871               	movf	(_main_k+1),w
+   167  002D  3A80               	xorlw	80h
+   168  002E  00F2               	movwf	(??_main+2+0)
+   169  002F  3080               	movlw	(high(04h))^80h
+   170  0030  0272               	subwf	(??_main+2+0),w
+   171  0031  1D03               	skipz
+   172  0032  2835               	goto	u710
+   173  0033                     u715:
+   174  0033  3004               	movlw	low(04h)
+   175  0034  0270               	subwf	(_main_k),w
+   176  0035                     u710:
+   177                           
+   178  0035  1C03               	skipc
+   179  0036  2838               	goto	u71
+   180  0037  2839               	goto	u70
+   181  0038                     u71:
+   182  0038  280C               	goto	l5
+   183  0039                     u70:
+   184                           	
+   185  0039                     l6:	
+   186                           	line	18
+   187                           ;attempt1.c: 17: }
+   188                           ;attempt1.c: 18: PORTB = 0x00;
+   189  0039  1003               	clrc
+   190  003A  1283               	bcf	status, 5	;RP0=0, select bank0
+   191  003B  1303               	bcf	status, 6	;RP2=0, select bank0
+   192                           	
+   193  003C  3000               	movlw	0
+   194  003D  1803               	btfsc	status,0
+   195  003E  3001               	movlw	1
+   196  003F  0086               	movwf	(6)	;volatile
+   197                           	line	19
+   198                           	
+   199  0040                     l2:	
+   200                           	line	11
+   201  0040  2807               	goto	l3
+   202                           	global	start
+   203  0041  120A  118A  2800   	ljmp	start
+   204                           ; =============== function _main ends =========
+                                 ======
+   205                           
+   206                           GLOBAL __end_of_main
+   207  0044                     	__end_of_main:
+   208                           	FNSIZE	_main,3,0
+   209                           	psect	maintext
+   210                           	line	20
+   211                           	signat	_main,88
+   212                           	global	_delay
+   213                           	global	??_delay
+   214                           	global	?_delay
+   215                           
+   216                           ; *************** function _delay *************
+                                 **
+   217                           ; Defined at:
+   218                           ;		line 23 in file "C:\Users\HP\Desktop\pic con
+                                 troller,PIC16F877A\STEPPER CON\attempt1.c"
+   219                           ; Parameters:
+   220                           ;		k           	offs:   0	type: long 
+   221                           ; Auto variables:
+   222                           ;		None
+   223                           ; Return value:
+   224                           ;		type: void 
+   225                           ;		size: 0
+   226                           ; Registers used:
+   227                           ;		wreg
+   228                           ; Tracked objects:
+   229                           ;		On entry : 300/0
+   230                           ;		On exit  : 0/0
+   231                           ;		Unchanged: 0/0
+   232                           ; Data sizes:
+   233                           ;		Autos:    0
+   234                           ;		Params:   4
+   235                           ;		Temp:     0
+   236                           ;		Total:    4
+   237                           ; This function calls:
+   238                           ;		Nothing
+   239                           ; This function is called by:
+   240                           ;		_main
+   241                           ; This function uses a non-reentrant model
+   242                           ; 
+   243                           	psect	text21,local,class=CODE,delta=2
+   244                           	file	"C:\Users\HP\Desktop\pic controller,PIC16
+                                 F877A\STEPPER CON\attempt1.c"
+   245                           	line	23
+   246                           ;attempt1.c: 22: void delay(long int k)
+   247                           ;attempt1.c: 23: {
+   248                           	
+   249  07D8                     _delay:	
+   250                           ; Regs used in _delay: [wreg]
+   251                           	line	24
+   252                           ;attempt1.c: 24: while(k--);
+   253  07D8  2FD9               	goto	l9
+   254                           	
+   255  07D9                     l9:	
+   256                           	
+   257  07D9  30FF               	movlw	0FFh
+   258  07DA  07F3               	addwf	(_delay_k),f
+   259  07DB  30FF               	movlw	0FFh
+   260  07DC  1103               	clrz
+   261  07DD  1803               	skipnc
+   262  07DE  3E01               	addlw	1
+   263  07DF  1D03               	skipz
+   264  07E0  07F4               	addwf	(_delay_k+1),f
+   265  07E1  30FF               	movlw	0FFh
+   266  07E2  1103               	clrz
+   267  07E3  1803               	skipnc
+   268  07E4  3E01               	addlw	1
+   269  07E5  1D03               	skipz
+   270  07E6  07F5               	addwf	(_delay_k+2),f
+   271  07E7  30FF               	movlw	0FFh
+   272  07E8  1103               	clrz
+   273  07E9  1803               	skipnc
+   274  07EA  3E01               	addlw	1
+   275  07EB  1D03               	skipz
+   276  07EC  07F6               	addwf	(_delay_k+3),f
+   277  07ED  30FF               	movlw	0FFh
+   278  07EE  0676               	xorwf	((_delay_k+3))&07fh,w
+   279  07EF  1D03               	skipz
+   280  07F0  2FFB               	goto	u85
+   281  07F1  30FF               	movlw	0FFh
+   282  07F2  0675               	xorwf	((_delay_k+2))&07fh,w
+   283  07F3  1D03               	skipz
+   284  07F4  2FFB               	goto	u85
+   285  07F5  30FF               	movlw	0FFh
+   286  07F6  0674               	xorwf	((_delay_k+1))&07fh,w
+   287  07F7  1D03               	skipz
+   288  07F8  2FFB               	goto	u85
+   289  07F9  30FF               	movlw	0FFh
+   290  07FA  0673               	xorwf	((_delay_k))&07fh,w
+   291  07FB                     u85:
+   292  07FB  1D03               	skipz
+   293  07FC  2FFE               	goto	u81
+   294  07FD  2FFF               	goto	u80
+   295  07FE                     u81:
+   296  07FE  2FD9               	goto	l9
+   297  07FF                     u80:
+   298                           	
+   299  07FF                     l11:	
+   300                           	line	25
+   301                           ;attempt1.c: 25: }
+   302  07FF                     l8:	
+   303  07FF  0008               	return
+   304                           ; =============== function _delay ends ========
+                                 =======
+   305                           
+   306                           GLOBAL __end_of_delay
+   307  0800                     	__end_of_delay:
+   308                           	FNSIZE	_delay,0,4
+   309                           	signat	_delay,4216
+   310                           	FNCALL	_main,_delay
+   311                           	FNROOT	_main
+   312                           	psect	strings,class=CODE,delta=2,reloc=256
+   313                           	global	_ADCON0
+   314                           	global	_ADCON0
+   315  0000                     	_ADCON0	set	0x1F
+   316                           
+   317                           	global	_ADCON1
+   318                           	global	_ADCON1
+   319  0000                     	_ADCON1	set	0x9F
+   320                           
+   321                           	global	_ADRESH
+   322                           	global	_ADRESH
+   323  0000                     	_ADRESH	set	0x1E
+   324                           
+   325                           	global	_ADRESL
+   326                           	global	_ADRESL
+   327  0000                     	_ADRESL	set	0x9E
+   328                           
+   329                           	global	_CCP1CON
+   330                           	global	_CCP1CON
+   331  0000                     	_CCP1CON	set	0x17
+   332                           
+   333                           	global	_CCP2CON
+   334                           	global	_CCP2CON
+   335  0000                     	_CCP2CON	set	0x1D
+   336                           
+   337                           	global	_CCPR1H
+   338                           	global	_CCPR1H
+   339  0000                     	_CCPR1H	set	0x16
+   340                           
+   341                           	global	_CCPR1L
+   342                           	global	_CCPR1L
+   343  0000                     	_CCPR1L	set	0x15
+   344                           
+   345                           	global	_CCPR2H
+   346                           	global	_CCPR2H
+   347  0000                     	_CCPR2H	set	0x1C
+   348                           
+   349                           	global	_CCPR2L
+   350                           	global	_CCPR2L
+   351  0000                     	_CCPR2L	set	0x1B
+   352                           
+   353                           	global	_CMCON
+   354                           	global	_CMCON
+   355  0000                     	_CMCON	set	0x9C
+   356                           
+   357                           	global	_CVRCON
+   358                           	global	_CVRCON
+   359  0000                     	_CVRCON	set	0x9D
+   360                           
+   361                           	global	_EEADR
+   362                           	global	_EEADR
+   363  0000                     	_EEADR	set	0x10D
+   364                           
+   365                           	global	_EEADRH
+   366                           	global	_EEADRH
+   367  0000                     	_EEADRH	set	0x10F
+   368                           
+   369                           	global	_EEADRL
+   370                           	global	_EEADRL
+   371  0000                     	_EEADRL	set	0x10D
+   372                           
+   373                           	global	_EECON1
+   374                           	global	_EECON1
+   375  0000                     	_EECON1	set	0x18C
+   376                           
+   377                           	global	_EECON2
+   378                           	global	_EECON2
+   379  0000                     	_EECON2	set	0x18D
+   380                           
+   381                           	global	_EEDATA
+   382                           	global	_EEDATA
+   383  0000                     	_EEDATA	set	0x10C
+   384                           
+   385                           	global	_EEDATH
+   386                           	global	_EEDATH
+   387  0000                     	_EEDATH	set	0x10E
+   388                           
+   389                           	global	_FSR
+   390                           	global	_FSR
+   391  0000                     	_FSR	set	0x4
+   392                           
+   393                           	global	_INDF
+   394                           	global	_INDF
+   395  0000                     	_INDF	set	0x0
+   396                           
+   397                           	global	_INTCON
+   398                           	global	_INTCON
+   399  0000                     	_INTCON	set	0xB
+   400                           
+   401                           	global	_OPTION
+   402                           	global	_OPTION
+   403  0000                     	_OPTION	set	0x81
+   404                           
+   405                           	global	_PCL
+   406                           	global	_PCL
+   407  0000                     	_PCL	set	0x2
+   408                           
+   409                           	global	_PCLATH
+   410                           	global	_PCLATH
+   411  0000                     	_PCLATH	set	0xA
+   412                           
+   413                           	global	_PCON
+   414                           	global	_PCON
+   415  0000                     	_PCON	set	0x8E
+   416                           
+   417                           	global	_PIE1
+   418                           	global	_PIE1
+   419  0000                     	_PIE1	set	0x8C
+   420                           
+   421                           	global	_PIE2
+   422                           	global	_PIE2
+   423  0000                     	_PIE2	set	0x8D
+   424                           
+   425                           	global	_PIR1
+   426                           	global	_PIR1
+   427  0000                     	_PIR1	set	0xC
+   428                           
+   429                           	global	_PIR2
+   430                           	global	_PIR2
+   431  0000                     	_PIR2	set	0xD
+   432                           
+   433                           	global	_PORTA
+   434                           	global	_PORTA
+   435  0000                     	_PORTA	set	0x5
+   436                           
+   437                           	global	_PORTB
+   438  0000                     	_PORTB	set	0x6
+   439                           
+   440                           	global	_PORTC
+   441                           	global	_PORTC
+   442  0000                     	_PORTC	set	0x7
+   443                           
+   444                           	global	_PORTD
+   445                           	global	_PORTD
+   446  0000                     	_PORTD	set	0x8
+   447                           
+   448                           	global	_PORTE
+   449                           	global	_PORTE
+   450  0000                     	_PORTE	set	0x9
+   451                           
+   452                           	global	_PR2
+   453                           	global	_PR2
+   454  0000                     	_PR2	set	0x92
+   455                           
+   456                           	global	_RCREG
+   457                           	global	_RCREG
+   458  0000                     	_RCREG	set	0x1A
+   459                           
+   460                           	global	_RCSTA
+   461                           	global	_RCSTA
+   462  0000                     	_RCSTA	set	0x18
+   463                           
+   464                           	global	_SPBRG
+   465                           	global	_SPBRG
+   466  0000                     	_SPBRG	set	0x99
+   467                           
+   468                           	global	_SSPADD
+   469                           	global	_SSPADD
+   470  0000                     	_SSPADD	set	0x93
+   471                           
+   472                           	global	_SSPBUF
+   473                           	global	_SSPBUF
+   474  0000                     	_SSPBUF	set	0x13
+   475                           
+   476                           	global	_SSPCON
+   477                           	global	_SSPCON
+   478  0000                     	_SSPCON	set	0x14
+   479                           
+   480                           	global	_SSPCON2
+   481                           	global	_SSPCON2
+   482  0000                     	_SSPCON2	set	0x91
+   483                           
+   484                           	global	_SSPSTAT
+   485                           	global	_SSPSTAT
+   486  0000                     	_SSPSTAT	set	0x94
+   487                           
+   488                           	global	_STATUS
+   489                           	global	_STATUS
+   490  0000                     	_STATUS	set	0x3
+   491                           
+   492                           	global	_T1CON
+   493                           	global	_T1CON
+   494  0000                     	_T1CON	set	0x10
+   495                           
+   496                           	global	_T2CON
+   497                           	global	_T2CON
+   498  0000                     	_T2CON	set	0x12
+   499                           
+   500                           	global	_TMR0
+   501                           	global	_TMR0
+   502  0000                     	_TMR0	set	0x1
+   503                           
+   504                           	global	_TMR1H
+   505                           	global	_TMR1H
+   506  0000                     	_TMR1H	set	0xF
+   507                           
+   508                           	global	_TMR1L
+   509                           	global	_TMR1L
+   510  0000                     	_TMR1L	set	0xE
+   511                           
+   512                           	global	_TMR2
+   513                           	global	_TMR2
+   514  0000                     	_TMR2	set	0x11
+   515                           
+   516                           	global	_TRISA
+   517                           	global	_TRISA
+   518  0000                     	_TRISA	set	0x85
+   519                           
+   520                           	global	_TRISB
+   521  0000                     	_TRISB	set	0x86
+   522                           
+   523                           	global	_TRISC
+   524                           	global	_TRISC
+   525  0000                     	_TRISC	set	0x87
+   526                           
+   527                           	global	_TRISD
+   528                           	global	_TRISD
+   529  0000                     	_TRISD	set	0x88
+   530                           
+   531                           	global	_TRISE
+   532                           	global	_TRISE
+   533  0000                     	_TRISE	set	0x89
+   534                           
+   535                           	global	_TXREG
+   536                           	global	_TXREG
+   537  0000                     	_TXREG	set	0x19
+   538                           
+   539                           	global	_TXSTA
+   540                           	global	_TXSTA
+   541  0000                     	_TXSTA	set	0x98
+   542                           
+   543                           	global	_ACKDT
+   544                           	global	_ACKDT
+   545  0000                     	_ACKDT	set	0x48D	;byte address: 0x91
+   546                           
+   547                           	global	_ACKEN
+   548                           	global	_ACKEN
+   549  0000                     	_ACKEN	set	0x48C	;byte address: 0x91
+   550                           
+   551                           	global	_ACKSTAT
+   552                           	global	_ACKSTAT
+   553  0000                     	_ACKSTAT	set	0x48E	;byte address: 0x91
+   554                           
+   555                           	global	_ADCS0
+   556                           	global	_ADCS0
+   557  0000                     	_ADCS0	set	0xFE	;byte address: 0x1F
+   558                           
+   559                           	global	_ADCS1
+   560                           	global	_ADCS1
+   561  0000                     	_ADCS1	set	0xFF	;byte address: 0x1F
+   562                           
+   563                           	global	_ADCS2
+   564                           	global	_ADCS2
+   565  0000                     	_ADCS2	set	0x4FE	;byte address: 0x9F
+   566                           
+   567                           	global	_ADDEN
+   568                           	global	_ADDEN
+   569  0000                     	_ADDEN	set	0xC3	;byte address: 0x18
+   570                           
+   571                           	global	_ADFM
+   572                           	global	_ADFM
+   573  0000                     	_ADFM	set	0x4FF	;byte address: 0x9F
+   574                           
+   575                           	global	_ADGO
+   576                           	global	_ADGO
+   577  0000                     	_ADGO	set	0xFA	;byte address: 0x1F
+   578                           
+   579                           	global	_ADIE
+   580                           	global	_ADIE
+   581  0000                     	_ADIE	set	0x466	;byte address: 0x8C
+   582                           
+   583                           	global	_ADIF
+   584                           	global	_ADIF
+   585  0000                     	_ADIF	set	0x66	;byte address: 0xC
+   586                           
+   587                           	global	_ADON
+   588                           	global	_ADON
+   589  0000                     	_ADON	set	0xF8	;byte address: 0x1F
+   590                           
+   591                           	global	_BCLIE
+   592                           	global	_BCLIE
+   593  0000                     	_BCLIE	set	0x46B	;byte address: 0x8D
+   594                           
+   595                           	global	_BCLIF
+   596                           	global	_BCLIF
+   597  0000                     	_BCLIF	set	0x6B	;byte address: 0xD
+   598                           
+   599                           	global	_BF
+   600                           	global	_BF
+   601  0000                     	_BF	set	0x4A0	;byte address: 0x94
+   602                           
+   603                           	global	_BOR
+   604                           	global	_BOR
+   605  0000                     	_BOR	set	0x470	;byte address: 0x8E
+   606                           
+   607                           	global	_BRGH
+   608                           	global	_BRGH
+   609  0000                     	_BRGH	set	0x4C2	;byte address: 0x98
+   610                           
+   611                           	global	_C1INV
+   612                           	global	_C1INV
+   613  0000                     	_C1INV	set	0x4E4	;byte address: 0x9C
+   614                           
+   615                           	global	_C1OUT
+   616                           	global	_C1OUT
+   617  0000                     	_C1OUT	set	0x4E6	;byte address: 0x9C
+   618                           
+   619                           	global	_C2INV
+   620                           	global	_C2INV
+   621  0000                     	_C2INV	set	0x4E5	;byte address: 0x9C
+   622                           
+   623                           	global	_C2OUT
+   624                           	global	_C2OUT
+   625  0000                     	_C2OUT	set	0x4E7	;byte address: 0x9C
+   626                           
+   627                           	global	_CARRY
+   628                           	global	_CARRY
+   629  0000                     	_CARRY	set	0x18	;byte address: 0x3
+   630                           
+   631                           	global	_CCP1IE
+   632                           	global	_CCP1IE
+   633  0000                     	_CCP1IE	set	0x462	;byte address: 0x8C
+   634                           
+   635                           	global	_CCP1IF
+   636                           	global	_CCP1IF
+   637  0000                     	_CCP1IF	set	0x62	;byte address: 0xC
+   638                           
+   639                           	global	_CCP1M0
+   640                           	global	_CCP1M0
+   641  0000                     	_CCP1M0	set	0xB8	;byte address: 0x17
+   642                           
+   643                           	global	_CCP1M1
+   644                           	global	_CCP1M1
+   645  0000                     	_CCP1M1	set	0xB9	;byte address: 0x17
+   646                           
+   647                           	global	_CCP1M2
+   648                           	global	_CCP1M2
+   649  0000                     	_CCP1M2	set	0xBA	;byte address: 0x17
+   650                           
+   651                           	global	_CCP1M3
+   652                           	global	_CCP1M3
+   653  0000                     	_CCP1M3	set	0xBB	;byte address: 0x17
+   654                           
+   655                           	global	_CCP1X
+   656                           	global	_CCP1X
+   657  0000                     	_CCP1X	set	0xBD	;byte address: 0x17
+   658                           
+   659                           	global	_CCP1Y
+   660                           	global	_CCP1Y
+   661  0000                     	_CCP1Y	set	0xBC	;byte address: 0x17
+   662                           
+   663                           	global	_CCP2IE
+   664                           	global	_CCP2IE
+   665  0000                     	_CCP2IE	set	0x468	;byte address: 0x8D
+   666                           
+   667                           	global	_CCP2IF
+   668                           	global	_CCP2IF
+   669  0000                     	_CCP2IF	set	0x68	;byte address: 0xD
+   670                           
+   671                           	global	_CCP2M0
+   672                           	global	_CCP2M0
+   673  0000                     	_CCP2M0	set	0xE8	;byte address: 0x1D
+   674                           
+   675                           	global	_CCP2M1
+   676                           	global	_CCP2M1
+   677  0000                     	_CCP2M1	set	0xE9	;byte address: 0x1D
+   678                           
+   679                           	global	_CCP2M2
+   680                           	global	_CCP2M2
+   681  0000                     	_CCP2M2	set	0xEA	;byte address: 0x1D
+   682                           
+   683                           	global	_CCP2M3
+   684                           	global	_CCP2M3
+   685  0000                     	_CCP2M3	set	0xEB	;byte address: 0x1D
+   686                           
+   687                           	global	_CCP2X
+   688                           	global	_CCP2X
+   689  0000                     	_CCP2X	set	0xED	;byte address: 0x1D
+   690                           
+   691                           	global	_CCP2Y
+   692                           	global	_CCP2Y
+   693  0000                     	_CCP2Y	set	0xEC	;byte address: 0x1D
+   694                           
+   695                           	global	_CHS0
+   696                           	global	_CHS0
+   697  0000                     	_CHS0	set	0xFB	;byte address: 0x1F
+   698                           
+   699                           	global	_CHS1
+   700                           	global	_CHS1
+   701  0000                     	_CHS1	set	0xFC	;byte address: 0x1F
+   702                           
+   703                           	global	_CHS2
+   704                           	global	_CHS2
+   705  0000                     	_CHS2	set	0xFD	;byte address: 0x1F
+   706                           
+   707                           	global	_CIS
+   708                           	global	_CIS
+   709  0000                     	_CIS	set	0x4E3	;byte address: 0x9C
+   710                           
+   711                           	global	_CKE
+   712                           	global	_CKE
+   713  0000                     	_CKE	set	0x4A6	;byte address: 0x94
+   714                           
+   715                           	global	_CKP
+   716                           	global	_CKP
+   717  0000                     	_CKP	set	0xA4	;byte address: 0x14
+   718                           
+   719                           	global	_CM0
+   720                           	global	_CM0
+   721  0000                     	_CM0	set	0x4E0	;byte address: 0x9C
+   722                           
+   723                           	global	_CM1
+   724                           	global	_CM1
+   725  0000                     	_CM1	set	0x4E1	;byte address: 0x9C
+   726                           
+   727                           	global	_CM2
+   728                           	global	_CM2
+   729  0000                     	_CM2	set	0x4E2	;byte address: 0x9C
+   730                           
+   731                           	global	_CMIE
+   732                           	global	_CMIE
+   733  0000                     	_CMIE	set	0x46E	;byte address: 0x8D
+   734                           
+   735                           	global	_CMIF
+   736                           	global	_CMIF
+   737  0000                     	_CMIF	set	0x6E	;byte address: 0xD
+   738                           
+   739                           	global	_CREN
+   740                           	global	_CREN
+   741  0000                     	_CREN	set	0xC4	;byte address: 0x18
+   742                           
+   743                           	global	_CSRC
+   744                           	global	_CSRC
+   745  0000                     	_CSRC	set	0x4C7	;byte address: 0x98
+   746                           
+   747                           	global	_CVR0
+   748                           	global	_CVR0
+   749  0000                     	_CVR0	set	0x4E8	;byte address: 0x9D
+   750                           
+   751                           	global	_CVR1
+   752                           	global	_CVR1
+   753  0000                     	_CVR1	set	0x4E9	;byte address: 0x9D
+   754                           
+   755                           	global	_CVR2
+   756                           	global	_CVR2
+   757  0000                     	_CVR2	set	0x4EA	;byte address: 0x9D
+   758                           
+   759                           	global	_CVR3
+   760                           	global	_CVR3
+   761  0000                     	_CVR3	set	0x4EB	;byte address: 0x9D
+   762                           
+   763                           	global	_CVREN
+   764                           	global	_CVREN
+   765  0000                     	_CVREN	set	0x4EF	;byte address: 0x9D
+   766                           
+   767                           	global	_CVROE
+   768                           	global	_CVROE
+   769  0000                     	_CVROE	set	0x4EE	;byte address: 0x9D
+   770                           
+   771                           	global	_CVRR
+   772                           	global	_CVRR
+   773  0000                     	_CVRR	set	0x4ED	;byte address: 0x9D
+   774                           
+   775                           	global	_DA
+   776                           	global	_DA
+   777  0000                     	_DA	set	0x4A5	;byte address: 0x94
+   778                           
+   779                           	global	_DC
+   780                           	global	_DC
+   781  0000                     	_DC	set	0x19	;byte address: 0x3
+   782                           
+   783                           	global	_EEIE
+   784                           	global	_EEIE
+   785  0000                     	_EEIE	set	0x46C	;byte address: 0x8D
+   786                           
+   787                           	global	_EEIF
+   788                           	global	_EEIF
+   789  0000                     	_EEIF	set	0x6C	;byte address: 0xD
+   790                           
+   791                           	global	_EEPGD
+   792                           	global	_EEPGD
+   793  0000                     	_EEPGD	set	0xC67	;byte address: 0x18C
+   794                           
+   795                           	global	_FERR
+   796                           	global	_FERR
+   797  0000                     	_FERR	set	0xC2	;byte address: 0x18
+   798                           
+   799                           	global	_GCEN
+   800                           	global	_GCEN
+   801  0000                     	_GCEN	set	0x48F	;byte address: 0x91
+   802                           
+   803                           	global	_GIE
+   804                           	global	_GIE
+   805  0000                     	_GIE	set	0x5F	;byte address: 0xB
+   806                           
+   807                           	global	_GODONE
+   808                           	global	_GODONE
+   809  0000                     	_GODONE	set	0xFA	;byte address: 0x1F
+   810                           
+   811                           	global	_IBF
+   812                           	global	_IBF
+   813  0000                     	_IBF	set	0x44F	;byte address: 0x89
+   814                           
+   815                           	global	_IBOV
+   816                           	global	_IBOV
+   817  0000                     	_IBOV	set	0x44D	;byte address: 0x89
+   818                           
+   819                           	global	_INTE
+   820                           	global	_INTE
+   821  0000                     	_INTE	set	0x5C	;byte address: 0xB
+   822                           
+   823                           	global	_INTEDG
+   824                           	global	_INTEDG
+   825  0000                     	_INTEDG	set	0x40E	;byte address: 0x81
+   826                           
+   827                           	global	_INTF
+   828                           	global	_INTF
+   829  0000                     	_INTF	set	0x59	;byte address: 0xB
+   830                           
+   831                           	global	_IRP
+   832                           	global	_IRP
+   833  0000                     	_IRP	set	0x1F	;byte address: 0x3
+   834                           
+   835                           	global	_OBF
+   836                           	global	_OBF
+   837  0000                     	_OBF	set	0x44E	;byte address: 0x89
+   838                           
+   839                           	global	_OERR
+   840                           	global	_OERR
+   841  0000                     	_OERR	set	0xC1	;byte address: 0x18
+   842                           
+   843                           	global	_PCFG0
+   844                           	global	_PCFG0
+   845  0000                     	_PCFG0	set	0x4F8	;byte address: 0x9F
+   846                           
+   847                           	global	_PCFG1
+   848                           	global	_PCFG1
+   849  0000                     	_PCFG1	set	0x4F9	;byte address: 0x9F
+   850                           
+   851                           	global	_PCFG2
+   852                           	global	_PCFG2
+   853  0000                     	_PCFG2	set	0x4FA	;byte address: 0x9F
+   854                           
+   855                           	global	_PCFG3
+   856                           	global	_PCFG3
+   857  0000                     	_PCFG3	set	0x4FB	;byte address: 0x9F
+   858                           
+   859                           	global	_PD
+   860                           	global	_PD
+   861  0000                     	_PD	set	0x1B	;byte address: 0x3
+   862                           
+   863                           	global	_PEIE
+   864                           	global	_PEIE
+   865  0000                     	_PEIE	set	0x5E	;byte address: 0xB
+   866                           
+   867                           	global	_PEN
+   868                           	global	_PEN
+   869  0000                     	_PEN	set	0x48A	;byte address: 0x91
+   870                           
+   871                           	global	_POR
+   872                           	global	_POR
+   873  0000                     	_POR	set	0x471	;byte address: 0x8E
+   874                           
+   875                           	global	_PS0
+   876                           	global	_PS0
+   877  0000                     	_PS0	set	0x408	;byte address: 0x81
+   878                           
+   879                           	global	_PS1
+   880                           	global	_PS1
+   881  0000                     	_PS1	set	0x409	;byte address: 0x81
+   882                           
+   883                           	global	_PS2
+   884                           	global	_PS2
+   885  0000                     	_PS2	set	0x40A	;byte address: 0x81
+   886                           
+   887                           	global	_PSA
+   888                           	global	_PSA
+   889  0000                     	_PSA	set	0x40B	;byte address: 0x81
+   890                           
+   891                           	global	_PSPIE
+   892                           	global	_PSPIE
+   893  0000                     	_PSPIE	set	0x467	;byte address: 0x8C
+   894                           
+   895                           	global	_PSPIF
+   896                           	global	_PSPIF
+   897  0000                     	_PSPIF	set	0x67	;byte address: 0xC
+   898                           
+   899                           	global	_PSPMODE
+   900                           	global	_PSPMODE
+   901  0000                     	_PSPMODE	set	0x44C	;byte address: 0x89
+   902                           
+   903                           	global	_RA0
+   904                           	global	_RA0
+   905  0000                     	_RA0	set	0x28	;byte address: 0x5
+   906                           
+   907                           	global	_RA1
+   908                           	global	_RA1
+   909  0000                     	_RA1	set	0x29	;byte address: 0x5
+   910                           
+   911                           	global	_RA2
+   912                           	global	_RA2
+   913  0000                     	_RA2	set	0x2A	;byte address: 0x5
+   914                           
+   915                           	global	_RA3
+   916                           	global	_RA3
+   917  0000                     	_RA3	set	0x2B	;byte address: 0x5
+   918                           
+   919                           	global	_RA4
+   920                           	global	_RA4
+   921  0000                     	_RA4	set	0x2C	;byte address: 0x5
+   922                           
+   923                           	global	_RA5
+   924                           	global	_RA5
+   925  0000                     	_RA5	set	0x2D	;byte address: 0x5
+   926                           
+   927                           	global	_RB0
+   928                           	global	_RB0
+   929  0000                     	_RB0	set	0x30	;byte address: 0x6
+   930                           
+   931                           	global	_RB1
+   932                           	global	_RB1
+   933  0000                     	_RB1	set	0x31	;byte address: 0x6
+   934                           
+   935                           	global	_RB2
+   936                           	global	_RB2
+   937  0000                     	_RB2	set	0x32	;byte address: 0x6
+   938                           
+   939                           	global	_RB3
+   940                           	global	_RB3
+   941  0000                     	_RB3	set	0x33	;byte address: 0x6
+   942                           
+   943                           	global	_RB4
+   944                           	global	_RB4
+   945  0000                     	_RB4	set	0x34	;byte address: 0x6
+   946                           
+   947                           	global	_RB5
+   948                           	global	_RB5
+   949  0000                     	_RB5	set	0x35	;byte address: 0x6
+   950                           
+   951                           	global	_RB6
+   952                           	global	_RB6
+   953  0000                     	_RB6	set	0x36	;byte address: 0x6
+   954                           
+   955                           	global	_RB7
+   956                           	global	_RB7
+   957  0000                     	_RB7	set	0x37	;byte address: 0x6
+   958                           
+   959                           	global	_RBIE
+   960                           	global	_RBIE
+   961  0000                     	_RBIE	set	0x5B	;byte address: 0xB
+   962                           
+   963                           	global	_RBIF
+   964                           	global	_RBIF
+   965  0000                     	_RBIF	set	0x58	;byte address: 0xB
+   966                           
+   967                           	global	_RBPU
+   968                           	global	_RBPU
+   969  0000                     	_RBPU	set	0x40F	;byte address: 0x81
+   970                           
+   971                           	global	_RC0
+   972                           	global	_RC0
+   973  0000                     	_RC0	set	0x38	;byte address: 0x7
+   974                           
+   975                           	global	_RC1
+   976                           	global	_RC1
+   977  0000                     	_RC1	set	0x39	;byte address: 0x7
+   978                           
+   979                           	global	_RC2
+   980                           	global	_RC2
+   981  0000                     	_RC2	set	0x3A	;byte address: 0x7
+   982                           
+   983                           	global	_RC3
+   984                           	global	_RC3
+   985  0000                     	_RC3	set	0x3B	;byte address: 0x7
+   986                           
+   987                           	global	_RC4
+   988                           	global	_RC4
+   989  0000                     	_RC4	set	0x3C	;byte address: 0x7
+   990                           
+   991                           	global	_RC5
+   992                           	global	_RC5
+   993  0000                     	_RC5	set	0x3D	;byte address: 0x7
+   994                           
+   995                           	global	_RC6
+   996                           	global	_RC6
+   997  0000                     	_RC6	set	0x3E	;byte address: 0x7
+   998                           
+   999                           	global	_RC7
+  1000                           	global	_RC7
+  1001  0000                     	_RC7	set	0x3F	;byte address: 0x7
+  1002                           
+  1003                           	global	_RCEN
+  1004                           	global	_RCEN
+  1005  0000                     	_RCEN	set	0x48B	;byte address: 0x91
+  1006                           
+  1007                           	global	_RCIE
+  1008                           	global	_RCIE
+  1009  0000                     	_RCIE	set	0x465	;byte address: 0x8C
+  1010                           
+  1011                           	global	_RCIF
+  1012                           	global	_RCIF
+  1013  0000                     	_RCIF	set	0x65	;byte address: 0xC
+  1014                           
+  1015                           	global	_RD
+  1016                           	global	_RD
+  1017  0000                     	_RD	set	0xC60	;byte address: 0x18C
+  1018                           
+  1019                           	global	_RD0
+  1020                           	global	_RD0
+  1021  0000                     	_RD0	set	0x40	;byte address: 0x8
+  1022                           
+  1023                           	global	_RD1
+  1024                           	global	_RD1
+  1025  0000                     	_RD1	set	0x41	;byte address: 0x8
+  1026                           
+  1027                           	global	_RD2
+  1028                           	global	_RD2
+  1029  0000                     	_RD2	set	0x42	;byte address: 0x8
+  1030                           
+  1031                           	global	_RD3
+  1032                           	global	_RD3
+  1033  0000                     	_RD3	set	0x43	;byte address: 0x8
+  1034                           
+  1035                           	global	_RD4
+  1036                           	global	_RD4
+  1037  0000                     	_RD4	set	0x44	;byte address: 0x8
+  1038                           
+  1039                           	global	_RD5
+  1040                           	global	_RD5
+  1041  0000                     	_RD5	set	0x45	;byte address: 0x8
+  1042                           
+  1043                           	global	_RD6
+  1044                           	global	_RD6
+  1045  0000                     	_RD6	set	0x46	;byte address: 0x8
+  1046                           
+  1047                           	global	_RD7
+  1048                           	global	_RD7
+  1049  0000                     	_RD7	set	0x47	;byte address: 0x8
+  1050                           
+  1051                           	global	_RE0
+  1052                           	global	_RE0
+  1053  0000                     	_RE0	set	0x48	;byte address: 0x9
+  1054                           
+  1055                           	global	_RE1
+  1056                           	global	_RE1
+  1057  0000                     	_RE1	set	0x49	;byte address: 0x9
+  1058                           
+  1059                           	global	_RE2
+  1060                           	global	_RE2
+  1061  0000                     	_RE2	set	0x4A	;byte address: 0x9
+  1062                           
+  1063                           	global	_RP0
+  1064                           	global	_RP0
+  1065  0000                     	_RP0	set	0x1D	;byte address: 0x3
+  1066                           
+  1067                           	global	_RP1
+  1068                           	global	_RP1
+  1069  0000                     	_RP1	set	0x1E	;byte address: 0x3
+  1070                           
+  1071                           	global	_RSEN
+  1072                           	global	_RSEN
+  1073  0000                     	_RSEN	set	0x489	;byte address: 0x91
+  1074                           
+  1075                           	global	_RW
+  1076                           	global	_RW
+  1077  0000                     	_RW	set	0x4A2	;byte address: 0x94
+  1078                           
+  1079                           	global	_RX9
+  1080                           	global	_RX9
+  1081  0000                     	_RX9	set	0xC6	;byte address: 0x18
+  1082                           
+  1083                           	global	_RX9D
+  1084                           	global	_RX9D
+  1085  0000                     	_RX9D	set	0xC0	;byte address: 0x18
+  1086                           
+  1087                           	global	_SEN
+  1088                           	global	_SEN
+  1089  0000                     	_SEN	set	0x488	;byte address: 0x91
+  1090                           
+  1091                           	global	_SMP
+  1092                           	global	_SMP
+  1093  0000                     	_SMP	set	0x4A7	;byte address: 0x94
+  1094                           
+  1095                           	global	_SPEN
+  1096                           	global	_SPEN
+  1097  0000                     	_SPEN	set	0xC7	;byte address: 0x18
+  1098                           
+  1099                           	global	_SREN
+  1100                           	global	_SREN
+  1101  0000                     	_SREN	set	0xC5	;byte address: 0x18
+  1102                           
+  1103                           	global	_SSPEN
+  1104                           	global	_SSPEN
+  1105  0000                     	_SSPEN	set	0xA5	;byte address: 0x14
+  1106                           
+  1107                           	global	_SSPIE
+  1108                           	global	_SSPIE
+  1109  0000                     	_SSPIE	set	0x463	;byte address: 0x8C
+  1110                           
+  1111                           	global	_SSPIF
+  1112                           	global	_SSPIF
+  1113  0000                     	_SSPIF	set	0x63	;byte address: 0xC
+  1114                           
+  1115                           	global	_SSPM0
+  1116                           	global	_SSPM0
+  1117  0000                     	_SSPM0	set	0xA0	;byte address: 0x14
+  1118                           
+  1119                           	global	_SSPM1
+  1120                           	global	_SSPM1
+  1121  0000                     	_SSPM1	set	0xA1	;byte address: 0x14
+  1122                           
+  1123                           	global	_SSPM2
+  1124                           	global	_SSPM2
+  1125  0000                     	_SSPM2	set	0xA2	;byte address: 0x14
+  1126                           
+  1127                           	global	_SSPM3
+  1128                           	global	_SSPM3
+  1129  0000                     	_SSPM3	set	0xA3	;byte address: 0x14
+  1130                           
+  1131                           	global	_SSPOV
+  1132                           	global	_SSPOV
+  1133  0000                     	_SSPOV	set	0xA6	;byte address: 0x14
+  1134                           
+  1135                           	global	_START
+  1136                           	global	_START
+  1137  0000                     	_START	set	0x4A3	;byte address: 0x94
+  1138                           
+  1139                           	global	_STOP
+  1140                           	global	_STOP
+  1141  0000                     	_STOP	set	0x4A4	;byte address: 0x94
+  1142                           
+  1143                           	global	_SYNC
+  1144                           	global	_SYNC
+  1145  0000                     	_SYNC	set	0x4C4	;byte address: 0x98
+  1146                           
+  1147                           	global	_T0CS
+  1148                           	global	_T0CS
+  1149  0000                     	_T0CS	set	0x40D	;byte address: 0x81
+  1150                           
+  1151                           	global	_T0IE
+  1152                           	global	_T0IE
+  1153  0000                     	_T0IE	set	0x5D	;byte address: 0xB
+  1154                           
+  1155                           	global	_T0IF
+  1156                           	global	_T0IF
+  1157  0000                     	_T0IF	set	0x5A	;byte address: 0xB
+  1158                           
+  1159                           	global	_T0SE
+  1160                           	global	_T0SE
+  1161  0000                     	_T0SE	set	0x40C	;byte address: 0x81
+  1162                           
+  1163                           	global	_T1CKPS0
+  1164                           	global	_T1CKPS0
+  1165  0000                     	_T1CKPS0	set	0x84	;byte address: 0x10
+  1166                           
+  1167                           	global	_T1CKPS1
+  1168                           	global	_T1CKPS1
+  1169  0000                     	_T1CKPS1	set	0x85	;byte address: 0x10
+  1170                           
+  1171                           	global	_T1OSCEN
+  1172                           	global	_T1OSCEN
+  1173  0000                     	_T1OSCEN	set	0x83	;byte address: 0x10
+  1174                           
+  1175                           	global	_T1SYNC
+  1176                           	global	_T1SYNC
+  1177  0000                     	_T1SYNC	set	0x82	;byte address: 0x10
+  1178                           
+  1179                           	global	_T2CKPS0
+  1180                           	global	_T2CKPS0
+  1181  0000                     	_T2CKPS0	set	0x90	;byte address: 0x12
+  1182                           
+  1183                           	global	_T2CKPS1
+  1184                           	global	_T2CKPS1
+  1185  0000                     	_T2CKPS1	set	0x91	;byte address: 0x12
+  1186                           
+  1187                           	global	_TMR0IE
+  1188                           	global	_TMR0IE
+  1189  0000                     	_TMR0IE	set	0x5D	;byte address: 0xB
+  1190                           
+  1191                           	global	_TMR0IF
+  1192                           	global	_TMR0IF
+  1193  0000                     	_TMR0IF	set	0x5A	;byte address: 0xB
+  1194                           
+  1195                           	global	_TMR1CS
+  1196                           	global	_TMR1CS
+  1197  0000                     	_TMR1CS	set	0x81	;byte address: 0x10
+  1198                           
+  1199                           	global	_TMR1IE
+  1200                           	global	_TMR1IE
+  1201  0000                     	_TMR1IE	set	0x460	;byte address: 0x8C
+  1202                           
+  1203                           	global	_TMR1IF
+  1204                           	global	_TMR1IF
+  1205  0000                     	_TMR1IF	set	0x60	;byte address: 0xC
+  1206                           
+  1207                           	global	_TMR1ON
+  1208                           	global	_TMR1ON
+  1209  0000                     	_TMR1ON	set	0x80	;byte address: 0x10
+  1210                           
+  1211                           	global	_TMR2IE
+  1212                           	global	_TMR2IE
+  1213  0000                     	_TMR2IE	set	0x461	;byte address: 0x8C
+  1214                           
+  1215                           	global	_TMR2IF
+  1216                           	global	_TMR2IF
+  1217  0000                     	_TMR2IF	set	0x61	;byte address: 0xC
+  1218                           
+  1219                           	global	_TMR2ON
+  1220                           	global	_TMR2ON
+  1221  0000                     	_TMR2ON	set	0x92	;byte address: 0x12
+  1222                           
+  1223                           	global	_TO
+  1224                           	global	_TO
+  1225  0000                     	_TO	set	0x1C	;byte address: 0x3
+  1226                           
+  1227                           	global	_TOUTPS0
+  1228                           	global	_TOUTPS0
+  1229  0000                     	_TOUTPS0	set	0x93	;byte address: 0x12
+  1230                           
+  1231                           	global	_TOUTPS1
+  1232                           	global	_TOUTPS1
+  1233  0000                     	_TOUTPS1	set	0x94	;byte address: 0x12
+  1234                           
+  1235                           	global	_TOUTPS2
+  1236                           	global	_TOUTPS2
+  1237  0000                     	_TOUTPS2	set	0x95	;byte address: 0x12
+  1238                           
+  1239                           	global	_TOUTPS3
+  1240                           	global	_TOUTPS3
+  1241  0000                     	_TOUTPS3	set	0x96	;byte address: 0x12
+  1242                           
+  1243                           	global	_TRISA0
+  1244                           	global	_TRISA0
+  1245  0000                     	_TRISA0	set	0x428	;byte address: 0x85
+  1246                           
+  1247                           	global	_TRISA1
+  1248                           	global	_TRISA1
+  1249  0000                     	_TRISA1	set	0x429	;byte address: 0x85
+  1250                           
+  1251                           	global	_TRISA2
+  1252                           	global	_TRISA2
+  1253  0000                     	_TRISA2	set	0x42A	;byte address: 0x85
+  1254                           
+  1255                           	global	_TRISA3
+  1256                           	global	_TRISA3
+  1257  0000                     	_TRISA3	set	0x42B	;byte address: 0x85
+  1258                           
+  1259                           	global	_TRISA4
+  1260                           	global	_TRISA4
+  1261  0000                     	_TRISA4	set	0x42C	;byte address: 0x85
+  1262                           
+  1263                           	global	_TRISA5
+  1264                           	global	_TRISA5
+  1265  0000                     	_TRISA5	set	0x42D	;byte address: 0x85
+  1266                           
+  1267                           	global	_TRISB0
+  1268                           	global	_TRISB0
+  1269  0000                     	_TRISB0	set	0x430	;byte address: 0x86
+  1270                           
+  1271                           	global	_TRISB1
+  1272                           	global	_TRISB1
+  1273  0000                     	_TRISB1	set	0x431	;byte address: 0x86
+  1274                           
+  1275                           	global	_TRISB2
+  1276                           	global	_TRISB2
+  1277  0000                     	_TRISB2	set	0x432	;byte address: 0x86
+  1278                           
+  1279                           	global	_TRISB3
+  1280                           	global	_TRISB3
+  1281  0000                     	_TRISB3	set	0x433	;byte address: 0x86
+  1282                           
+  1283                           	global	_TRISB4
+  1284                           	global	_TRISB4
+  1285  0000                     	_TRISB4	set	0x434	;byte address: 0x86
+  1286                           
+  1287                           	global	_TRISB5
+  1288                           	global	_TRISB5
+  1289  0000                     	_TRISB5	set	0x435	;byte address: 0x86
+  1290                           
+  1291                           	global	_TRISB6
+  1292                           	global	_TRISB6
+  1293  0000                     	_TRISB6	set	0x436	;byte address: 0x86
+  1294                           
+  1295                           	global	_TRISB7
+  1296                           	global	_TRISB7
+  1297  0000                     	_TRISB7	set	0x437	;byte address: 0x86
+  1298                           
+  1299                           	global	_TRISC0
+  1300                           	global	_TRISC0
+  1301  0000                     	_TRISC0	set	0x438	;byte address: 0x87
+  1302                           
+  1303                           	global	_TRISC1
+  1304                           	global	_TRISC1
+  1305  0000                     	_TRISC1	set	0x439	;byte address: 0x87
+  1306                           
+  1307                           	global	_TRISC2
+  1308                           	global	_TRISC2
+  1309  0000                     	_TRISC2	set	0x43A	;byte address: 0x87
+  1310                           
+  1311                           	global	_TRISC3
+  1312                           	global	_TRISC3
+  1313  0000                     	_TRISC3	set	0x43B	;byte address: 0x87
+  1314                           
+  1315                           	global	_TRISC4
+  1316                           	global	_TRISC4
+  1317  0000                     	_TRISC4	set	0x43C	;byte address: 0x87
+  1318                           
+  1319                           	global	_TRISC5
+  1320                           	global	_TRISC5
+  1321  0000                     	_TRISC5	set	0x43D	;byte address: 0x87
+  1322                           
+  1323                           	global	_TRISC6
+  1324                           	global	_TRISC6
+  1325  0000                     	_TRISC6	set	0x43E	;byte address: 0x87
+  1326                           
+  1327                           	global	_TRISC7
+  1328                           	global	_TRISC7
+  1329  0000                     	_TRISC7	set	0x43F	;byte address: 0x87
+  1330                           
+  1331                           	global	_TRISD0
+  1332                           	global	_TRISD0
+  1333  0000                     	_TRISD0	set	0x440	;byte address: 0x88
+  1334                           
+  1335                           	global	_TRISD1
+  1336                           	global	_TRISD1
+  1337  0000                     	_TRISD1	set	0x441	;byte address: 0x88
+  1338                           
+  1339                           	global	_TRISD2
+  1340                           	global	_TRISD2
+  1341  0000                     	_TRISD2	set	0x442	;byte address: 0x88
+  1342                           
+  1343                           	global	_TRISD3
+  1344                           	global	_TRISD3
+  1345  0000                     	_TRISD3	set	0x443	;byte address: 0x88
+  1346                           
+  1347                           	global	_TRISD4
+  1348                           	global	_TRISD4
+  1349  0000                     	_TRISD4	set	0x444	;byte address: 0x88
+  1350                           
+  1351                           	global	_TRISD5
+  1352                           	global	_TRISD5
+  1353  0000                     	_TRISD5	set	0x445	;byte address: 0x88
+  1354                           
+  1355                           	global	_TRISD6
+  1356                           	global	_TRISD6
+  1357  0000                     	_TRISD6	set	0x446	;byte address: 0x88
+  1358                           
+  1359                           	global	_TRISD7
+  1360                           	global	_TRISD7
+  1361  0000                     	_TRISD7	set	0x447	;byte address: 0x88
+  1362                           
+  1363                           	global	_TRISE0
+  1364                           	global	_TRISE0
+  1365  0000                     	_TRISE0	set	0x448	;byte address: 0x89
+  1366                           
+  1367                           	global	_TRISE1
+  1368                           	global	_TRISE1
+  1369  0000                     	_TRISE1	set	0x449	;byte address: 0x89
+  1370                           
+  1371                           	global	_TRISE2
+  1372                           	global	_TRISE2
+  1373  0000                     	_TRISE2	set	0x44A	;byte address: 0x89
+  1374                           
+  1375                           	global	_TRMT
+  1376                           	global	_TRMT
+  1377  0000                     	_TRMT	set	0x4C1	;byte address: 0x98
+  1378                           
+  1379                           	global	_TX9
+  1380                           	global	_TX9
+  1381  0000                     	_TX9	set	0x4C6	;byte address: 0x98
+  1382                           
+  1383                           	global	_TX9D
+  1384                           	global	_TX9D
+  1385  0000                     	_TX9D	set	0x4C0	;byte address: 0x98
+  1386                           
+  1387                           	global	_TXEN
+  1388                           	global	_TXEN
+  1389  0000                     	_TXEN	set	0x4C5	;byte address: 0x98
+  1390                           
+  1391                           	global	_TXIE
+  1392                           	global	_TXIE
+  1393  0000                     	_TXIE	set	0x464	;byte address: 0x8C
+  1394                           
+  1395                           	global	_TXIF
+  1396                           	global	_TXIF
+  1397  0000                     	_TXIF	set	0x64	;byte address: 0xC
+  1398                           
+  1399                           	global	_UA
+  1400                           	global	_UA
+  1401  0000                     	_UA	set	0x4A1	;byte address: 0x94
+  1402                           
+  1403                           	global	_WCOL
+  1404                           	global	_WCOL
+  1405  0000                     	_WCOL	set	0xA7	;byte address: 0x14
+  1406                           
+  1407                           	global	_WR
+  1408                           	global	_WR
+  1409  0000                     	_WR	set	0xC61	;byte address: 0x18C
+  1410                           
+  1411                           	global	_WREN
+  1412                           	global	_WREN
+  1413  0000                     	_WREN	set	0xC62	;byte address: 0x18C
+  1414                           
+  1415                           	global	_WRERR
+  1416                           	global	_WRERR
+  1417  0000                     	_WRERR	set	0xC63	;byte address: 0x18C
+  1418                           
+  1419                           	global	_ZERO
+  1420                           	global	_ZERO
+  1421  0000                     	_ZERO	set	0x1A	;byte address: 0x3
+  1422                           
+  1423                           	PSECT	fnautoc,class=COMMON,space=1
+  1424                           	FNCONF	fnautoc,??,?
+  1425                           apbank macro
+  1426                           	; no bank selection necessary for common memor
+                                 y
+  1427  0070                     	endm
+
+
+HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
+Symbol Table                                          Sat Jan 06 15:18:18 2024
+
+            l2 0040              l3 0007              l5 000C  
+            l6 0039              l8 07FF              l9 07D9  
+    __Lrdata_0 0000      __Lramdata 0000             l11 07FF  
+           _DA 04A5             _BF 04A0             _DC 0019  
+           _PD 001B             _RD 0C60             _UA 04A1  
+           u70 0039             _TO 001C             u71 0038  
+           u80 07FF             u64 0012             u81 07FE  
+           u65 0010             _RW 04A2             u85 07FB  
+           _WR 0C61            _CM0 04E0            _CM1 04E1  
+          _CM2 04E2            _CKE 04A6            _IBF 044F  
+          _CIS 04E3            _CKP 00A4            _GIE 005F  
+          _BOR 0470            _RA0 0028            _RA1 0029  
+          _RB0 0030            _RA2 002A            _RB1 0031  
+          _RA3 002B            _RC0 0038            _RB2 0032  
+          _RA4 002C            _RC1 0039            _RB3 0033  
+          _RA5 002D            _RD0 0040            _RC2 003A  
+          _RB4 0034            _RD1 0041            _RC3 003B  
+          _RB5 0035            _RE0 0048            _RD2 0042  
+          _RC4 003C            _RB6 0036            _RE1 0049  
+          _RD3 0043            _RC5 003D            _RB7 0037  
+          _RE2 004A            _RD4 0044            _RC6 003E  
+          _RD5 0045            _RC7 003F            _RD6 0046  
+          _OBF 044E            _RD7 0047            _FSR 0004  
+          _PCL 0002            _PS0 0408            _PR2 0092  
+          _PS1 0409            _RP0 001D            _PS2 040A  
+          _PEN 048A            _IRP 001F            _RP1 001E  
+          u710 0035            u715 0033            _SEN 0488  
+          _PSA 040B            _POR 0471            _RX9 00C6  
+          _SMP 04A7            _TX9 04C6        ??_delay 0077  
+         _ADIE 0466           _ADIF 0066           _ADFM 04FF  
+         _ADGO 00FA       __tempreg 0070           _ADON 00F8  
+         _CHS0 00FB           _CHS1 00FC           _CHS2 00FD  
+         _EEIE 046C           _EEIF 006C           _GCEN 048F  
+         _CMIE 046E           _CMIF 006E           _BRGH 04C2  
+         _T0IE 005D           _T0IF 005A           _CREN 00C4  
+         _T0CS 040D           _FERR 00C2           _IBOV 044D  
+         _CVR0 04E8           _CVR1 04E9           _CVR2 04EA  
+         _CVR3 04EB           _T0SE 040C           _CSRC 04C7  
+         _INDF 0000           _PIE1 008C           _PIE2 008D  
+         _CVRR 04ED           _PEIE 005E           _INTE 005C  
+         _INTF 0059           _RBIE 005B           _RBIF 0058  
+         _RCIE 0465           _RCIF 0065           _RCEN 048B  
+         _PCON 008E           _PIR1 000C           _PIR2 000D  
+         _OERR 00C1           _RBPU 040F           _RX9D 00C0  
+         _TMR0 0001           _TMR2 0011           _WCOL 00A7  
+         _SPEN 00C7           _RSEN 0489      __databank 0000  
+         _TX9D 04C0           _SREN 00C5           _TRMT 04C1  
+         _STOP 04A4           _ZERO 001A           _TXIE 0464  
+         _WREN 0C62           _TXIF 0064           _TXEN 04C5  
+         _SYNC 04C4           _main 0003           start 0000  
+      _CCP1CON 0017        _CCP2CON 001D        _ACKSTAT 048E  
+        _C1INV 04E4          _C2INV 04E5          _C1OUT 04E6  
+        _C2OUT 04E7          _ADCS0 00FE          _ADCS1 00FF  
+        _ADCS2 04FE          _ADDEN 00C3          ?_main 0070  
+        _ACKEN 048C          _ACKDT 048D          _BCLIE 046B  
+        _BCLIF 006B          _CCP1X 00BD          _CCP1Y 00BC  
+        _CCP2X 00ED          _CCP2Y 00EC          _EEADR 010D  
+__end_of_delay 0800          _CARRY 0018          _EEPGD 0C67  
+        _CMCON 009C          _T1CON 0010          _T2CON 0012  
+      _T1CKPS0 0084        _T1CKPS1 0085          _PCFG0 04F8  
+        _PCFG1 04F9          _PCFG2 04FA          _PCFG3 04FB  
+      _T2CKPS0 0090        _T2CKPS1 0091          _CVREN 04EF  
+        _CVROE 04EE          _RCREG 001A          _RCSTA 0018  
+        _TMR1H 000F          _TMR1L 000E          _SPBRG 0099  
+        _PORTA 0005          _PORTB 0006        _T1OSCEN 0083  
+        _PORTC 0007          _PORTD 0008          _PORTE 0009  
+        _PSPIE 0467          _PSPIF 0067          _START 04A3  
+        _SSPM0 00A0          _SSPM1 00A1          _SSPM2 00A2  
+        _SSPM3 00A3          _TRISA 0085          _TRISB 0086  
+        _TRISC 0087          _TRISD 0088          _SSPIE 0463  
+        _TRISE 0089          _SSPIF 0063          _SSPEN 00A5  
+        _SSPOV 00A6          _WRERR 0C63          _TXREG 0019  
+        _TXSTA 0098          _delay 07D8        _PSPMODE 044C  
+      _SSPCON2 0091        _SSPSTAT 0094        _TOUTPS0 0093  
+      _TOUTPS1 0094        _TOUTPS2 0095        _TOUTPS3 0096  
+        status 0003        _delay_k 0073         ??_main 0070  
+       ?_delay 0073         _ADCON0 001F         _ADCON1 009F  
+       _CCP1M0 00B8         _CCP1M1 00B9         _CCP1M2 00BA  
+       _CCP1M3 00BB         _CCP2M0 00E8         _CCP2M1 00E9  
+       _CCP2M2 00EA         _CCP2M3 00EB         _CCP1IE 0462  
+       _CCP1IF 0062         _CCP2IE 0468         _CCP2IF 0068  
+       _ADRESH 001E         _EEADRH 010F         _ADRESL 009E  
+       _EEADRL 010D         _EEDATA 010C         _CCPR1H 0016  
+       _EEDATH 010E         _CCPR2H 001C         _CCPR1L 0015  
+       _CCPR2L 001B         _EECON1 018C         _EECON2 018D  
+ __end_of_main 0044         _GODONE 00FA         _CVRCON 009D  
+       _T1SYNC 0082         _INTEDG 040E         _PCLATH 000A  
+       _INTCON 000B         _TMR0IE 005D         _TMR0IF 005A  
+       _TMR1IE 0460         _TMR1IF 0060         _TMR1CS 0081  
+       _TMR2IE 0461         _TMR2IF 0061         _TMR1ON 0080  
+       _OPTION 0081         _TMR2ON 0092         _SSPADD 0093  
+       _TRISA0 0428         _TRISA1 0429         _TRISB0 0430  
+       _TRISA2 042A         _TRISB1 0431         _TRISA3 042B  
+       _TRISC0 0438         _TRISB2 0432         _TRISA4 042C  
+       _TRISC1 0439         _TRISB3 0433         _TRISA5 042D  
+       _TRISD0 0440         _TRISC2 043A         _TRISB4 0434  
+       _TRISD1 0441         _TRISC3 043B         _TRISB5 0435  
+       _TRISE0 0448         _TRISD2 0442         _TRISC4 043C  
+       _TRISB6 0436         _TRISE1 0449         _TRISD3 0443  
+       _TRISC5 043D         _TRISB7 0437         _TRISE2 044A  
+       _TRISD4 0444         _TRISC6 043E         _TRISD5 0445  
+       _TRISC7 043F         _TRISD6 0446         _TRISD7 0447  
+       _STATUS 0003         _SSPCON 0014         _SSPBUF 0013  
+       _main_k 0070      __Hrdata_0 0001      __Hramdata 0001  
