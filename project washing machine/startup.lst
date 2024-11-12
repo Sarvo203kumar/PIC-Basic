@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
-                                                      Tue Nov 28 10:34:11 2023
+                                                      Sat Dec 02 16:34:08 2023
 
 
      1                           
@@ -15,10 +15,10 @@ HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884
      7                           	;
      8                           	; Compiler options:
      9                           	;
-    10                           	; -oCEP0896.cof -mCEP0896.map --summary=defaul
-                                 t --output=default \
-    11                           	; CEP0896.p1 --chip=16F877A -P --runtime=defau
-                                 lt --opt=default \
+    10                           	; -oattempt1.cof -mattempt1.map --summary=defa
+                                 ult --output=default \
+    11                           	; attepmt1.p1 --chip=16F877A -P --runtime=defa
+                                 ult --opt=default \
     12                           	; -D__DEBUG=1 -g --asmlist --errformat=Error  
                                   [%n] %f; %l.%c %s \
     13                           	; --msgformat=Advisory[%n] %s --warnformat=War
@@ -117,100 +117,59 @@ HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884
    104                           	psect	init
    105  0000                     start
    106  0000                     _exit
-   107  0000                     FSR	set	4
-   108  0000                     INDF	set	0
-   109  0000                     PCLATH	set	0Ah
-   110  0000                     PC	set	2
-   111                           global btemp, __Lramdata, __Lidata, __Hramdata
-   112  0000  30E1               movlw	low(__Lramdata)
-   113  0001  0084               movwf	FSR
-   114  0002  3007               movlw	high(__Lidata)
-   115  0003  00FE               movwf	btemp
-   116  0004  308A               movlw	low(__Lidata)
-   117  0005  00FF               movwf	btemp+1
-   118  0006                     copyloop:
-   119  0006  2011               fcall fetch
-   120  0007  0080               movwf	INDF
-   121  0008  0A84               incf	FSR,f
-   122  0009  0804               movf	FSR,w
-   123  000A  3AEA               xorlw	low(__Hramdata)
-   124  000B  1903               btfsc	STATUS,2
-   125  000C  2815               goto	done_copy
-   126  000D  0AFF               incf	btemp+1,f
-   127  000E  1903               btfsc	STATUS,2
-   128  000F  0AFE               incf	btemp,f
-   129  0010  2806               goto copyloop
-   130  0011                     fetch:
-   131  0011  087E               movf	btemp,w
-   132  0012  008A               movwf	PCLATH
-   133  0013  087F               movf	btemp+1,w
-   134  0014  0082               movwf	PC
-   135  0015                     done_copy:
-   136                           
-   137                           ;----------------------------------------------
+   107                           
+   108                           ;----------------------------------------------
                                  ---------------------------------
-   138                           ;		Clear (zero) uninitialized global variables
-   139                           
-   140                           ;	20 bytes of RAM objects in bank 0 to zero
-   141                           
-   142                           	psect	init
-   143                           	global	__Lrbss_0
-   144  0015  306A               	movlw	low(__Lrbss_0)		;load the low address in
+   109                           ;		Clear (zero) uninitialized global variables
+   110                           
+   111                           ;	No RAM objects to clear in bank 0
+   112                           ;	No RAM objects to clear in bank 1
+   113                           ;	No RAM objects to clear in bank 2
+   114                           ;	No RAM objects to clear in bank 3
+   115                           ;	2 bytes of RAM objects in common bank to zero
+   116                           
+   117                           	psect	init
+   118  0000  1783               	bsf	STATUS,7		;select indirect bank 2/3
+   119                           	global	__Lcommon
+   120  0001  307C               	movlw	low(__Lcommon)		;load the low address in
                                  to FSR
-   145  0016  0084               	movwf	FSR
-   146  0017  307E               	movlw	low(__Lrbss_0+20)		;load the high addres
-                                 s+1 into W
-   147  0018  120A  118A  2028   	fcall	clear_ram		;go and zero that range of ad
-              120A  118A         dresses
-   148                           
-   149                           	psect	clrtext,class=CODE,delta=2
-   150                           	global	clear_ram
-   151                           ;	Called with FSR containing the base address, 
-                                 and
-   152                           ;	W with the last address+1
-   153  0028                     clear_ram:
-   154  0028  0064               	clrwdt			;clear the watchdog before getting in
-                                 to this loop
-   155  0029                     clrloop:
-   156  0029  0180               	clrf	INDF		;clear RAM location pointed to by F
-                                 SR
-   157  002A  0A84               	incf	FSR,f		;increment pointer to next locatio
-                                 n
-   158  002B  0604               	xorwf	FSR,w		;XOR with final address
-   159  002C  1903               	btfsc	STATUS,2	;have we reached the end yet?
-   160  002D  3400               	retlw	0		;all done for this bank, return
-   161  002E  0604               	xorwf	FSR,w		;XOR again to restore value
-   162  002F  2829               	goto	clrloop		;go and do the next byte
-   163                           
-   164                           ;	6 bytes of RAM objects in bank 1 to zero
-   165                           
-   166                           	psect	init
-   167                           	global	__Lrbss_1
-   168  001D  30EA               	movlw	low(__Lrbss_1)		;load the low address in
-                                 to FSR
-   169  001E  0084               	movwf	FSR
-   170  001F  30F0               	movlw	low(__Lrbss_1+6)		;load the high address
+   121  0002  0084               	movwf	FSR
+   122  0003  307E               	movlw	low(__Lcommon+2)		;load the high address
                                  +1 into W
-   171  0020  120A  118A  2028   	fcall	clear_ram		;go and zero that range of ad
+   123  0004  120A  118A  200D   	fcall	clear_ram		;go and zero that range of ad
               120A  118A         dresses
-   172                           
-   173                           ;	No RAM objects to clear in bank 2
-   174                           ;	No RAM objects to clear in bank 3
-   175                           ;	No RAM objects to clear in common bank
-   176                           
-   177                           ;----------------------------------------------
+   124                           
+   125                           	psect	clrtext,class=CODE,delta=2
+   126                           	global	clear_ram
+   127                           ;	Called with FSR containing the base address, 
+                                 and
+   128                           ;	W with the last address+1
+   129  000D                     clear_ram:
+   130  000D  0064               	clrwdt			;clear the watchdog before getting in
+                                 to this loop
+   131  000E                     clrloop:
+   132  000E  0180               	clrf	INDF		;clear RAM location pointed to by F
+                                 SR
+   133  000F  0A84               	incf	FSR,f		;increment pointer to next locatio
+                                 n
+   134  0010  0604               	xorwf	FSR,w		;XOR with final address
+   135  0011  1903               	btfsc	STATUS,2	;have we reached the end yet?
+   136  0012  3400               	retlw	0		;all done for this bank, return
+   137  0013  0604               	xorwf	FSR,w		;XOR again to restore value
+   138  0014  280E               	goto	clrloop		;go and do the next byte
+   139                           
+   140                           
+   141                           ;----------------------------------------------
                                  ---------------------------------
-   178                           	psect	end_init
-   179  0025  120A  118A  2830   	ljmp _main
+   142                           	psect	end_init
+   143  0009  0183               	clrf	STATUS
+   144  000A  120A  118A  2815   	ljmp _main
 
 
 HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
-Symbol Table                                          Tue Nov 28 10:34:11 2023
+Symbol Table                                          Sat Dec 02 16:34:08 2023
 
-  __Lrbss_0 006A    __Lrbss_1 00EA           PC 0002   __Lramdata 00E1  
-        FSR 0004         INDF 0000        _main 0030        _exit 0000  
-      fetch 0011        btemp 007E        start 0000    clear_ram 0028  
-     PCLATH 000A       STATUS 0003    done_copy 0015    intlevel0 0000  
+        FSR 0004         INDF 0000        _main 0015        _exit 0000  
+      start 0000    clear_ram 000D       STATUS 0003    intlevel0 0000  
   intlevel1 0000    intlevel2 0000    intlevel3 0000    intlevel4 0000  
-  intlevel5 0000     __Lidata 078A    reset_vec 0000     copyloop 0006  
-    clrloop 0029   __Hramdata 00EA  
+  intlevel5 0000    reset_vec 0000      clrloop 000E    __Lcommon 007C  

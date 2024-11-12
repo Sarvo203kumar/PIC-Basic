@@ -555,90 +555,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _WR `Vb 1 e@3169 ]
 "392 C:\Program Files (x86)\HI-TECH Software\PICC\PRO\9.60\include\pic168xa.h
 [v _RD `Vb 1 e@3168 ]
-"9 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
-[v _Lcd_rs `b 1 s@60 ]
-"10 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
-[v _Lcd_en `b 1 s@61 ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
-[v _Lcd8_Command `(v 0 ef1`uc ]
-"19 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
-[v _Delay `(v 0 ef1`ui ]
-"5 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_serial.h
-[v _Baudrate `(v 0 ef1`ul ]
-"5 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_hbit `ui 1 e ]
-"5 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_lbit `ui 1 e ]
-"6 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_temp `ui 1 e ]
-"6 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_temp0 `ui 1 e ]
-"6 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_val1 `ui 1 e ]
-"7 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_val `uc 1 e ]
-"7 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_del `uc 1 e ]
-"7 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _adc_j `uc 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _count `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _sec `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _b `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _temp `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _pres `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _hb `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _st `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _shb `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _sp `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _a `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _n1 `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _n2 `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _n3 `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _x `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _y `ui 1 e ]
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _z `ui 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _cu `uc 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _kc `uc 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _val1 `uc -> 12 `i e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _s `uc 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _j `uc 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _u `uc 1 e ]
-"14 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _qq `uc 1 e ]
-"15 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _c `uc -> 5 `i e ]
-"17 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _aa `ui 1 e ]
-"17 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _add `ui 1 e ]
-"17 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _ss `ui 1 e ]
-"17 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _f `ui -> 5 `i e ]
-"17 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
-[v _i `ui 1 e ]
+"10 C:\Users\HP\Desktop\pic controller\project washing machine\attepmt1.c
+[v _i `i 1 e ]
 [p mainexit ]
 [; ;pic168xa.h: 19: volatile unsigned char INDF @ 0x00;
 [; ;pic168xa.h: 20: volatile unsigned char TMR0 @ 0x01;
@@ -926,1913 +844,280 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 358: extern void _delay(unsigned long);
 [; ;pic.h: 407: extern bit __timeout, __powerdown;
 [; ;pic.h: 408: extern unsigned char __resetbits;
-[; ;pic_lcd8.h: 9: static bit Lcd_rs @((unsigned) &PORTC*8+4);
-[; ;pic_lcd8.h: 10: static bit Lcd_en @((unsigned) &PORTC*8+5);
-[; ;pic_lcd8.h: 12: void Lcd8_Init();
-[; ;pic_lcd8.h: 13: void Lcd8_Command(unsigned char);
-[; ;pic_lcd8.h: 14: void Lcd8_Write(unsigned char,unsigned char);
-[; ;pic_lcd8.h: 15: void Lcd8_Display(unsigned char,const unsigned char*,unsigned int);
-[; ;pic_lcd8.h: 16: void Lcd8_Decimal2(unsigned char,unsigned char);
-[; ;pic_lcd8.h: 17: void Lcd8_Decimal3(unsigned char,unsigned char);
-[; ;pic_lcd8.h: 18: void Lcd8_Decimal4(unsigned char,unsigned int);
-[; ;pic_lcd8.h: 19: void Delay(unsigned int);
-"22 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
-[v _Lcd8_Init `(v 1 ef ]
+[i _i
+"10 C:\Users\HP\Desktop\pic controller\project washing machine\attepmt1.c
+-> 0 `i
+]
+[; ;attepmt1.c: 10: int i=0;
+"13
+[v _delay `(v 1 ef ]
 {
-[; ;pic_lcd8.h: 21: void Lcd8_Init()
-[; ;pic_lcd8.h: 22: {
-[e :U _Lcd8_Init ]
+[; ;attepmt1.c: 12: void delay()
+[; ;attepmt1.c: 13: {
+[e :U _delay ]
 [f ]
-[; ;pic_lcd8.h: 23: Lcd8_Command(0x38);
-"23
-[e ( _Lcd8_Command (1 -> -> 56 `i `uc ]
-[; ;pic_lcd8.h: 24: Lcd8_Command(0x06);
-"24
-[e ( _Lcd8_Command (1 -> -> 6 `i `uc ]
-[; ;pic_lcd8.h: 25: Lcd8_Command(0x0c);
-"25
-[e ( _Lcd8_Command (1 -> -> 12 `i `uc ]
-[; ;pic_lcd8.h: 26: Lcd8_Command(0x01);
-"26
-[e ( _Lcd8_Command (1 -> -> 1 `i `uc ]
-[; ;pic_lcd8.h: 27: }
-"27
+"14
+[v _a `ui 1 a ]
+[; ;attepmt1.c: 14: unsigned int a;
+[; ;attepmt1.c: 15: for (a=0;a<10000;a++);
+"15
+{
+[e = _a -> -> 0 `i `ui ]
+[e $ < _a -> -> 10000 `i `ui 2  ]
+[e $U 3  ]
+[e :U 2 ]
+[e ++ _a -> -> 1 `i `ui ]
+[e $ < _a -> -> 10000 `i `ui 2  ]
+[e :U 3 ]
+}
+[; ;attepmt1.c: 16: }
+"16
 [e :UE 1 ]
 }
-"30
-[v _Lcd8_Command `(v 1 ef1`uc ]
-{
-[; ;pic_lcd8.h: 29: void Lcd8_Command(unsigned char com)
-[; ;pic_lcd8.h: 30: {
-[e :U _Lcd8_Command ]
-[v _com `uc 1 r1 ]
-[f ]
-[; ;pic_lcd8.h: 31: PORTD=com;
-"31
-[e = _PORTD _com ]
-[; ;pic_lcd8.h: 32: Lcd_en=1;
-"32
-[e = _Lcd_en -> -> 1 `i `b ]
-[; ;pic_lcd8.h: 33: Lcd_rs=0;
-"33
-[e = _Lcd_rs -> -> 0 `i `b ]
-[; ;pic_lcd8.h: 34: Delay(125);
-"34
-[e ( _Delay (1 -> -> 125 `i `ui ]
-[; ;pic_lcd8.h: 35: Lcd_en=0;
-"35
-[e = _Lcd_en -> -> 0 `i `b ]
-[; ;pic_lcd8.h: 36: Delay(125);
-"36
-[e ( _Delay (1 -> -> 125 `i `ui ]
-[; ;pic_lcd8.h: 37: }
-"37
-[e :UE 2 ]
-}
-"40
-[v _Lcd8_Write `(v 1 ef2`uc`uc ]
-{
-[; ;pic_lcd8.h: 39: void Lcd8_Write(unsigned char com,unsigned char lr)
-[; ;pic_lcd8.h: 40: {
-[e :U _Lcd8_Write ]
-[v _com `uc 1 r1 ]
-[v _lr `uc 1 r2 ]
-[f ]
-[; ;pic_lcd8.h: 41: Lcd8_Command(com);
-"41
-[e ( _Lcd8_Command (1 _com ]
-[; ;pic_lcd8.h: 43: PORTD=lr;
-"43
-[e = _PORTD _lr ]
-[; ;pic_lcd8.h: 44: Lcd_en=1;
-"44
-[e = _Lcd_en -> -> 1 `i `b ]
-[; ;pic_lcd8.h: 45: Lcd_rs=1;
-"45
-[e = _Lcd_rs -> -> 1 `i `b ]
-[; ;pic_lcd8.h: 46: Delay(125);
-"46
-[e ( _Delay (1 -> -> 125 `i `ui ]
-[; ;pic_lcd8.h: 47: Lcd_en=0;
-"47
-[e = _Lcd_en -> -> 0 `i `b ]
-[; ;pic_lcd8.h: 48: Delay(125);
-"48
-[e ( _Delay (1 -> -> 125 `i `ui ]
-[; ;pic_lcd8.h: 49: }
-"49
-[e :UE 3 ]
-}
-"52
-[v _Lcd8_Display `(v 1 ef3`uc`*Cuc`ui ]
-{
-[; ;pic_lcd8.h: 51: void Lcd8_Display(unsigned char com,const unsigned char *word,unsigned int n)
-[; ;pic_lcd8.h: 52: {
-[e :U _Lcd8_Display ]
-[v _com `uc 1 r1 ]
-[v _word `*Cuc 1 r2 ]
-[v _n `ui 1 r3 ]
-[f ]
-"53
-[v _Lcd_i `uc 1 a ]
-[; ;pic_lcd8.h: 53: unsigned char Lcd_i;
-[; ;pic_lcd8.h: 55: for(Lcd_i=0;Lcd_i<n;Lcd_i++)
-"55
-{
-[e = _Lcd_i -> -> 0 `i `uc ]
-[e $U 8  ]
-"56
-[e :U 5 ]
-[; ;pic_lcd8.h: 56: {
-{
-[; ;pic_lcd8.h: 57: Lcd8_Write(com+Lcd_i,word[Lcd_i]);
-"57
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> _Lcd_i `i `uc *U + _word * -> _Lcd_i `ux -> -> # *U _word `ui `ux ]
-"58
-}
-"55
-[e ++ _Lcd_i -> -> 1 `i `uc ]
-[e :U 8 ]
-[e $ < -> _Lcd_i `ui _n 5  ]
-[e :U 6 ]
-"58
-}
-[; ;pic_lcd8.h: 58: }
-[; ;pic_lcd8.h: 59: }
-"59
-[e :UE 4 ]
-}
-"62
-[v _Lcd8_Decimal2 `(v 1 ef2`uc`uc ]
-{
-[; ;pic_lcd8.h: 61: void Lcd8_Decimal2(unsigned char com,unsigned char val)
-[; ;pic_lcd8.h: 62: {
-[e :U _Lcd8_Decimal2 ]
-[v _com `uc 1 r1 ]
-[v _val `uc 1 r2 ]
-[f ]
-"63
-[v _Lcd_hr `ui 1 a ]
-[v _Lcd_t `ui 1 a ]
-[v _Lcd_o `ui 1 a ]
-[; ;pic_lcd8.h: 63: unsigned int Lcd_hr,Lcd_t,Lcd_o;
-[; ;pic_lcd8.h: 65: Lcd_hr=val%100;
-"65
-[e = _Lcd_hr -> % -> _val `i -> 100 `i `ui ]
-[; ;pic_lcd8.h: 66: Lcd_t=Lcd_hr/10;
-"66
-[e = _Lcd_t / _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 67: Lcd_o=Lcd_hr%10;
-"67
-[e = _Lcd_o % _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 69: Lcd8_Write(com,Lcd_t+0x30);
-"69
-[e ( _Lcd8_Write (2 , _com -> + _Lcd_t -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 70: Lcd8_Write(com+1,Lcd_o+0x30);
-"70
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 1 `i `uc -> + _Lcd_o -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 71: }
-"71
-[e :UE 9 ]
-}
-"75
-[v _Lcd8_Decimal3 `(v 1 ef2`uc`uc ]
-{
-[; ;pic_lcd8.h: 74: void Lcd8_Decimal3(unsigned char com,unsigned char val)
-[; ;pic_lcd8.h: 75: {
-[e :U _Lcd8_Decimal3 ]
-[v _com `uc 1 r1 ]
-[v _val `uc 1 r2 ]
-[f ]
-"76
-[v _Lcd_h `ui 1 a ]
-[v _Lcd_hr `ui 1 a ]
-[v _Lcd_t `ui 1 a ]
-[v _Lcd_o `ui 1 a ]
-[; ;pic_lcd8.h: 76: unsigned int Lcd_h,Lcd_hr,Lcd_t,Lcd_o;
-[; ;pic_lcd8.h: 78: Lcd_h=val/100;
-"78
-[e = _Lcd_h -> / -> _val `i -> 100 `i `ui ]
-[; ;pic_lcd8.h: 79: Lcd_hr=val%100;
-"79
-[e = _Lcd_hr -> % -> _val `i -> 100 `i `ui ]
-[; ;pic_lcd8.h: 80: Lcd_t=Lcd_hr/10;
-"80
-[e = _Lcd_t / _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 81: Lcd_o=Lcd_hr%10;
-"81
-[e = _Lcd_o % _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 83: Lcd8_Write(com,Lcd_h+0x30);
-"83
-[e ( _Lcd8_Write (2 , _com -> + _Lcd_h -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 84: Lcd8_Write(com+1,Lcd_t+0x30);
-"84
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 1 `i `uc -> + _Lcd_t -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 85: Lcd8_Write(com+2,Lcd_o+0x30);
-"85
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 2 `i `uc -> + _Lcd_o -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 86: }
-"86
-[e :UE 10 ]
-}
-"89
-[v _Lcd8_Decimal4 `(v 1 ef2`uc`ui ]
-{
-[; ;pic_lcd8.h: 88: void Lcd8_Decimal4(unsigned char com,unsigned int val)
-[; ;pic_lcd8.h: 89: {
-[e :U _Lcd8_Decimal4 ]
-[v _com `uc 1 r1 ]
-[v _val `ui 1 r2 ]
-[f ]
-"90
-[v _Lcd_th `ui 1 a ]
-[v _Lcd_thr `ui 1 a ]
-[v _Lcd_h `ui 1 a ]
-[v _Lcd_hr `ui 1 a ]
-[v _Lcd_t `ui 1 a ]
-[v _Lcd_o `ui 1 a ]
-[; ;pic_lcd8.h: 90: unsigned int Lcd_th,Lcd_thr,Lcd_h,Lcd_hr,Lcd_t,Lcd_o;
-[; ;pic_lcd8.h: 92: val = val%10000;
-"92
-[e = _val % _val -> -> 10000 `i `ui ]
-[; ;pic_lcd8.h: 93: Lcd_th=val/1000;
-"93
-[e = _Lcd_th / _val -> -> 1000 `i `ui ]
-[; ;pic_lcd8.h: 94: Lcd_thr=val%1000;
-"94
-[e = _Lcd_thr % _val -> -> 1000 `i `ui ]
-[; ;pic_lcd8.h: 95: Lcd_h=Lcd_thr/100;
-"95
-[e = _Lcd_h / _Lcd_thr -> -> 100 `i `ui ]
-[; ;pic_lcd8.h: 96: Lcd_hr=Lcd_thr%100;
-"96
-[e = _Lcd_hr % _Lcd_thr -> -> 100 `i `ui ]
-[; ;pic_lcd8.h: 97: Lcd_t=Lcd_hr/10;
-"97
-[e = _Lcd_t / _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 98: Lcd_o=Lcd_hr%10;
-"98
-[e = _Lcd_o % _Lcd_hr -> -> 10 `i `ui ]
-[; ;pic_lcd8.h: 100: Lcd8_Write(com,Lcd_th+0x30);
-"100
-[e ( _Lcd8_Write (2 , _com -> + _Lcd_th -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 101: Lcd8_Write(com+1,Lcd_h+0x30);
-"101
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 1 `i `uc -> + _Lcd_h -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 102: Lcd8_Write(com+2,Lcd_t+0x30);
-"102
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 2 `i `uc -> + _Lcd_t -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 103: Lcd8_Write(com+3,Lcd_o+0x30);
-"103
-[e ( _Lcd8_Write (2 , -> + -> _com `i -> 3 `i `uc -> + _Lcd_o -> -> 48 `i `ui `uc ]
-[; ;pic_lcd8.h: 104: }
-"104
-[e :UE 11 ]
-}
-"107
-[v _Delay `(v 1 ef1`ui ]
-{
-[; ;pic_lcd8.h: 106: void Delay(unsigned int del)
-[; ;pic_lcd8.h: 107: {
-[e :U _Delay ]
-[v _del `ui 1 r1 ]
-[f ]
-[; ;pic_lcd8.h: 108: while(del--);
-"108
-[e $U 13  ]
-[e :U 14 ]
-[e :U 13 ]
-[e $ != -- _del -> -> 1 `i `ui -> -> 0 `i `ui 14  ]
-[e :U 15 ]
-[; ;pic_lcd8.h: 109: }
-"109
-[e :UE 12 ]
-}
-[; ;pic_serial.h: 2: void Serial_Init(unsigned long int);
-[; ;pic_serial.h: 3: void Serial_Out(unsigned char);
-[; ;pic_serial.h: 4: void Serial_Conout(const unsigned char *,unsigned char);
-[; ;pic_serial.h: 5: void Baudrate(unsigned long int);
-[; ;pic_serial.h: 6: void Receive(unsigned char);
-"9 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_serial.h
-[v _Serial_Init `(v 1 ef1`ul ]
-{
-[; ;pic_serial.h: 8: void Serial_Init(unsigned long int baud)
-[; ;pic_serial.h: 9: {
-[e :U _Serial_Init ]
-[v _baud `ul 1 r1 ]
-[f ]
-[; ;pic_serial.h: 10: Baudrate(baud);
-"10
-[e ( _Baudrate (1 _baud ]
-[; ;pic_serial.h: 11: SYNC = 0;
-"11
-[e = _SYNC -> -> 0 `i `b ]
-[; ;pic_serial.h: 12: SPEN = 1;
-"12
-[e = _SPEN -> -> 1 `i `b ]
-[; ;pic_serial.h: 13: TXEN = 1;
-"13
-[e = _TXEN -> -> 1 `i `b ]
-[; ;pic_serial.h: 14: GIE=1;
-"14
-[e = _GIE -> -> 1 `i `b ]
-[; ;pic_serial.h: 15: PEIE=1;
-"15
-[e = _PEIE -> -> 1 `i `b ]
-[; ;pic_serial.h: 16: RCIE = 1;
-"16
-[e = _RCIE -> -> 1 `i `b ]
-[; ;pic_serial.h: 17: CREN = 1;
-"17
-[e = _CREN -> -> 1 `i `b ]
-[; ;pic_serial.h: 18: }
-"18
-[e :UE 16 ]
-}
-"21
-[v _Serial_Out `(v 1 ef1`uc ]
-{
-[; ;pic_serial.h: 20: void Serial_Out(unsigned char val)
-[; ;pic_serial.h: 21: {
-[e :U _Serial_Out ]
-[v _val `uc 1 r1 ]
-[f ]
-[; ;pic_serial.h: 22: TXREG =val;
-"22
-[e = _TXREG _val ]
-[; ;pic_serial.h: 23: while(!TXIF);
-"23
-[e $U 18  ]
-[e :U 19 ]
-[e :U 18 ]
-[e $ ! _TXIF 19  ]
-[e :U 20 ]
-[; ;pic_serial.h: 24: TXIF = 0;
-"24
-[e = _TXIF -> -> 0 `i `b ]
-[; ;pic_serial.h: 25: }
-"25
-[e :UE 17 ]
-}
-"29
-[v _Serial_Conout `(v 1 ef2`*Cuc`uc ]
-{
-[; ;pic_serial.h: 28: void Serial_Conout(const unsigned char *data,unsigned char n)
-[; ;pic_serial.h: 29: {
-[e :U _Serial_Conout ]
-[v _data `*Cuc 1 r1 ]
-[v _n `uc 1 r2 ]
-[f ]
-"30
-[v _ser_j `uc 1 a ]
-[; ;pic_serial.h: 30: unsigned char ser_j;
-[; ;pic_serial.h: 31: for(ser_j=0;ser_j<n;ser_j++)
-"31
-{
-[e = _ser_j -> -> 0 `i `uc ]
-[e $U 25  ]
-"32
-[e :U 22 ]
-[; ;pic_serial.h: 32: {
-{
-[; ;pic_serial.h: 33: Serial_Out(data[ser_j]);
-"33
-[e ( _Serial_Out (1 *U + _data * -> _ser_j `ux -> -> # *U _data `ui `ux ]
-"34
-}
-"31
-[e ++ _ser_j -> -> 1 `i `uc ]
-[e :U 25 ]
-[e $ < -> _ser_j `i -> _n `i 22  ]
-[e :U 23 ]
-"34
-}
-[; ;pic_serial.h: 34: }
-[; ;pic_serial.h: 35: }
-"35
-[e :UE 21 ]
-}
-"38
-[v _Baudrate `(v 1 ef1`ul ]
-{
-[; ;pic_serial.h: 37: void Baudrate(unsigned long int baud)
-[; ;pic_serial.h: 38: {
-[e :U _Baudrate ]
-[v _baud `ul 1 r1 ]
-[f ]
-[; ;pic_serial.h: 39: if(baud==110)
-"39
-[e $ ! == _baud -> -> -> 110 `i `l `ul 27  ]
-[; ;pic_serial.h: 40: {
-"40
-{
-[; ;pic_serial.h: 41: SPBRG = 141;
-"41
-[e = _SPBRG -> -> 141 `i `uc ]
-[; ;pic_serial.h: 42: BRGH = 0;
-"42
-[e = _BRGH -> -> 0 `i `b ]
-"43
-}
-[; ;pic_serial.h: 43: }
-[e $U 28  ]
-"44
-[e :U 27 ]
-[; ;pic_serial.h: 44: else if(baud==1200)
-[e $ ! == _baud -> -> -> 1200 `i `l `ul 29  ]
-[; ;pic_serial.h: 45: {
-"45
-{
-[; ;pic_serial.h: 46: SPBRG = 51;
-"46
-[e = _SPBRG -> -> 51 `i `uc ]
-[; ;pic_serial.h: 47: BRGH = 0;
-"47
-[e = _BRGH -> -> 0 `i `b ]
-"48
-}
-[; ;pic_serial.h: 48: }
-[e $U 30  ]
-"49
-[e :U 29 ]
-[; ;pic_serial.h: 49: else if(baud==2400)
-[e $ ! == _baud -> -> -> 2400 `i `l `ul 31  ]
-[; ;pic_serial.h: 50: {
-"50
-{
-[; ;pic_serial.h: 51: SPBRG = 25;
-"51
-[e = _SPBRG -> -> 25 `i `uc ]
-[; ;pic_serial.h: 52: BRGH = 0;
-"52
-[e = _BRGH -> -> 0 `i `b ]
-"53
-}
-[; ;pic_serial.h: 53: }
-[e $U 32  ]
-"54
-[e :U 31 ]
-[; ;pic_serial.h: 54: else if(baud==4800)
-[e $ ! == _baud -> -> -> 4800 `i `l `ul 33  ]
-[; ;pic_serial.h: 55: {
-"55
-{
-[; ;pic_serial.h: 56: SPBRG = 12;
-"56
-[e = _SPBRG -> -> 12 `i `uc ]
-[; ;pic_serial.h: 57: BRGH = 0;
-"57
-[e = _BRGH -> -> 0 `i `b ]
-"58
-}
-[; ;pic_serial.h: 58: }
-[e $U 34  ]
-"59
-[e :U 33 ]
-[; ;pic_serial.h: 59: else if(baud==9600)
-[e $ ! == _baud -> -> -> 9600 `i `l `ul 35  ]
-[; ;pic_serial.h: 60: {
-"60
-{
-[; ;pic_serial.h: 61: SPBRG = 25;
-"61
-[e = _SPBRG -> -> 25 `i `uc ]
-[; ;pic_serial.h: 62: BRGH = 1;
-"62
-[e = _BRGH -> -> 1 `i `b ]
-"63
-}
-[; ;pic_serial.h: 63: }
-[e $U 36  ]
-"64
-[e :U 35 ]
-[; ;pic_serial.h: 64: else if(baud==57600)
-[e $ ! == _baud -> -> 57600 `l `ul 37  ]
-[; ;pic_serial.h: 65: {
-"65
-{
-[; ;pic_serial.h: 66: SPBRG = 20;
-"66
-[e = _SPBRG -> -> 20 `i `uc ]
-[; ;pic_serial.h: 67: BRGH = 1;
-"67
-[e = _BRGH -> -> 1 `i `b ]
-"68
-}
-[; ;pic_serial.h: 68: }
-[e $U 38  ]
-"69
-[e :U 37 ]
-[; ;pic_serial.h: 69: else if(baud==115200)
-[e $ ! == _baud -> -> 115200 `l `ul 39  ]
-[; ;pic_serial.h: 70: {
-"70
-{
-[; ;pic_serial.h: 71: SPBRG = 10;
-"71
-[e = _SPBRG -> -> 10 `i `uc ]
-[; ;pic_serial.h: 72: BRGH = 1;
-"72
-[e = _BRGH -> -> 1 `i `b ]
-"73
-}
-[e :U 39 ]
-"74
-[e :U 38 ]
-[e :U 36 ]
-[e :U 34 ]
-[e :U 32 ]
-[e :U 30 ]
-[e :U 28 ]
-[; ;pic_serial.h: 73: }
-[; ;pic_serial.h: 74: }
-[e :UE 26 ]
-}
-"78
-[v _Receive `(v 1 ef1`uc ]
-{
-[; ;pic_serial.h: 77: void Receive(unsigned char rece)
-[; ;pic_serial.h: 78: {
-[e :U _Receive ]
-[v _rece `uc 1 r1 ]
-[f ]
-[; ;pic_serial.h: 79: if(rece==1)
-"79
-[e $ ! == -> _rece `i -> 1 `i 41  ]
-[; ;pic_serial.h: 80: {
-"80
-{
-[; ;pic_serial.h: 81: RCIE = 1;
-"81
-[e = _RCIE -> -> 1 `i `b ]
-[; ;pic_serial.h: 82: CREN = 1;
-"82
-[e = _CREN -> -> 1 `i `b ]
-"83
-}
-[; ;pic_serial.h: 83: }
-[e $U 42  ]
-"84
-[e :U 41 ]
-[; ;pic_serial.h: 84: else
-[; ;pic_serial.h: 85: {
-"85
-{
-[; ;pic_serial.h: 86: RCIE = 0;
-"86
-[e = _RCIE -> -> 0 `i `b ]
-[; ;pic_serial.h: 87: CREN = 0;
-"87
-[e = _CREN -> -> 0 `i `b ]
-"88
-}
-[e :U 42 ]
-[; ;pic_serial.h: 88: }
-[; ;pic_serial.h: 89: }
-"89
-[e :UE 40 ]
-}
-[; ;pic_adc.h: 2: Adc8_Cha(unsigned char);
-[; ;pic_adc.h: 3: Adc10_Cha(unsigned char);
-[; ;pic_adc.h: 5: unsigned int adc_hbit,adc_lbit;
-[; ;pic_adc.h: 6: unsigned int adc_temp,adc_temp0,adc_val1;
-[; ;pic_adc.h: 7: unsigned char adc_val,adc_del,adc_j;
-"10 D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
-[v _Adc8_Cha `(i 1 ef1`uc ]
-{
-[; ;pic_adc.h: 9: Adc8_Cha(unsigned char val)
-[; ;pic_adc.h: 10: {
-[e :U _Adc8_Cha ]
-[v _val `uc 1 r1 ]
-[f ]
-[; ;pic_adc.h: 11: ADFM=0;
-"11
-[e = _ADFM -> -> 0 `i `b ]
-[; ;pic_adc.h: 12: adc_del=25;
-"12
-[e = _adc_del -> -> 25 `i `uc ]
-[; ;pic_adc.h: 14: if(val==0)
-"14
-[e $ ! == -> _val `i -> 0 `i 44  ]
-[; ;pic_adc.h: 15: {
-"15
-{
-[; ;pic_adc.h: 16: adc_temp0=0;
-"16
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 17: for(adc_j=0;adc_j<10;adc_j++)
-"17
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 45  ]
-[e $U 46  ]
-"18
-[e :U 45 ]
-[; ;pic_adc.h: 18: {
-{
-[; ;pic_adc.h: 19: ADCON0=0x00;
 "19
-[e = _ADCON0 -> -> 0 `i `uc ]
-[; ;pic_adc.h: 20: ADON=1;
-"20
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 21: while(adc_del--);
-"21
-[e $U 48  ]
-[e :U 49 ]
-[e :U 48 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 49  ]
-[e :U 50 ]
-[; ;pic_adc.h: 22: ADCON0 =0x05;
-"22
-[e = _ADCON0 -> -> 5 `i `uc ]
-[; ;pic_adc.h: 23: while(ADCON0!=0X01);
-"23
-[e $U 51  ]
-[e :U 52 ]
-[e :U 51 ]
-[e $ != -> _ADCON0 `i -> 1 `i 52  ]
-[e :U 53 ]
-[; ;pic_adc.h: 24: adc_temp=ADRESH;
-"24
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 25: adc_temp0=adc_temp0+adc_temp;
-"25
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"26
-}
-"17
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 45  ]
-[e :U 46 ]
-"26
-}
-"27
-}
-[; ;pic_adc.h: 26: }
-[; ;pic_adc.h: 27: }
-[e $U 54  ]
-"28
-[e :U 44 ]
-[; ;pic_adc.h: 28: else if(val==1)
-[e $ ! == -> _val `i -> 1 `i 55  ]
-[; ;pic_adc.h: 29: {
-"29
-{
-[; ;pic_adc.h: 30: adc_temp0=0;
-"30
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 31: for(adc_j=0;adc_j<10;adc_j++)
-"31
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 56  ]
-[e $U 57  ]
-"32
-[e :U 56 ]
-[; ;pic_adc.h: 32: {
-{
-[; ;pic_adc.h: 33: ADCON0=0x08;
-"33
-[e = _ADCON0 -> -> 8 `i `uc ]
-[; ;pic_adc.h: 34: ADON=1;
-"34
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 35: while(adc_del--);
-"35
-[e $U 59  ]
-[e :U 60 ]
-[e :U 59 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 60  ]
-[e :U 61 ]
-[; ;pic_adc.h: 36: ADCON0 =0x0d;
-"36
-[e = _ADCON0 -> -> 13 `i `uc ]
-[; ;pic_adc.h: 37: while(ADCON0!=0X09);
-"37
-[e $U 62  ]
-[e :U 63 ]
-[e :U 62 ]
-[e $ != -> _ADCON0 `i -> 9 `i 63  ]
-[e :U 64 ]
-[; ;pic_adc.h: 38: adc_temp=ADRESH;
-"38
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 39: adc_temp0=adc_temp0+adc_temp;
-"39
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"40
-}
-"31
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 56  ]
-[e :U 57 ]
-"40
-}
-"41
-}
-[; ;pic_adc.h: 40: }
-[; ;pic_adc.h: 41: }
-[e $U 65  ]
-"42
-[e :U 55 ]
-[; ;pic_adc.h: 42: else if(val==2)
-[e $ ! == -> _val `i -> 2 `i 66  ]
-[; ;pic_adc.h: 43: {
-"43
-{
-[; ;pic_adc.h: 44: adc_temp0=0;
-"44
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 45: for(adc_j=0;adc_j<10;adc_j++)
-"45
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 67  ]
-[e $U 68  ]
-"46
-[e :U 67 ]
-[; ;pic_adc.h: 46: {
-{
-[; ;pic_adc.h: 47: ADCON0=0x10;
-"47
-[e = _ADCON0 -> -> 16 `i `uc ]
-[; ;pic_adc.h: 48: ADON=1;
-"48
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 49: while(adc_del--);
-"49
-[e $U 70  ]
-[e :U 71 ]
-[e :U 70 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 71  ]
-[e :U 72 ]
-[; ;pic_adc.h: 50: ADCON0 =0x15;
-"50
-[e = _ADCON0 -> -> 21 `i `uc ]
-[; ;pic_adc.h: 51: while(ADCON0!=0x11);
-"51
-[e $U 73  ]
-[e :U 74 ]
-[e :U 73 ]
-[e $ != -> _ADCON0 `i -> 17 `i 74  ]
-[e :U 75 ]
-[; ;pic_adc.h: 52: adc_temp=ADRESH;
-"52
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 53: adc_temp0=adc_temp0+adc_temp;
-"53
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"54
-}
-"45
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 67  ]
-[e :U 68 ]
-"54
-}
-"55
-}
-[; ;pic_adc.h: 54: }
-[; ;pic_adc.h: 55: }
-[e $U 76  ]
-"56
-[e :U 66 ]
-[; ;pic_adc.h: 56: else if(val==3)
-[e $ ! == -> _val `i -> 3 `i 77  ]
-[; ;pic_adc.h: 57: {
-"57
-{
-[; ;pic_adc.h: 58: adc_temp0=0;
-"58
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 59: for(adc_j=0;adc_j<10;adc_j++)
-"59
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 78  ]
-[e $U 79  ]
-"60
-[e :U 78 ]
-[; ;pic_adc.h: 60: {
-{
-[; ;pic_adc.h: 61: ADCON0=0x18;
-"61
-[e = _ADCON0 -> -> 24 `i `uc ]
-[; ;pic_adc.h: 62: ADON=1;
-"62
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 63: while(adc_del--);
-"63
-[e $U 81  ]
-[e :U 82 ]
-[e :U 81 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 82  ]
-[e :U 83 ]
-[; ;pic_adc.h: 64: ADCON0 =0x1d;
-"64
-[e = _ADCON0 -> -> 29 `i `uc ]
-[; ;pic_adc.h: 65: while(ADCON0!=0x19);
-"65
-[e $U 84  ]
-[e :U 85 ]
-[e :U 84 ]
-[e $ != -> _ADCON0 `i -> 25 `i 85  ]
-[e :U 86 ]
-[; ;pic_adc.h: 66: adc_temp=ADRESH;
-"66
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 67: adc_temp0=adc_temp0+adc_temp;
-"67
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"68
-}
-"59
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 78  ]
-[e :U 79 ]
-"68
-}
-"69
-}
-[; ;pic_adc.h: 68: }
-[; ;pic_adc.h: 69: }
-[e $U 87  ]
-"70
-[e :U 77 ]
-[; ;pic_adc.h: 70: else if(val==4)
-[e $ ! == -> _val `i -> 4 `i 88  ]
-[; ;pic_adc.h: 71: {
-"71
-{
-[; ;pic_adc.h: 72: adc_temp0=0;
-"72
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 73: for(adc_j=0;adc_j<10;adc_j++)
-"73
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 89  ]
-[e $U 90  ]
-"74
-[e :U 89 ]
-[; ;pic_adc.h: 74: {
-{
-[; ;pic_adc.h: 75: ADCON0=0x20;
-"75
-[e = _ADCON0 -> -> 32 `i `uc ]
-[; ;pic_adc.h: 76: ADON=1;
-"76
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 77: while(adc_del--);
-"77
-[e $U 92  ]
-[e :U 93 ]
-[e :U 92 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 93  ]
-[e :U 94 ]
-[; ;pic_adc.h: 78: ADCON0 =0x25;
-"78
-[e = _ADCON0 -> -> 37 `i `uc ]
-[; ;pic_adc.h: 79: while(ADCON0!=0x21);
-"79
-[e $U 95  ]
-[e :U 96 ]
-[e :U 95 ]
-[e $ != -> _ADCON0 `i -> 33 `i 96  ]
-[e :U 97 ]
-[; ;pic_adc.h: 80: adc_temp=ADRESH;
-"80
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 81: adc_temp0=adc_temp0+adc_temp;
-"81
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"82
-}
-"73
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 89  ]
-[e :U 90 ]
-"82
-}
-"83
-}
-[; ;pic_adc.h: 82: }
-[; ;pic_adc.h: 83: }
-[e $U 98  ]
-"84
-[e :U 88 ]
-[; ;pic_adc.h: 84: else if(val==5)
-[e $ ! == -> _val `i -> 5 `i 99  ]
-[; ;pic_adc.h: 85: {
-"85
-{
-[; ;pic_adc.h: 86: adc_temp0=0;
-"86
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 87: for(adc_j=0;adc_j<10;adc_j++)
-"87
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 100  ]
-[e $U 101  ]
-"88
-[e :U 100 ]
-[; ;pic_adc.h: 88: {
-{
-[; ;pic_adc.h: 89: ADCON0=0x28;
-"89
-[e = _ADCON0 -> -> 40 `i `uc ]
-[; ;pic_adc.h: 90: ADON=1;
-"90
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 91: while(adc_del--);
-"91
-[e $U 103  ]
-[e :U 104 ]
-[e :U 103 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 104  ]
-[e :U 105 ]
-[; ;pic_adc.h: 92: ADCON0 =0x2d;
-"92
-[e = _ADCON0 -> -> 45 `i `uc ]
-[; ;pic_adc.h: 93: while(ADCON0!=0x29);
-"93
-[e $U 106  ]
-[e :U 107 ]
-[e :U 106 ]
-[e $ != -> _ADCON0 `i -> 41 `i 107  ]
-[e :U 108 ]
-[; ;pic_adc.h: 94: adc_temp=ADRESH;
-"94
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 95: adc_temp0=adc_temp0+adc_temp;
-"95
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"96
-}
-"87
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 100  ]
-[e :U 101 ]
-"96
-}
-"97
-}
-[; ;pic_adc.h: 96: }
-[; ;pic_adc.h: 97: }
-[e $U 109  ]
-"98
-[e :U 99 ]
-[; ;pic_adc.h: 98: else if(val==6)
-[e $ ! == -> _val `i -> 6 `i 110  ]
-[; ;pic_adc.h: 99: {
-"99
-{
-[; ;pic_adc.h: 100: adc_temp0=0;
-"100
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 101: for(adc_j=0;adc_j<10;adc_j++)
-"101
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 111  ]
-[e $U 112  ]
-"102
-[e :U 111 ]
-[; ;pic_adc.h: 102: {
-{
-[; ;pic_adc.h: 103: ADCON0=0x30;
-"103
-[e = _ADCON0 -> -> 48 `i `uc ]
-[; ;pic_adc.h: 104: ADON=1;
-"104
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 105: while(adc_del--);
-"105
-[e $U 114  ]
-[e :U 115 ]
-[e :U 114 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 115  ]
-[e :U 116 ]
-[; ;pic_adc.h: 106: ADCON0 =0x35;
-"106
-[e = _ADCON0 -> -> 53 `i `uc ]
-[; ;pic_adc.h: 107: while(ADCON0!=0x31);
-"107
-[e $U 117  ]
-[e :U 118 ]
-[e :U 117 ]
-[e $ != -> _ADCON0 `i -> 49 `i 118  ]
-[e :U 119 ]
-[; ;pic_adc.h: 108: adc_temp=ADRESH;
-"108
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 109: adc_temp0=adc_temp0+adc_temp;
-"109
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"110
-}
-"101
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 111  ]
-[e :U 112 ]
-"110
-}
-"111
-}
-[; ;pic_adc.h: 110: }
-[; ;pic_adc.h: 111: }
-[e $U 120  ]
-"112
-[e :U 110 ]
-[; ;pic_adc.h: 112: else if(val==7)
-[e $ ! == -> _val `i -> 7 `i 121  ]
-[; ;pic_adc.h: 113: {
-"113
-{
-[; ;pic_adc.h: 114: adc_temp0=0;
-"114
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 115: for(adc_j=0;adc_j<10;adc_j++)
-"115
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 122  ]
-[e $U 123  ]
-"116
-[e :U 122 ]
-[; ;pic_adc.h: 116: {
-{
-[; ;pic_adc.h: 117: ADCON0=0x38;
-"117
-[e = _ADCON0 -> -> 56 `i `uc ]
-[; ;pic_adc.h: 118: ADON=1;
-"118
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 119: while(adc_del--);
-"119
-[e $U 125  ]
-[e :U 126 ]
-[e :U 125 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 126  ]
-[e :U 127 ]
-[; ;pic_adc.h: 120: ADCON0 =0x3d;
-"120
-[e = _ADCON0 -> -> 61 `i `uc ]
-[; ;pic_adc.h: 121: while(ADCON0!=0x39);
-"121
-[e $U 128  ]
-[e :U 129 ]
-[e :U 128 ]
-[e $ != -> _ADCON0 `i -> 57 `i 129  ]
-[e :U 130 ]
-[; ;pic_adc.h: 122: adc_temp=ADRESH;
-"122
-[e = _adc_temp -> _ADRESH `ui ]
-[; ;pic_adc.h: 123: adc_temp0=adc_temp0+adc_temp;
-"123
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"124
-}
-"115
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 122  ]
-[e :U 123 ]
-"124
-}
-"125
-}
-[e :U 121 ]
-"126
-[e :U 120 ]
-[e :U 109 ]
-[e :U 98 ]
-[e :U 87 ]
-[e :U 76 ]
-[e :U 65 ]
-[e :U 54 ]
-[; ;pic_adc.h: 124: }
-[; ;pic_adc.h: 125: }
-[; ;pic_adc.h: 126: adc_val=adc_temp0/10;
-[e = _adc_val -> / _adc_temp0 -> -> 10 `i `ui `uc ]
-[; ;pic_adc.h: 127: return adc_val;
-"127
-[e ) -> _adc_val `i ]
-[e $UE 43  ]
-[; ;pic_adc.h: 128: }
-"128
-[e :UE 43 ]
-}
-"132
-[v _Adc10_Cha `(i 1 ef1`uc ]
-{
-[; ;pic_adc.h: 131: Adc10_Cha(unsigned char val)
-[; ;pic_adc.h: 132: {
-[e :U _Adc10_Cha ]
-[v _val `uc 1 r1 ]
-[f ]
-[; ;pic_adc.h: 133: ADFM=1;
-"133
-[e = _ADFM -> -> 1 `i `b ]
-[; ;pic_adc.h: 134: adc_del=25;
-"134
-[e = _adc_del -> -> 25 `i `uc ]
-[; ;pic_adc.h: 136: if(val==0)
-"136
-[e $ ! == -> _val `i -> 0 `i 132  ]
-[; ;pic_adc.h: 137: {
-"137
-{
-[; ;pic_adc.h: 138: adc_temp0=0;
-"138
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 139: for(adc_j=0;adc_j<10;adc_j++)
-"139
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 133  ]
-[e $U 134  ]
-"140
-[e :U 133 ]
-[; ;pic_adc.h: 140: {
-{
-[; ;pic_adc.h: 141: ADCON0=0x00;
-"141
-[e = _ADCON0 -> -> 0 `i `uc ]
-[; ;pic_adc.h: 142: ADON=1;
-"142
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 143: while(adc_del--);
-"143
-[e $U 136  ]
-[e :U 137 ]
-[e :U 136 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 137  ]
-[e :U 138 ]
-[; ;pic_adc.h: 144: ADCON0 =0x05;
-"144
-[e = _ADCON0 -> -> 5 `i `uc ]
-[; ;pic_adc.h: 145: while(ADCON0!=0X01);
-"145
-[e $U 139  ]
-[e :U 140 ]
-[e :U 139 ]
-[e $ != -> _ADCON0 `i -> 1 `i 140  ]
-[e :U 141 ]
-[; ;pic_adc.h: 146: adc_hbit=ADRESH;
-"146
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 147: adc_lbit=ADRESL;
-"147
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 148: adc_temp = adc_lbit + (256*adc_hbit);
-"148
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 149: adc_temp0=adc_temp0+adc_temp;
-"149
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"150
-}
-"139
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 133  ]
-[e :U 134 ]
-"150
-}
-"151
-}
-[; ;pic_adc.h: 150: }
-[; ;pic_adc.h: 151: }
-[e $U 142  ]
-"152
-[e :U 132 ]
-[; ;pic_adc.h: 152: else if(val==1)
-[e $ ! == -> _val `i -> 1 `i 143  ]
-[; ;pic_adc.h: 153: {
-"153
-{
-[; ;pic_adc.h: 154: adc_temp0=0;
-"154
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 155: for(adc_j=0;adc_j<10;adc_j++)
-"155
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 144  ]
-[e $U 145  ]
-"156
-[e :U 144 ]
-[; ;pic_adc.h: 156: {
-{
-[; ;pic_adc.h: 157: ADCON0=0x08;
-"157
-[e = _ADCON0 -> -> 8 `i `uc ]
-[; ;pic_adc.h: 158: ADON=1;
-"158
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 159: while(adc_del--);
-"159
-[e $U 147  ]
-[e :U 148 ]
-[e :U 147 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 148  ]
-[e :U 149 ]
-[; ;pic_adc.h: 160: ADCON0 =0x0d;
-"160
-[e = _ADCON0 -> -> 13 `i `uc ]
-[; ;pic_adc.h: 161: while(ADCON0!=0X09);
-"161
-[e $U 150  ]
-[e :U 151 ]
-[e :U 150 ]
-[e $ != -> _ADCON0 `i -> 9 `i 151  ]
-[e :U 152 ]
-[; ;pic_adc.h: 162: adc_hbit=ADRESH;
-"162
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 163: adc_lbit=ADRESL;
-"163
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 164: adc_temp = adc_lbit + (256*adc_hbit);
-"164
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 165: adc_temp0=adc_temp0+adc_temp;
-"165
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"166
-}
-"155
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 144  ]
-[e :U 145 ]
-"166
-}
-"167
-}
-[; ;pic_adc.h: 166: }
-[; ;pic_adc.h: 167: }
-[e $U 153  ]
-"168
-[e :U 143 ]
-[; ;pic_adc.h: 168: else if(val==2)
-[e $ ! == -> _val `i -> 2 `i 154  ]
-[; ;pic_adc.h: 169: {
-"169
-{
-[; ;pic_adc.h: 170: adc_temp0=0;
-"170
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 171: for(adc_j=0;adc_j<10;adc_j++)
-"171
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 155  ]
-[e $U 156  ]
-"172
-[e :U 155 ]
-[; ;pic_adc.h: 172: {
-{
-[; ;pic_adc.h: 173: ADCON0=0x10;
-"173
-[e = _ADCON0 -> -> 16 `i `uc ]
-[; ;pic_adc.h: 174: ADON=1;
-"174
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 175: while(adc_del--);
-"175
-[e $U 158  ]
-[e :U 159 ]
-[e :U 158 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 159  ]
-[e :U 160 ]
-[; ;pic_adc.h: 176: ADCON0 =0x15;
-"176
-[e = _ADCON0 -> -> 21 `i `uc ]
-[; ;pic_adc.h: 177: while(ADCON0!=0x11);
-"177
-[e $U 161  ]
-[e :U 162 ]
-[e :U 161 ]
-[e $ != -> _ADCON0 `i -> 17 `i 162  ]
-[e :U 163 ]
-[; ;pic_adc.h: 178: adc_hbit=ADRESH;
-"178
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 179: adc_lbit=ADRESL;
-"179
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 180: adc_temp = adc_lbit + (256*adc_hbit);
-"180
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 181: adc_temp0=adc_temp0+adc_temp;
-"181
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"182
-}
-"171
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 155  ]
-[e :U 156 ]
-"182
-}
-"183
-}
-[; ;pic_adc.h: 182: }
-[; ;pic_adc.h: 183: }
-[e $U 164  ]
-"184
-[e :U 154 ]
-[; ;pic_adc.h: 184: else if(val==3)
-[e $ ! == -> _val `i -> 3 `i 165  ]
-[; ;pic_adc.h: 185: {
-"185
-{
-[; ;pic_adc.h: 186: adc_temp0=0;
-"186
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 187: for(adc_j=0;adc_j<10;adc_j++)
-"187
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 166  ]
-[e $U 167  ]
-"188
-[e :U 166 ]
-[; ;pic_adc.h: 188: {
-{
-[; ;pic_adc.h: 189: ADCON0=0x18;
-"189
-[e = _ADCON0 -> -> 24 `i `uc ]
-[; ;pic_adc.h: 190: ADON=1;
-"190
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 191: while(adc_del--);
-"191
-[e $U 169  ]
-[e :U 170 ]
-[e :U 169 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 170  ]
-[e :U 171 ]
-[; ;pic_adc.h: 192: ADCON0 =0x1d;
-"192
-[e = _ADCON0 -> -> 29 `i `uc ]
-[; ;pic_adc.h: 193: while(ADCON0!=0x19);
-"193
-[e $U 172  ]
-[e :U 173 ]
-[e :U 172 ]
-[e $ != -> _ADCON0 `i -> 25 `i 173  ]
-[e :U 174 ]
-[; ;pic_adc.h: 194: adc_hbit=ADRESH;
-"194
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 195: adc_lbit=ADRESL;
-"195
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 196: adc_temp = adc_lbit + (256*adc_hbit);
-"196
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 197: adc_temp0=adc_temp0+adc_temp;
-"197
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"198
-}
-"187
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 166  ]
-[e :U 167 ]
-"198
-}
-"199
-}
-[; ;pic_adc.h: 198: }
-[; ;pic_adc.h: 199: }
-[e $U 175  ]
-"200
-[e :U 165 ]
-[; ;pic_adc.h: 200: else if(val==4)
-[e $ ! == -> _val `i -> 4 `i 176  ]
-[; ;pic_adc.h: 201: {
-"201
-{
-[; ;pic_adc.h: 202: adc_temp0=0;
-"202
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 203: for(adc_j=0;adc_j<10;adc_j++)
-"203
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 177  ]
-[e $U 178  ]
-"204
-[e :U 177 ]
-[; ;pic_adc.h: 204: {
-{
-[; ;pic_adc.h: 205: ADCON0=0x20;
-"205
-[e = _ADCON0 -> -> 32 `i `uc ]
-[; ;pic_adc.h: 206: ADON=1;
-"206
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 207: while(adc_del--);
-"207
-[e $U 180  ]
-[e :U 181 ]
-[e :U 180 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 181  ]
-[e :U 182 ]
-[; ;pic_adc.h: 208: ADCON0 =0x25;
-"208
-[e = _ADCON0 -> -> 37 `i `uc ]
-[; ;pic_adc.h: 209: while(ADCON0!=0x21);
-"209
-[e $U 183  ]
-[e :U 184 ]
-[e :U 183 ]
-[e $ != -> _ADCON0 `i -> 33 `i 184  ]
-[e :U 185 ]
-[; ;pic_adc.h: 210: adc_hbit=ADRESH;
-"210
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 211: adc_lbit=ADRESL;
-"211
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 212: adc_temp = adc_lbit + (256*adc_hbit);
-"212
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 213: adc_temp0=adc_temp0+adc_temp;
-"213
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"214
-}
-"203
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 177  ]
-[e :U 178 ]
-"214
-}
-"215
-}
-[; ;pic_adc.h: 214: }
-[; ;pic_adc.h: 215: }
-[e $U 186  ]
-"216
-[e :U 176 ]
-[; ;pic_adc.h: 216: else if(val==5)
-[e $ ! == -> _val `i -> 5 `i 187  ]
-[; ;pic_adc.h: 217: {
-"217
-{
-[; ;pic_adc.h: 218: adc_temp0=0;
-"218
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 219: for(adc_j=0;adc_j<10;adc_j++)
-"219
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 188  ]
-[e $U 189  ]
-"220
-[e :U 188 ]
-[; ;pic_adc.h: 220: {
-{
-[; ;pic_adc.h: 221: ADCON0=0x28;
-"221
-[e = _ADCON0 -> -> 40 `i `uc ]
-[; ;pic_adc.h: 222: ADON=1;
-"222
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 223: while(adc_del--);
-"223
-[e $U 191  ]
-[e :U 192 ]
-[e :U 191 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 192  ]
-[e :U 193 ]
-[; ;pic_adc.h: 224: ADCON0 =0x2d;
-"224
-[e = _ADCON0 -> -> 45 `i `uc ]
-[; ;pic_adc.h: 225: while(ADCON0!=0x29);
-"225
-[e $U 194  ]
-[e :U 195 ]
-[e :U 194 ]
-[e $ != -> _ADCON0 `i -> 41 `i 195  ]
-[e :U 196 ]
-[; ;pic_adc.h: 226: adc_hbit=ADRESH;
-"226
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 227: adc_lbit=ADRESL;
-"227
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 228: adc_temp = adc_lbit + (256*adc_hbit);
-"228
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 229: adc_temp0=adc_temp0+adc_temp;
-"229
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"230
-}
-"219
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 188  ]
-[e :U 189 ]
-"230
-}
-"231
-}
-[; ;pic_adc.h: 230: }
-[; ;pic_adc.h: 231: }
-[e $U 197  ]
-"232
-[e :U 187 ]
-[; ;pic_adc.h: 232: else if(val==6)
-[e $ ! == -> _val `i -> 6 `i 198  ]
-[; ;pic_adc.h: 233: {
-"233
-{
-[; ;pic_adc.h: 234: adc_temp0=0;
-"234
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 235: for(adc_j=0;adc_j<10;adc_j++)
-"235
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 199  ]
-[e $U 200  ]
-"236
-[e :U 199 ]
-[; ;pic_adc.h: 236: {
-{
-[; ;pic_adc.h: 237: ADCON0=0x30;
-"237
-[e = _ADCON0 -> -> 48 `i `uc ]
-[; ;pic_adc.h: 238: ADON=1;
-"238
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 239: while(adc_del--);
-"239
-[e $U 202  ]
-[e :U 203 ]
-[e :U 202 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 203  ]
-[e :U 204 ]
-[; ;pic_adc.h: 240: ADCON0 =0x35;
-"240
-[e = _ADCON0 -> -> 53 `i `uc ]
-[; ;pic_adc.h: 241: while(ADCON0!=0x31);
-"241
-[e $U 205  ]
-[e :U 206 ]
-[e :U 205 ]
-[e $ != -> _ADCON0 `i -> 49 `i 206  ]
-[e :U 207 ]
-[; ;pic_adc.h: 242: adc_hbit=ADRESH;
-"242
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 243: adc_lbit=ADRESL;
-"243
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 244: adc_temp = adc_lbit + (256*adc_hbit);
-"244
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 245: adc_temp0=adc_temp0+adc_temp;
-"245
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"246
-}
-"235
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 199  ]
-[e :U 200 ]
-"246
-}
-"247
-}
-[; ;pic_adc.h: 246: }
-[; ;pic_adc.h: 247: }
-[e $U 208  ]
-"248
-[e :U 198 ]
-[; ;pic_adc.h: 248: else if(val==7)
-[e $ ! == -> _val `i -> 7 `i 209  ]
-[; ;pic_adc.h: 249: {
-"249
-{
-[; ;pic_adc.h: 250: adc_temp0=0;
-"250
-[e = _adc_temp0 -> -> 0 `i `ui ]
-[; ;pic_adc.h: 251: for(adc_j=0;adc_j<10;adc_j++)
-"251
-{
-[e = _adc_j -> -> 0 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 210  ]
-[e $U 211  ]
-"252
-[e :U 210 ]
-[; ;pic_adc.h: 252: {
-{
-[; ;pic_adc.h: 253: ADCON0=0x38;
-"253
-[e = _ADCON0 -> -> 56 `i `uc ]
-[; ;pic_adc.h: 254: ADON=1;
-"254
-[e = _ADON -> -> 1 `i `b ]
-[; ;pic_adc.h: 255: while(adc_del--);
-"255
-[e $U 213  ]
-[e :U 214 ]
-[e :U 213 ]
-[e $ != -> -- _adc_del -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 214  ]
-[e :U 215 ]
-[; ;pic_adc.h: 256: ADCON0 =0x3d;
-"256
-[e = _ADCON0 -> -> 61 `i `uc ]
-[; ;pic_adc.h: 257: while(ADCON0!=0x39);
-"257
-[e $U 216  ]
-[e :U 217 ]
-[e :U 216 ]
-[e $ != -> _ADCON0 `i -> 57 `i 217  ]
-[e :U 218 ]
-[; ;pic_adc.h: 258: adc_hbit=ADRESH;
-"258
-[e = _adc_hbit -> _ADRESH `ui ]
-[; ;pic_adc.h: 259: adc_lbit=ADRESL;
-"259
-[e = _adc_lbit -> _ADRESL `ui ]
-[; ;pic_adc.h: 260: adc_temp = adc_lbit + (256*adc_hbit);
-"260
-[e = _adc_temp + _adc_lbit * -> -> 256 `i `ui _adc_hbit ]
-[; ;pic_adc.h: 261: adc_temp0=adc_temp0+adc_temp;
-"261
-[e = _adc_temp0 + _adc_temp0 _adc_temp ]
-"262
-}
-"251
-[e ++ _adc_j -> -> 1 `i `uc ]
-[e $ < -> _adc_j `i -> 10 `i 210  ]
-[e :U 211 ]
-"262
-}
-"263
-}
-[e :U 209 ]
-"265
-[e :U 208 ]
-[e :U 197 ]
-[e :U 186 ]
-[e :U 175 ]
-[e :U 164 ]
-[e :U 153 ]
-[e :U 142 ]
-[; ;pic_adc.h: 262: }
-[; ;pic_adc.h: 263: }
-[; ;pic_adc.h: 265: adc_val1=adc_temp0/10;
-[e = _adc_val1 / _adc_temp0 -> -> 10 `i `ui ]
-[; ;pic_adc.h: 266: return adc_val1;
-"266
-[e ) -> _adc_val1 `i ]
-[e $UE 131  ]
-[; ;pic_adc.h: 267: }
-"267
-[e :UE 131 ]
-}
-[i _a
-"13 D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
--> -> 0 `i `ui
-]
-[i _n1
--> -> 0 `i `ui
-]
-[i _n2
--> -> 0 `i `ui
-]
-[i _n3
--> -> 0 `i `ui
-]
-[; ;CEP0896.C: 13: unsigned int count,sec,b,temp,pres,hb,st,shb,sp,a=0,n1=0,n2=0,n3=0,x,y,z;
-[i _cu
-"14
--> -> 192 `i `uc
-]
-[i _s
--> -> 0 `i `uc
-]
-[i _j
--> -> 0 `i `uc
-]
-[i _u
--> -> 0 `i `uc
-]
-[i _qq
--> -> 1 `i `uc
-]
-[; ;CEP0896.C: 14: unsigned char cu=0xc0,kc,val1[12],s=0,j=0,u=0,qq=1;
-[i _c
-:U ..
-"15
--> -> 49 `ui `uc
--> -> 50 `ui `uc
--> -> 51 `ui `uc
--> -> 52 `ui `uc
-..
-]
-[; ;CEP0896.C: 15: unsigned char c[5]={'1','2','3','4'};
-[i _add
-"17
--> -> 192 `i `ui
-]
-[i _ss
--> -> 0 `i `ui
-]
-[; ;CEP0896.C: 17: unsigned int aa,add=0xc0,ss=0,f[5],i;
-[; ;CEP0896.C: 19: void Gsm_Send();
-[; ;CEP0896.C: 20: void Gsm();
-[; ;CEP0896.C: 21: void number_entering();
-[; ;CEP0896.C: 22: void keypad();
-[; ;CEP0896.C: 23: void keypadd();
-"25
 [v _main `(v 1 ef ]
 {
-[; ;CEP0896.C: 24: void main()
-[; ;CEP0896.C: 25: {
+[; ;attepmt1.c: 18: void main()
+[; ;attepmt1.c: 19: {
 [e :U _main ]
 [f ]
-[; ;CEP0896.C: 26: TRISC=0xC0;
-"26
-[e = _TRISC -> -> 192 `i `uc ]
-[; ;CEP0896.C: 27: TRISD=0x00;
-"27
+[; ;attepmt1.c: 20: RB0=RB3=RB1=RB2=RD0=RD3=RD1=RD2=0;
+"20
+[e = _RB0 = _RB3 = _RB1 = _RB2 = _RD0 = _RD3 = _RD1 = _RD2 -> -> 0 `i `b ]
+[; ;attepmt1.c: 21: TRISB=0xff;
+"21
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;attepmt1.c: 22: TRISD =0;
+"22
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;CEP0896.C: 28: TRISB=0x00;
+[; ;attepmt1.c: 24: while(1)
+"24
+[e :U 7 ]
+[; ;attepmt1.c: 25: {
+"25
+{
+[; ;attepmt1.c: 26: RD0 =0;
+"26
+[e = _RD0 -> -> 0 `i `b ]
+[; ;attepmt1.c: 27: if(RB1 ==1 && RB2 ==0)
+"27
+[e $ ! && == -> _RB1 `i -> 1 `i == -> _RB2 `i -> 0 `i 9  ]
+[; ;attepmt1.c: 28: {
 "28
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;CEP0896.C: 29: TRISA=0x0f;
+{
+[; ;attepmt1.c: 29: if(RB3 == 0)
 "29
-[e = _TRISA -> -> 15 `i `uc ]
-[; ;CEP0896.C: 32: Lcd8_Init();
+[e $ ! == -> _RB3 `i -> 0 `i 10  ]
+[; ;attepmt1.c: 30: {
+"30
+{
+[; ;attepmt1.c: 31: RD0 =1;
+"31
+[e = _RD0 -> -> 1 `i `b ]
+[; ;attepmt1.c: 32: delay(10);
 "32
-[e ( _Lcd8_Init ..  ]
-[; ;CEP0896.C: 33: Delay(6500);
+[e ( _delay -> 10 `i ]
 "33
-[e ( _Delay (1 -> -> 6500 `i `ui ]
-[; ;CEP0896.C: 34: Lcd8_Display(0x80,"--HAND MOVEMENT-",16);
+}
+[; ;attepmt1.c: 33: }
+[e $U 11  ]
 "34
-[e ( _Lcd8_Display (3 , , -> -> 128 `i `uc :s 1C -> -> 16 `i `ui ]
-[; ;CEP0896.C: 35: Lcd8_Display(0xC0,"BSD ROBOT CONTRL",16);
+[e :U 10 ]
+[; ;attepmt1.c: 34: else if(RB3 ==1)
+[e $ ! == -> _RB3 `i -> 1 `i 12  ]
+[; ;attepmt1.c: 35: {
 "35
-[e ( _Lcd8_Display (3 , , -> -> 192 `i `uc :s 2C -> -> 16 `i `ui ]
-[; ;CEP0896.C: 36: Delay(65000);Delay(65000);
+{
+[; ;attepmt1.c: 36: RD0 =0;
 "36
-[e ( _Delay (1 -> -> 65000 `l `ui ]
-[e ( _Delay (1 -> -> 65000 `l `ui ]
-[; ;CEP0896.C: 38: Serial_Init(9600);
+[e = _RD0 -> -> 0 `i `b ]
+[; ;attepmt1.c: 37: for (i=0;i<100;i++)
+"37
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 100 `i 13  ]
+[e $U 14  ]
 "38
-[e ( _Serial_Init (1 -> -> -> 9600 `i `l `ul ]
-[; ;CEP0896.C: 39: Receive(0);RB0=1;RB1=1;RB2=1;RB3=1;
+[e :U 13 ]
+[; ;attepmt1.c: 38: {
+{
+[; ;attepmt1.c: 39: RD2=0;RD1 =1;
 "39
-[e ( _Receive (1 -> -> 0 `i `uc ]
-[e = _RB0 -> -> 1 `i `b ]
-[e = _RB1 -> -> 1 `i `b ]
-[e = _RB2 -> -> 1 `i `b ]
-[e = _RB3 -> -> 1 `i `b ]
-[; ;CEP0896.C: 40: Lcd8_Command(1);
+[e = _RD2 -> -> 0 `i `b ]
+[e = _RD1 -> -> 1 `i `b ]
+[; ;attepmt1.c: 40: delay(100);
 "40
-[e ( _Lcd8_Command (1 -> -> 1 `i `uc ]
-[; ;CEP0896.C: 41: Lcd8_Display(0x80,"X:    Y:   Z:   ",16);
+[e ( _delay -> 100 `i ]
+[; ;attepmt1.c: 41: RD1=0;RD2=1;
 "41
-[e ( _Lcd8_Display (3 , , -> -> 128 `i `uc :s 3C -> -> 16 `i `ui ]
-[; ;CEP0896.C: 42: Lcd8_Display(0xC0,"                ",16);
+[e = _RD1 -> -> 0 `i `b ]
+[e = _RD2 -> -> 1 `i `b ]
+[; ;attepmt1.c: 42: delay(100);
 "42
-[e ( _Lcd8_Display (3 , , -> -> 192 `i `uc :s 4C -> -> 16 `i `ui ]
-[; ;CEP0896.C: 43: while(1)
+[e ( _delay -> 100 `i ]
 "43
-[e :U 221 ]
-[; ;CEP0896.C: 44: {
+}
+"37
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 100 `i 13  ]
+[e :U 14 ]
+"43
+}
+[; ;attepmt1.c: 43: }
+[; ;attepmt1.c: 44: RD1=0;RD2=0;
 "44
-{
-[; ;CEP0896.C: 46: x=Adc8_Cha(0);
+[e = _RD1 -> -> 0 `i `b ]
+[e = _RD2 -> -> 0 `i `b ]
+[; ;attepmt1.c: 45: RD3 = 1;
+"45
+[e = _RD3 -> -> 1 `i `b ]
+[; ;attepmt1.c: 46: delay(150000);
 "46
-[e = _x -> ( _Adc8_Cha (1 -> -> 0 `i `uc `ui ]
-[; ;CEP0896.C: 47: y=Adc8_Cha(1);
+[e ( _delay -> 150000 `l ]
+[; ;attepmt1.c: 47: RD3 =0;
 "47
-[e = _y -> ( _Adc8_Cha (1 -> -> 1 `i `uc `ui ]
-[; ;CEP0896.C: 48: z=Adc8_Cha(2);
+[e = _RD3 -> -> 0 `i `b ]
+[; ;attepmt1.c: 48: RD1=1;
 "48
-[e = _z -> ( _Adc8_Cha (1 -> -> 2 `i `uc `ui ]
-[; ;CEP0896.C: 50: Lcd8_Decimal3(0x82,x);
+[e = _RD1 -> -> 1 `i `b ]
+[; ;attepmt1.c: 49: delay(150000000);
+"49
+[e ( _delay -> 150000000 `l ]
+[; ;attepmt1.c: 50: RD1=0;
 "50
-[e ( _Lcd8_Decimal3 (2 , -> -> 130 `i `uc -> _x `uc ]
-[; ;CEP0896.C: 51: Lcd8_Decimal3(0x88,y);
+[e = _RD1 -> -> 0 `i `b ]
 "51
-[e ( _Lcd8_Decimal3 (2 , -> -> 136 `i `uc -> _y `uc ]
-[; ;CEP0896.C: 52: Lcd8_Decimal3(0x8D,z);
+}
+[e :U 12 ]
 "52
-[e ( _Lcd8_Decimal3 (2 , -> -> 141 `i `uc -> _z `uc ]
-[; ;CEP0896.C: 54: if((x>=80&&x<=85)&& (z>76&& z<=82))
+[e :U 11 ]
+}
+[e :U 9 ]
+[; ;attepmt1.c: 51: }
+[; ;attepmt1.c: 52: }
+[; ;attepmt1.c: 53: if(RB1 ==0 && RB2 ==1)
+"53
+[e $ ! && == -> _RB1 `i -> 0 `i == -> _RB2 `i -> 1 `i 16  ]
+[; ;attepmt1.c: 54: {
 "54
-[e $ ! && && >= _x -> -> 80 `i `ui <= _x -> -> 85 `i `ui && > _z -> -> 76 `i `ui <= _z -> -> 82 `i `ui 223  ]
-[; ;CEP0896.C: 55: { Lcd8_Display(0xC6,"STOP      ",10);
+{
+[; ;attepmt1.c: 55: if(RB3 == 0)
 "55
-{
-[e ( _Lcd8_Display (3 , , -> -> 198 `i `uc :s 5C -> -> 10 `i `ui ]
-[; ;CEP0896.C: 56: RB0=1;RB1=1;RB2=1;RB3=1;
+[e $ ! == -> _RB3 `i -> 0 `i 17  ]
+[; ;attepmt1.c: 56: {
 "56
-[e = _RB0 -> -> 1 `i `b ]
-[e = _RB1 -> -> 1 `i `b ]
-[e = _RB2 -> -> 1 `i `b ]
-[e = _RB3 -> -> 1 `i `b ]
+{
+[; ;attepmt1.c: 57: RD0 =1;
 "57
-}
-[e :U 223 ]
-[; ;CEP0896.C: 57: }
-[; ;CEP0896.C: 58: if((x>=96&&x<=100)&& (z>75&& z<=82))
+[e = _RD0 -> -> 1 `i `b ]
+[; ;attepmt1.c: 58: delay(10);
 "58
-[e $ ! && && >= _x -> -> 96 `i `ui <= _x -> -> 100 `i `ui && > _z -> -> 75 `i `ui <= _z -> -> 82 `i `ui 224  ]
-[; ;CEP0896.C: 59: { Lcd8_Display(0xC6,"LEFT      ",10);
+[e ( _delay -> 10 `i ]
 "59
-{
-[e ( _Lcd8_Display (3 , , -> -> 198 `i `uc :s 6C -> -> 10 `i `ui ]
-[; ;CEP0896.C: 60: RB0=1;RB1=1;RB2=1;RB3=0;
+}
+[; ;attepmt1.c: 59: }
+[e $U 18  ]
 "60
-[e = _RB0 -> -> 1 `i `b ]
-[e = _RB1 -> -> 1 `i `b ]
-[e = _RB2 -> -> 1 `i `b ]
-[e = _RB3 -> -> 0 `i `b ]
+[e :U 17 ]
+[; ;attepmt1.c: 60: else if(RB3 ==1)
+[e $ ! == -> _RB3 `i -> 1 `i 19  ]
+[; ;attepmt1.c: 61: {
 "61
-}
-[e :U 224 ]
-[; ;CEP0896.C: 61: }
-[; ;CEP0896.C: 63: if((x>=64&&x<=70)&& (z>79&& z<=84))
+{
+[; ;attepmt1.c: 62: RD0 =0;
+"62
+[e = _RD0 -> -> 0 `i `b ]
+[; ;attepmt1.c: 63: for (i=0;i<80;i++)
 "63
-[e $ ! && && >= _x -> -> 64 `i `ui <= _x -> -> 70 `i `ui && > _z -> -> 79 `i `ui <= _z -> -> 84 `i `ui 225  ]
-[; ;CEP0896.C: 64: { Lcd8_Display(0xC6,"RIGHT     ",10);
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 80 `i 20  ]
+[e $U 21  ]
 "64
+[e :U 20 ]
+[; ;attepmt1.c: 64: {
 {
-[e ( _Lcd8_Display (3 , , -> -> 198 `i `uc :s 7C -> -> 10 `i `ui ]
-[; ;CEP0896.C: 65: RB0=1;RB1=1;RB2=0;RB3=1;
+[; ;attepmt1.c: 65: RD2=0;RD1 =1;
 "65
-[e = _RB0 -> -> 1 `i `b ]
-[e = _RB1 -> -> 1 `i `b ]
-[e = _RB2 -> -> 0 `i `b ]
-[e = _RB3 -> -> 1 `i `b ]
+[e = _RD2 -> -> 0 `i `b ]
+[e = _RD1 -> -> 1 `i `b ]
+[; ;attepmt1.c: 66: delay(100);
 "66
-}
-[e :U 225 ]
-[; ;CEP0896.C: 66: }
-[; ;CEP0896.C: 68: if((z>=65&&z<=75)&& (x>79&& x<=85))
+[e ( _delay -> 100 `i ]
+[; ;attepmt1.c: 67: RD1=0;RD2=1;
+"67
+[e = _RD1 -> -> 0 `i `b ]
+[e = _RD2 -> -> 1 `i `b ]
+[; ;attepmt1.c: 68: delay(100);
 "68
-[e $ ! && && >= _z -> -> 65 `i `ui <= _z -> -> 75 `i `ui && > _x -> -> 79 `i `ui <= _x -> -> 85 `i `ui 226  ]
-[; ;CEP0896.C: 69: { Lcd8_Display(0xC6,"START     ",10);
+[e ( _delay -> 100 `i ]
 "69
-{
-[e ( _Lcd8_Display (3 , , -> -> 198 `i `uc :s 8C -> -> 10 `i `ui ]
-[; ;CEP0896.C: 70: RB0=0;RB1=1;RB2=1;RB3=1;
+}
+"63
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 80 `i 20  ]
+[e :U 21 ]
+"69
+}
+[; ;attepmt1.c: 69: }
+[; ;attepmt1.c: 70: RD1=0;RD2=0;
 "70
-[e = _RB0 -> -> 0 `i `b ]
-[e = _RB1 -> -> 1 `i `b ]
-[e = _RB2 -> -> 1 `i `b ]
-[e = _RB3 -> -> 1 `i `b ]
+[e = _RD1 -> -> 0 `i `b ]
+[e = _RD2 -> -> 0 `i `b ]
+[; ;attepmt1.c: 71: RD3 = 1;
 "71
-}
-[e :U 226 ]
-[; ;CEP0896.C: 71: }
-[; ;CEP0896.C: 73: if((z>=95&&z<=101)&& (x>80&& x<=89))
+[e = _RD3 -> -> 1 `i `b ]
+[; ;attepmt1.c: 72: delay(10000000);
+"72
+[e ( _delay -> 10000000 `l ]
+[; ;attepmt1.c: 73: RD3 =0;
 "73
-[e $ ! && && >= _z -> -> 95 `i `ui <= _z -> -> 101 `i `ui && > _x -> -> 80 `i `ui <= _x -> -> 89 `i `ui 227  ]
-[; ;CEP0896.C: 74: {Lcd8_Display(0xC6,"REVERSE   ",10);
-"74
-{
-[e ( _Lcd8_Display (3 , , -> -> 198 `i `uc :s 9C -> -> 10 `i `ui ]
-[; ;CEP0896.C: 75: RB0=1;RB1=0;RB2=1;RB3=1;
+[e = _RD3 -> -> 0 `i `b ]
+[; ;attepmt1.c: 75: RD1=1;
 "75
-[e = _RB0 -> -> 1 `i `b ]
-[e = _RB1 -> -> 0 `i `b ]
-[e = _RB2 -> -> 1 `i `b ]
-[e = _RB3 -> -> 1 `i `b ]
+[e = _RD1 -> -> 1 `i `b ]
+[; ;attepmt1.c: 76: delay(1500);
 "76
-}
-[e :U 227 ]
+[e ( _delay -> 1500 `i ]
+[; ;attepmt1.c: 77: RD1=0;
+"77
+[e = _RD1 -> -> 0 `i `b ]
 "78
 }
-[e :U 220 ]
-"43
-[e $U 221  ]
-[e :U 222 ]
-[; ;CEP0896.C: 76: }
-[; ;CEP0896.C: 78: }
-[; ;CEP0896.C: 79: }
+[e :U 19 ]
 "79
-[e :UE 219 ]
+[e :U 18 ]
 }
-[a 2C 66 83 68 32 82 79 66 79 84 32 67 79 78 84 82 76 0 ]
-[a 1C 45 45 72 65 78 68 32 77 79 86 69 77 69 78 84 45 0 ]
-[a 9C 82 69 86 69 82 83 69 32 32 32 0 ]
-[a 3C 88 58 32 32 32 32 89 58 32 32 32 90 58 32 32 32 0 ]
-[a 8C 83 84 65 82 84 32 32 32 32 32 0 ]
-[a 7C 82 73 71 72 84 32 32 32 32 32 0 ]
-[a 6C 76 69 70 84 32 32 32 32 32 32 0 ]
-[a 5C 83 84 79 80 32 32 32 32 32 32 0 ]
-[a 4C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[; ;attepmt1.c: 78: }
+[; ;attepmt1.c: 79: }
+[e $U 23  ]
+"80
+[e :U 16 ]
+[; ;attepmt1.c: 80: else
+[; ;attepmt1.c: 81: {
+"81
+{
+[; ;attepmt1.c: 82: RD1=0;
+"82
+[e = _RD1 -> -> 0 `i `b ]
+[; ;attepmt1.c: 83: delay(1500);
+"83
+[e ( _delay -> 1500 `i ]
+[; ;attepmt1.c: 84: RD1=0;
+"84
+[e = _RD1 -> -> 0 `i `b ]
+"85
+}
+[e :U 23 ]
+"86
+}
+[e :U 6 ]
+"24
+[e $U 7  ]
+[e :U 8 ]
+[; ;attepmt1.c: 85: }
+[; ;attepmt1.c: 86: }
+[; ;attepmt1.c: 87: }
+"87
+[e :UE 5 ]
+}

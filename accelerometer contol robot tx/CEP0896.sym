@@ -618,7 +618,7 @@ startup.as
 161 2E 0 CODE
 162 2F 0 CODE
 CEP0896.obj
-G:\accelerometer contol robot tx\CEP0896.C
+D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
 26 30 0 CODE
 27 34 0 CODE
 28 39 0 CODE
@@ -655,7 +655,7 @@ G:\accelerometer contol robot tx\CEP0896.C
 74 217 0 CODE
 75 223 0 CODE
 43 229 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 78 3AE 0 CODE
 79 3C8 0 CODE
 80 3E1 0 CODE
@@ -664,7 +664,7 @@ G:\accelerometer contol robot tx\pic_lcd8.h
 84 419 0 CODE
 85 426 0 CODE
 86 433 0 CODE
-G:\accelerometer contol robot tx\pic_serial.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_serial.h
 10 24B 0 CODE
 11 258 0 CODE
 12 25B 0 CODE
@@ -674,7 +674,7 @@ G:\accelerometer contol robot tx\pic_serial.h
 16 265 0 CODE
 17 268 0 CODE
 18 26B 0 CODE
-G:\accelerometer contol robot tx\pic_adc.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_adc.h
 10 4DC 0 CODE
 11 4DF 0 CODE
 12 4E2 0 CODE
@@ -776,7 +776,7 @@ G:\accelerometer contol robot tx\pic_adc.h
 126 6E2 0 CODE
 127 6F7 0 CODE
 128 6FF 0 CODE
-G:\accelerometer contol robot tx\pic_serial.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_serial.h
 78 FCF 0 CODE
 79 FD2 0 CODE
 81 FD9 0 CODE
@@ -785,12 +785,12 @@ G:\accelerometer contol robot tx\pic_serial.h
 86 FE0 0 CODE
 87 FE3 0 CODE
 89 FE6 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 55 290 0 CODE
 57 297 0 CODE
 55 2A6 0 CODE
 59 2BA 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 23 FE7 0 CODE
 24 FED 0 CODE
 25 FF3 0 CODE
@@ -871,7 +871,7 @@ C:\Program Files (x86)\HI-TECH Software\PICC\PRO\9.60\sources\lwdiv.c
 23 32F 0 CODE
 25 335 0 CODE
 26 33C 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 40 26C 0 CODE
 41 26D 0 CODE
 43 273 0 CODE
@@ -881,7 +881,7 @@ G:\accelerometer contol robot tx\pic_lcd8.h
 47 283 0 CODE
 48 286 0 CODE
 49 28F 0 CODE
-G:\accelerometer contol robot tx\pic_serial.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_serial.h
 39 434 0 CODE
 41 446 0 CODE
 42 44A 0 CODE
@@ -910,7 +910,7 @@ G:\accelerometer contol robot tx\pic_serial.h
 71 4D6 0 CODE
 72 4DA 0 CODE
 74 4DB 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 30 22D 0 CODE
 31 230 0 CODE
 32 233 0 CODE
@@ -919,10 +919,10 @@ G:\accelerometer contol robot tx\pic_lcd8.h
 35 23E 0 CODE
 36 241 0 CODE
 37 24A 0 CODE
-G:\accelerometer contol robot tx\pic_lcd8.h
+D:\Course Example Programs\PIC\accelerometer contol robot tx\pic_lcd8.h
 108 7EE 0 CODE
 109 7FF 0 CODE
-G:\accelerometer contol robot tx\CEP0896.C
+D:\Course Example Programs\PIC\accelerometer contol robot tx\CEP0896.C
 15 78A 0 CODE
 17 78F 0 CODE
 14 791 0 CODE

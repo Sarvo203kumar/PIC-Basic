@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
-                                                      Tue Dec 26 11:10:11 2023
+                                                      Tue Nov 28 10:34:10 2023
 
 HI-TECH Software Omniscient Code Generator build 3884
      1  0000                     opt subtitle "HI-TECH Software Omniscient Code 
@@ -139,8 +139,8 @@ HI-TECH Software Omniscient Code Generator build 3884
    130                           ; *************** function _main **************
                                  *
    131                           ; Defined at:
-   132                           ;		line 25 in file "G:\accelerometer contol rob
-                                 ot tx\CEP0896.C"
+   132                           ;		line 25 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\CEP0896.C"
    133                           ; Parameters:
    134                           ;		None
    135                           ; Auto variables:
@@ -173,8 +173,8 @@ HI-TECH Software Omniscient Code Generator build 3884
    162                           ; This function uses a non-reentrant model
    163                           ; 
    164                           	psect	maintext,class=CODE,delta=2
-   165                           	file	"G:\accelerometer contol robot tx\CEP0896
-                                 .C"
+   165                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\CEP0896.C"
    166                           	line	25
    167                           ;CEP0896.C: 13: unsigned int count,sec,b,temp,p
                                  res,hb,st,shb,sp,a=0,n1=0,n2=0,n3=0,x,y,z;
@@ -646,8 +646,8 @@ HI-TECH Software Omniscient Code Generator build 3884
    600  0192  2995               	goto	u4885
    601  0193  3050               	movlw	low(050h)
    602  0194  0267               	subwf	(103),w
-   603+ 0195                     u4885:
-   604+ 0195  1C03               	skipc
+   603  0195                     u4885:
+   604  0195  1C03               	skipc
    605  0196  2998               	goto	u4881
    606  0197  2999               	goto	u4880
    607  0198                     u4881:
@@ -874,61 +874,61 @@ HI-TECH Software Omniscient Code Generator build 3884
    819                           
    820                           GLOBAL __end_of_main
    821  022D                     	__end_of_main:
-   822+                          	FNSIZE	_main,0,0
-   823+                          	psect	maintext
-   824+                          	line	79
-   825+                          	signat	_main,88
-   826+                          	global	_Lcd8_Decimal3
-   827+                          	global	??_Lcd8_Decimal3
-   828+                          	global	?_Lcd8_Decimal3
-   829+                          
-   830+                          ; *************** function _Lcd8_Decimal3 *****
-      +                          **********
-   831+                          ; Defined at:
-   832+                          ;		line 75 in file "G:\accelerometer contol rob
-      +                          ot tx\pic_lcd8.h"
-   833+                          ; Parameters:
-   834+                          ;		com         	reg:   wr	type: unsigned char 
-   835+                          ;		val         	offs:   0	type: unsigned char 
-   836+                          ; Auto variables:
-   837+                          ;		com         	       	type: unsigned char 
-   838+                          ;		Lcd_o       	       	type: unsigned int 
-   839+                          ;		Lcd_t       	       	type: unsigned int 
-   840+                          ;		Lcd_h       	       	type: unsigned int 
-   841+                          ;		Lcd_hr      	       	type: unsigned int 
-   842+                          ; Return value:
-   843+                          ;		type: void 
-   844+                          ;		size: 0
-   845+                          ; Registers used:
-   846+                          ;		wreg, status,2, status,0, pclath, cstack
-   847+                          ; Tracked objects:
-   848+                          ;		On entry : 300/0
-   849+                          ;		On exit  : 0/0
-   850+                          ;		Unchanged: 0/0
-   851+                          ; Data sizes:
-   852+                          ;		Autos:    9
-   853+                          ;		Params:   1
-   854+                          ;		Temp:     2
-   855+                          ;		Total:   12
-   856+                          ; This function calls:
-   857+                          ;		___awdiv
-   858+                          ;		___awmod
-   859+                          ;		___lwdiv
-   860+                          ;		___lwmod
-   861+                          ;		_Lcd8_Write
-   862+                          ; This function is called by:
-   863+                          ;		_main
-   864+                          ; This function uses a non-reentrant model
-   865+                          ; 
-   866+                          	psect	text147,local,class=CODE,delta=2
-   867+                          	file	"G:\accelerometer contol robot tx\pic_lcd
-      +                          8.h"
-   868+                          	line	75
-   869+                          ;pic_lcd8.h: 74: void Lcd8_Decimal3(unsigned ch
-      +                          ar com,unsigned char val)
-   870+                          ;pic_lcd8.h: 75: {
-   871+                          	
-   872+ 03AE                     _Lcd8_Decimal3:	
+   822                           	FNSIZE	_main,0,0
+   823                           	psect	maintext
+   824                           	line	79
+   825                           	signat	_main,88
+   826                           	global	_Lcd8_Decimal3
+   827                           	global	??_Lcd8_Decimal3
+   828                           	global	?_Lcd8_Decimal3
+   829                           
+   830                           ; *************** function _Lcd8_Decimal3 *****
+                                 **********
+   831                           ; Defined at:
+   832                           ;		line 75 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_lcd8.h"
+   833                           ; Parameters:
+   834                           ;		com         	reg:   wr	type: unsigned char 
+   835                           ;		val         	offs:   0	type: unsigned char 
+   836                           ; Auto variables:
+   837                           ;		com         	       	type: unsigned char 
+   838                           ;		Lcd_o       	       	type: unsigned int 
+   839                           ;		Lcd_t       	       	type: unsigned int 
+   840                           ;		Lcd_h       	       	type: unsigned int 
+   841                           ;		Lcd_hr      	       	type: unsigned int 
+   842                           ; Return value:
+   843                           ;		type: void 
+   844                           ;		size: 0
+   845                           ; Registers used:
+   846                           ;		wreg, status,2, status,0, pclath, cstack
+   847                           ; Tracked objects:
+   848                           ;		On entry : 300/0
+   849                           ;		On exit  : 0/0
+   850                           ;		Unchanged: 0/0
+   851                           ; Data sizes:
+   852                           ;		Autos:    9
+   853                           ;		Params:   1
+   854                           ;		Temp:     2
+   855                           ;		Total:   12
+   856                           ; This function calls:
+   857                           ;		___awdiv
+   858                           ;		___awmod
+   859                           ;		___lwdiv
+   860                           ;		___lwmod
+   861                           ;		_Lcd8_Write
+   862                           ; This function is called by:
+   863                           ;		_main
+   864                           ; This function uses a non-reentrant model
+   865                           ; 
+   866                           	psect	text147,local,class=CODE,delta=2
+   867                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
+   868                           	line	75
+   869                           ;pic_lcd8.h: 74: void Lcd8_Decimal3(unsigned ch
+                                 ar com,unsigned char val)
+   870                           ;pic_lcd8.h: 75: {
+   871                           	
+   872  03AE                     _Lcd8_Decimal3:	
    873                           ; Regs used in _Lcd8_Decimal3: [wreg+status,2+s
                                  tatus,0+pclath+cstack]
    874                           ;_Lcd8_Decimal3_com stored from wreg
@@ -1112,8 +1112,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   1043                           ; *************** function _Serial_Init *******
                                  ********
   1044                           ; Defined at:
-  1045                           ;		line 9 in file "G:\accelerometer contol robo
-                                 t tx\pic_serial.h"
+  1045                           ;		line 9 in file "D:\Course Example Programs\P
+                                 IC\accelerometer contol robot tx\pic_serial.h"
   1046                           ; Parameters:
   1047                           ;		baud        	offs:   0	type: unsigned long 
   1048                           ; Auto variables:
@@ -1139,8 +1139,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   1068                           ; This function uses a non-reentrant model
   1069                           ; 
   1070                           	psect	text148,local,class=CODE,delta=2
-  1071                           	file	"G:\accelerometer contol robot tx\pic_ser
-                                 ial.h"
+  1071                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_serial.h"
   1072                           	line	9
   1073                           ;pic_serial.h: 8: void Serial_Init(unsigned lon
                                  g int baud)
@@ -1215,8 +1215,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   1139                           ; *************** function _Adc8_Cha **********
                                  *****
   1140                           ; Defined at:
-  1141                           ;		line 10 in file "G:\accelerometer contol rob
-                                 ot tx\pic_adc.h"
+  1141                           ;		line 10 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_adc.h"
   1142                           ; Parameters:
   1143                           ;		val         	reg:   wr	type: unsigned char 
   1144                           ; Auto variables:
@@ -1242,8 +1242,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   1164                           ; This function uses a non-reentrant model
   1165                           ; 
   1166                           	psect	text149,local,class=CODE,delta=2
-  1167                           	file	"G:\accelerometer contol robot tx\pic_adc
-                                 .h"
+  1167                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_adc.h"
   1168                           	line	10
   1169                           ;pic_adc.h: 9: Adc8_Cha(unsigned char val)
   1170                           ;pic_adc.h: 10: {
@@ -2388,8 +2388,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2306                           ; *************** function _Receive ***********
                                  ****
   2307                           ; Defined at:
-  2308                           ;		line 78 in file "G:\accelerometer contol rob
-                                 ot tx\pic_serial.h"
+  2308                           ;		line 78 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_serial.h"
   2309                           ; Parameters:
   2310                           ;		rece        	reg:   wr	type: unsigned char 
   2311                           ; Auto variables:
@@ -2415,8 +2415,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2331                           ; This function uses a non-reentrant model
   2332                           ; 
   2333                           	psect	text150,local,class=CODE,delta=2
-  2334                           	file	"G:\accelerometer contol robot tx\pic_ser
-                                 ial.h"
+  2334                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_serial.h"
   2335                           	line	78
   2336                           ;pic_serial.h: 77: void Receive(unsigned char r
                                  ece)
@@ -2493,8 +2493,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2406                           ; *************** function _Lcd8_Display ******
                                  *********
   2407                           ; Defined at:
-  2408                           ;		line 52 in file "G:\accelerometer contol rob
-                                 ot tx\pic_lcd8.h"
+  2408                           ;		line 52 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_lcd8.h"
   2409                           ; Parameters:
   2410                           ;		com         	reg:   wr	type: unsigned char 
   2411                           ;		word        	offs:   0	type: PTR const unsig
@@ -2529,8 +2529,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2437                           ; This function uses a non-reentrant model
   2438                           ; 
   2439                           	psect	text151,local,class=CODE,delta=2
-  2440                           	file	"G:\accelerometer contol robot tx\pic_lcd
-                                 8.h"
+  2440                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
   2441                           	line	52
   2442                           ;pic_lcd8.h: 51: void Lcd8_Display(unsigned cha
                                  r com,const unsigned char *word,unsigned int n)
@@ -2626,8 +2626,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2527                           ; *************** function _Lcd8_Init *********
                                  ******
   2528                           ; Defined at:
-  2529                           ;		line 22 in file "G:\accelerometer contol rob
-                                 ot tx\pic_lcd8.h"
+  2529                           ;		line 22 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_lcd8.h"
   2530                           ; Parameters:
   2531                           ;		None
   2532                           ; Auto variables:
@@ -2653,8 +2653,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   2552                           ; This function uses a non-reentrant model
   2553                           ; 
   2554                           	psect	text152,local,class=CODE,delta=2
-  2555                           	file	"G:\accelerometer contol robot tx\pic_lcd
-                                 8.h"
+  2555                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
   2556                           	line	22
   2557                           ;pic_lcd8.h: 21: void Lcd8_Init()
   2558                           ;pic_lcd8.h: 22: {
@@ -3532,8 +3532,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3404                           ; *************** function _Lcd8_Write ********
                                  *******
   3405                           ; Defined at:
-  3406                           ;		line 40 in file "G:\accelerometer contol rob
-                                 ot tx\pic_lcd8.h"
+  3406                           ;		line 40 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_lcd8.h"
   3407                           ; Parameters:
   3408                           ;		com         	reg:   wr	type: unsigned char 
   3409                           ;		lr          	offs:   0	type: unsigned char 
@@ -3562,8 +3562,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3432                           ; This function uses a non-reentrant model
   3433                           ; 
   3434                           	psect	text157,local,class=CODE,delta=2
-  3435                           	file	"G:\accelerometer contol robot tx\pic_lcd
-                                 8.h"
+  3435                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
   3436                           	line	40
   3437                           ;pic_lcd8.h: 39: void Lcd8_Write(unsigned char 
                                  com,unsigned char lr)
@@ -3639,8 +3639,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3502                           ; *************** function _Baudrate **********
                                  *****
   3503                           ; Defined at:
-  3504                           ;		line 38 in file "G:\accelerometer contol rob
-                                 ot tx\pic_serial.h"
+  3504                           ;		line 38 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_serial.h"
   3505                           ; Parameters:
   3506                           ;		baud        	offs:   0	type: unsigned long 
   3507                           ; Auto variables:
@@ -3666,8 +3666,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3527                           ; This function uses a non-reentrant model
   3528                           ; 
   3529                           	psect	text158,local,class=CODE,delta=2
-  3530                           	file	"G:\accelerometer contol robot tx\pic_ser
-                                 ial.h"
+  3530                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_serial.h"
   3531                           	line	38
   3532                           ;pic_serial.h: 37: void Baudrate(unsigned long 
                                  int baud)
@@ -3984,8 +3984,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3842                           ; *************** function _Lcd8_Command ******
                                  *********
   3843                           ; Defined at:
-  3844                           ;		line 30 in file "G:\accelerometer contol rob
-                                 ot tx\pic_lcd8.h"
+  3844                           ;		line 30 in file "D:\Course Example Programs\
+                                 PIC\accelerometer contol robot tx\pic_lcd8.h"
   3845                           ; Parameters:
   3846                           ;		com         	reg:   wr	type: unsigned char 
   3847                           ; Auto variables:
@@ -4013,8 +4013,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3869                           ; This function uses a non-reentrant model
   3870                           ; 
   3871                           	psect	text159,local,class=CODE,delta=2
-  3872                           	file	"G:\accelerometer contol robot tx\pic_lcd
-                                 8.h"
+  3872                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
   3873                           	line	30
   3874                           ;pic_lcd8.h: 29: void Lcd8_Command(unsigned cha
                                  r com)
@@ -4083,8 +4083,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3933                           ; *************** function _Delay *************
                                  **
   3934                           ; Defined at:
-  3935                           ;		line 107 in file "G:\accelerometer contol ro
-                                 bot tx\pic_lcd8.h"
+  3935                           ;		line 107 in file "D:\Course Example Programs
+                                 \PIC\accelerometer contol robot tx\pic_lcd8.h"
   3936                           ; Parameters:
   3937                           ;		del         	offs:   0	type: unsigned int 
   3938                           ; Auto variables:
@@ -4112,8 +4112,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   3960                           ; This function uses a non-reentrant model
   3961                           ; 
   3962                           	psect	text160,local,class=CODE,delta=2
-  3963                           	file	"G:\accelerometer contol robot tx\pic_lcd
-                                 8.h"
+  3963                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\pic_lcd8.h"
   3964                           	line	107
   3965                           ;pic_lcd8.h: 106: void Delay(unsigned int del)
   3966                           ;pic_lcd8.h: 107: {
@@ -4206,8 +4206,8 @@ HI-TECH Software Omniscient Code Generator build 3884
   4052  0000                     	_qq	set	0xE9
   4053                           
   4054                           	psect	idata,class=CODE,delta=2,space=0
-  4055                           	file	"G:\accelerometer contol robot tx\CEP0896
-                                 .C"
+  4055                           	file	"D:\Course Example Programs\PIC\accelerom
+                                 eter contol robot tx\CEP0896.C"
   4056                           	line	15
   4057                           
   4058                           ;initializer for _c
@@ -5695,7 +5695,7 @@ HI-TECH Software Omniscient Code Generator build 3884
 
 
 HI-TECH Software PICC Macro Assembler V9.60PL5 build 3884 
-Symbol Table                                          Tue Dec 26 11:10:11 2023
+Symbol Table                                          Tue Nov 28 10:34:10 2023
 
              __Lrbss_0 006A               __Lrbss_1 00EA  
                     l1 0FFF                      l2 024A  

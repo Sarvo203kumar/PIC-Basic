@@ -1,0 +1,7 @@
+_init: CODE, 1740 0 31
+_delay: CODE, 1771 0 33
+_main: CODE, 1950 0 98
+_write: CODE, 1898 0 52
+_cmd: CODE, 1848 0 50
+_disp: CODE, 1804 0 44
+Total: 308

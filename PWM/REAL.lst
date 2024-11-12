@@ -1,0 +1,1276 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.82 build 9453 
+                                                                                               Sat Jan 27 16:17:56 2024
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 9453
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 9453"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F877A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           	FNCALL	_main,_init
+    43                           	FNCALL	_main,_disp
+    44                           	FNCALL	_main,_delay
+    45                           	FNCALL	_disp,_cmd
+    46                           	FNCALL	_disp,_write
+    47                           	FNCALL	_init,_cmd
+    48                           	FNROOT	_main
+    49                           	global	_digit
+    50                           psect	idataBANK0,class=CODE,space=0,delta=2
+    51                           global __pidataBANK0
+    52  069D                     __pidataBANK0:
+    53                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+    54                           	line	16
+    55                           
+    56                           ;initializer for _digit
+    57  069D  34C0               	retlw	0C0h
+    58  069E  34F9               	retlw	0F9h
+    59  069F  34A4               	retlw	0A4h
+    60  06A0  34B0               	retlw	0B0h
+    61  06A1  3499               	retlw	099h
+    62  06A2  3492               	retlw	092h
+    63  06A3  3482               	retlw	082h
+    64  06A4  34F8               	retlw	0F8h
+    65  06A5  3480               	retlw	080h
+    66  06A6  3490               	retlw	090h
+    67                           	global	_m
+    68                           psect	nvCOMMON,class=COMMON,space=1
+    69                           global __pnvCOMMON
+    70  007D                     __pnvCOMMON:
+    71  007D                     _m:
+    72  007D                            ds      1
+    73                           
+    74                           	global	_CCP1CON
+    75  0017                     _CCP1CON	set	23
+    76                           	global	_CCP2CON
+    77  001D                     _CCP2CON	set	29
+    78                           	global	_CCPR1L
+    79  0015                     _CCPR1L	set	21
+    80                           	global	_CCPR2L
+    81  001B                     _CCPR2L	set	27
+    82                           	global	_PORTD
+    83  0008                     _PORTD	set	8
+    84                           	global	_CARRY
+    85  0018                     _CARRY	set	24
+    86                           	global	_GIE
+    87  005F                     _GIE	set	95
+    88                           	global	_RD0
+    89  0040                     _RD0	set	64
+    90                           	global	_RD1
+    91  0041                     _RD1	set	65
+    92                           	global	_TMR2ON
+    93  0092                     _TMR2ON	set	146
+    94                           	global	_PR2
+    95  0092                     _PR2	set	146
+    96                           	global	_TRISC
+    97  0087                     _TRISC	set	135
+    98                           	global	_TRISD
+    99  0088                     _TRISD	set	136
+   100                           	global	_EEADR
+   101  010D                     _EEADR	set	269
+   102                           	global	_EEDATA
+   103  010C                     _EEDATA	set	268
+   104                           	global	_EECON1
+   105  018C                     _EECON1	set	396
+   106                           	global	_EECON2
+   107  018D                     _EECON2	set	397
+   108                           	global	_RD
+   109  0C60                     _RD	set	3168
+   110                           	global	_WR
+   111  0C61                     _WR	set	3169
+   112                           	global	_WREN
+   113  0C62                     _WREN	set	3170
+   114                           psect	strings,class=STRING,delta=2
+   115                           global __pstrings
+   116  0003                     __pstrings:
+   117                           ;	global	stringdir,stringtab,__stringbase
+   118  0003                     stringtab:
+   119                           ;	String table - string pointers are 1 byte each
+   120  0003                     stringcode:stringdir:
+      + 0003                     stringdir:	
+   121  0003  3000               movlw high(stringdir)
+   122  0004  008A               movwf pclath
+   123  0005  0804               movf fsr,w
+   124  0006  0A84               incf fsr
+   125  0007  0782               	addwf pc
+   126  0008                     __stringbase:
+   127  0008  3400               	retlw	0
+   128                           psect	strings
+   129                           	
+   130  0009                     STR_1:	
+   131  0009  3450               	retlw	80	;'P'
+   132  000A  3457               	retlw	87	;'W'
+   133  000B  344D               	retlw	77	;'M'
+   134  000C  3420               	retlw	32	;' '
+   135  000D  3454               	retlw	84	;'T'
+   136  000E  3445               	retlw	69	;'E'
+   137  000F  3453               	retlw	83	;'S'
+   138  0010  3454               	retlw	84	;'T'
+   139  0011  3449               	retlw	73	;'I'
+   140  0012  344E               	retlw	78	;'N'
+   141  0013  3447               	retlw	71	;'G'
+   142  0014  342E               	retlw	46	;'.'
+   143  0015  342E               	retlw	46	;'.'
+   144  0016  342E               	retlw	46	;'.'
+   145  0017  3400               	retlw	0
+   146                           psect	strings
+   147                           	file	"REAL.as"
+   148                           	line	#
+   149                           psect cinit,class=CODE,delta=2
+   150                           global start_initialization
+   151  06A7                     start_initialization:
+   152                           
+   153                           psect	dataBANK0,class=BANK0,space=1
+   154                           global __pdataBANK0
+   155  0020                     __pdataBANK0:
+   156                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   157  0020                     _digit:
+   158  0020                            ds      10
+   159                           
+   160                           global btemp
+   161                           psect inittext,class=CODE,delta=2
+   162                           global init_fetch,btemp
+   163                           ;	Called with low address in FSR and high address in W
+   164  06B9                     init_fetch:
+   165  06B9  087E               	movf btemp,w
+   166  06BA  008A               	movwf pclath
+   167  06BB  087F               	movf btemp+1,w
+   168  06BC  0082               	movwf pc
+   169                           global init_ram
+   170                           ;Called with:
+   171                           ;	high address of idata address in btemp 
+   172                           ;	low address of idata address in btemp+1 
+   173                           ;	low address of data in FSR
+   174                           ;	high address + 1 of data in btemp-1
+   175  06BD                     init_ram:
+   176  06BD  120A  118A  26B9   	fcall init_fetch
+              120A  118A         
+   177  06C2  0080               	movwf indf,f
+   178  06C3  0A84               	incf fsr,f
+   179  06C4  0804               	movf fsr,w
+   180  06C5  067D               	xorwf btemp-1,w
+   181  06C6  1903               	btfsc status,2
+   182  06C7  3400               	retlw 0
+   183  06C8  0AFF               	incf btemp+1,f
+   184  06C9  1903               	btfsc status,2
+   185  06CA  0AFE               	incf btemp,f
+   186  06CB  2EBD               	goto init_ram
+   187                           ; Initialize objects allocated to BANK0
+   188                           psect cinit,class=CODE,delta=2
+   189                           global init_ram, __pidataBANK0
+   190  06A7  1383               	bcf	status, 7	;select IRP bank0
+   191  06A8  302A               	movlw low(__pdataBANK0+10)
+   192  06A9  00FD               	movwf btemp-1,f
+   193  06AA  3006               	movlw high(__pidataBANK0)
+   194  06AB  00FE               	movwf btemp,f
+   195  06AC  309D               	movlw low(__pidataBANK0)
+   196  06AD  00FF               	movwf btemp+1,f
+   197  06AE  3020               	movlw low(__pdataBANK0)
+   198  06AF  0084               	movwf fsr,f
+   199  06B0  120A  118A  26BD   	fcall init_ram
+              120A  118A         
+   200                           psect cinit,class=CODE,delta=2
+   201                           global end_of_initialization
+   202                           
+   203                           ;End of C runtime variable initialization code
+   204                           
+   205  06B5                     end_of_initialization:
+   206  06B5  0183               clrf status
+   207  06B6  120A  118A  2F9E   ljmp _main	;jump to C main() function
+   208                           psect	cstackCOMMON,class=COMMON,space=1
+   209                           global __pcstackCOMMON
+   210  0070                     __pcstackCOMMON:
+   211                           	global	?_init
+   212  0070                     ?_init:	; 0 bytes @ 0x0
+   213                           	global	?_delay
+   214  0070                     ?_delay:	; 0 bytes @ 0x0
+   215                           	global	?_cmd
+   216  0070                     ?_cmd:	; 0 bytes @ 0x0
+   217                           	global	??_cmd
+   218  0070                     ??_cmd:	; 0 bytes @ 0x0
+   219                           	global	?_main
+   220  0070                     ?_main:	; 0 bytes @ 0x0
+   221                           	global	?_write
+   222  0070                     ?_write:	; 0 bytes @ 0x0
+   223                           	global	??_write
+   224  0070                     ??_write:	; 0 bytes @ 0x0
+   225                           	global	delay@k
+   226  0070                     delay@k:	; 4 bytes @ 0x0
+   227  0070                     	ds	1
+   228                           	global	cmd@a
+   229  0071                     cmd@a:	; 1 bytes @ 0x1
+   230                           	global	write@b
+   231  0071                     write@b:	; 1 bytes @ 0x1
+   232  0071                     	ds	1
+   233                           	global	??_init
+   234  0072                     ??_init:	; 0 bytes @ 0x2
+   235                           	global	?_disp
+   236  0072                     ?_disp:	; 0 bytes @ 0x2
+   237                           	global	disp@b
+   238  0072                     disp@b:	; 1 bytes @ 0x2
+   239  0072                     	ds	1
+   240                           	global	disp@c
+   241  0073                     disp@c:	; 1 bytes @ 0x3
+   242  0073                     	ds	1
+   243                           	global	??_disp
+   244  0074                     ??_disp:	; 0 bytes @ 0x4
+   245                           	global	??_delay
+   246  0074                     ??_delay:	; 0 bytes @ 0x4
+   247                           	global	disp@a
+   248  0074                     disp@a:	; 1 bytes @ 0x4
+   249  0074                     	ds	1
+   250                           	global	disp@k
+   251  0075                     disp@k:	; 2 bytes @ 0x5
+   252  0075                     	ds	2
+   253                           	global	??_main
+   254  0077                     ??_main:	; 0 bytes @ 0x7
+   255  0077                     	ds	2
+   256                           	global	main@k
+   257  0079                     main@k:	; 2 bytes @ 0x9
+   258  0079                     	ds	2
+   259                           	global	main@j
+   260  007B                     main@j:	; 2 bytes @ 0xB
+   261  007B                     	ds	2
+   262 ;;Data sizes: Strings 15, constant 0, data 10, bss 0, persistent 1 stack 0
+   263 ;;Auto spaces:   Size  Autos    Used
+   264 ;; COMMON          14     13      14
+   265 ;; BANK0           80      0      10
+   266 ;; BANK1           80      0       0
+   267 ;; BANK3           96      0       0
+   268 ;; BANK2           96      0       0
+   269                           
+   270 ;;
+   271 ;; Pointer list with targets:
+   272                           
+   273 ;; disp@b	PTR const unsigned char  size(1) Largest target is 15
+   274 ;;		 -> STR_1(CODE[15]), 
+   275 ;;
+   276                           
+   277                           
+   278 ;;
+   279 ;; Critical Paths under _main in COMMON
+   280 ;;
+   281 ;;   _main->_disp
+   282 ;;   _disp->_cmd
+   283 ;;   _disp->_write
+   284 ;;   _init->_cmd
+   285 ;;
+   286 ;; Critical Paths under _main in BANK0
+   287 ;;
+   288 ;;   None.
+   289 ;;
+   290 ;; Critical Paths under _main in BANK1
+   291 ;;
+   292 ;;   None.
+   293 ;;
+   294 ;; Critical Paths under _main in BANK3
+   295 ;;
+   296 ;;   None.
+   297 ;;
+   298 ;; Critical Paths under _main in BANK2
+   299 ;;
+   300 ;;   None.
+   301                           
+   302 ;;
+   303 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   304 ;;
+   305                           
+   306 ;;
+   307 ;;Call Graph Tables:
+   308 ;;
+   309 ;; ---------------------------------------------------------------------------------
+   310 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   311 ;; ---------------------------------------------------------------------------------
+   312 ;; (0) _main                                                 6     6      0     240
+   313 ;;                                              7 COMMON     6     6      0
+   314 ;;                               _init
+   315 ;;                               _disp
+   316 ;;                              _delay
+   317 ;; ---------------------------------------------------------------------------------
+   318 ;; (1) _disp                                                 5     3      2     150
+   319 ;;                                              2 COMMON     5     3      2
+   320 ;;                                _cmd
+   321 ;;                              _write
+   322 ;; ---------------------------------------------------------------------------------
+   323 ;; (1) _init                                                 0     0      0      30
+   324 ;;                                _cmd
+   325 ;; ---------------------------------------------------------------------------------
+   326 ;; (2) _write                                                2     2      0      30
+   327 ;;                                              0 COMMON     2     2      0
+   328 ;; ---------------------------------------------------------------------------------
+   329 ;; (2) _cmd                                                  2     2      0      30
+   330 ;;                                              0 COMMON     2     2      0
+   331 ;; ---------------------------------------------------------------------------------
+   332 ;; (1) _delay                                                4     0      4      15
+   333 ;;                                              0 COMMON     4     0      4
+   334 ;; ---------------------------------------------------------------------------------
+   335 ;; Estimated maximum stack depth 2
+   336 ;; ---------------------------------------------------------------------------------
+   337                           
+   338 ;; Call Graph Graphs:
+   339                           
+   340 ;; _main (ROOT)
+   341 ;;   _init
+   342 ;;     _cmd
+   343 ;;   _disp
+   344 ;;     _cmd
+   345 ;;     _write
+   346 ;;   _delay
+   347 ;;
+   348                           
+   349 ;; Address spaces:
+   350                           
+   351 ;;Name               Size   Autos  Total    Cost      Usage
+   352 ;;BANK3               60      0       0       9        0.0%
+   353 ;;BITBANK3            60      0       0       8        0.0%
+   354 ;;SFR3                 0      0       0       4        0.0%
+   355 ;;BITSFR3              0      0       0       4        0.0%
+   356 ;;BANK2               60      0       0      11        0.0%
+   357 ;;BITBANK2            60      0       0      10        0.0%
+   358 ;;SFR2                 0      0       0       5        0.0%
+   359 ;;BITSFR2              0      0       0       5        0.0%
+   360 ;;SFR1                 0      0       0       2        0.0%
+   361 ;;BITSFR1              0      0       0       2        0.0%
+   362 ;;BANK1               50      0       0       7        0.0%
+   363 ;;BITBANK1            50      0       0       6        0.0%
+   364 ;;CODE                 0      0       0       0        0.0%
+   365 ;;DATA                 0      0      1A      12        0.0%
+   366 ;;ABS                  0      0      18       3        0.0%
+   367 ;;NULL                 0      0       0       0        0.0%
+   368 ;;STACK                0      0       2       2        0.0%
+   369 ;;BANK0               50      0       A       5       12.5%
+   370 ;;BITBANK0            50      0       0       4        0.0%
+   371 ;;SFR0                 0      0       0       1        0.0%
+   372 ;;BITSFR0              0      0       0       1        0.0%
+   373 ;;COMMON               E      D       E       1      100.0%
+   374 ;;BITCOMMON            E      0       0       0        0.0%
+   375 ;;EEDATA             100      0       0       0        0.0%
+   376                           
+   377                           	global	_main
+   378                           psect	maintext,global,class=CODE,delta=2
+   379                           global __pmaintext
+   380  079E                     __pmaintext:
+   381                           
+   382 ;; *************** function _main *****************
+   383 ;; Defined at:
+   384 ;;		line 19 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   385 ;; Parameters:    Size  Location     Type
+   386 ;;		None
+   387 ;; Auto vars:     Size  Location     Type
+   388 ;;  j               2   11[COMMON] int 
+   389 ;;  k               2    9[COMMON] int 
+   390 ;; Return value:  Size  Location     Type
+   391 ;;		None               void
+   392 ;; Registers used:
+   393 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   394 ;; Tracked objects:
+   395 ;;		On entry : 17F/0
+   396 ;;		On exit  : 0/0
+   397 ;;		Unchanged: 0/0
+   398 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   399 ;;      Params:         0       0       0       0       0
+   400 ;;      Locals:         4       0       0       0       0
+   401 ;;      Temps:          2       0       0       0       0
+   402 ;;      Totals:         6       0       0       0       0
+   403 ;;Total ram usage:        6 bytes
+   404 ;; Hardware stack levels required when called:    2
+   405 ;; This function calls:
+   406 ;;		_init
+   407 ;;		_disp
+   408 ;;		_delay
+   409 ;; This function is called by:
+   410 ;;		Startup code after reset
+   411 ;; This function uses a non-reentrant model
+   412 ;;
+   413                           psect	maintext
+   414                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   415                           	line	19
+   416                           	global	__size_of_main
+   417  0062                     	__size_of_main	equ	__end_of_main-_main
+   418                           	
+   419  079E                     _main:	
+   420                           	opt	stack 6
+   421                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   422                           	line	20
+   423                           	
+   424  079E                     l2695:	
+   425                           ;basic.c: 20: TRISD = 0x00;
+   426  079E  1683               	bsf	status, 5	;RP0=1, select bank1
+   427  079F  1303               	bcf	status, 6	;RP1=0, select bank1
+   428  07A0  0188               	clrf	(136)^080h	;volatile
+   429                           	line	21
+   430                           	
+   431  07A1                     l2697:	
+   432                           ;basic.c: 21: TRISC = 0xf9;
+   433  07A1  30F9               	movlw	(0F9h)
+   434  07A2  0087               	movwf	(135)^080h	;volatile
+   435                           	line	22
+   436                           	
+   437  07A3                     l2699:	
+   438                           ;basic.c: 22: init();
+   439  07A3  120A  118A  26CC   	fcall	_init
+              120A  118A         
+   440                           	line	23
+   441                           	
+   442  07A8                     l2701:	
+   443                           ;basic.c: 23: CCP1CON = CCP2CON = 0x0f;
+   444  07A8  300F               	movlw	(0Fh)
+   445  07A9  1283               	bcf	status, 5	;RP0=0, select bank0
+   446  07AA  1303               	bcf	status, 6	;RP1=0, select bank0
+   447  07AB  009D               	movwf	(29)	;volatile
+   448  07AC  0097               	movwf	(23)	;volatile
+   449                           	line	24
+   450                           	
+   451  07AD                     l2703:	
+   452                           ;basic.c: 24: CCPR1L = CCPR2L = 0x00;
+   453  07AD  019B               	clrf	(27)	;volatile
+   454  07AE  0195               	clrf	(21)	;volatile
+   455                           	line	25
+   456                           	
+   457  07AF                     l2705:	
+   458                           ;basic.c: 25: PR2 = 255;
+   459  07AF  30FF               	movlw	(0FFh)
+   460  07B0  1683               	bsf	status, 5	;RP0=1, select bank1
+   461  07B1  1303               	bcf	status, 6	;RP1=0, select bank1
+   462  07B2  0092               	movwf	(146)^080h	;volatile
+   463                           	line	26
+   464                           	
+   465  07B3                     l2707:	
+   466                           ;basic.c: 26: disp(0x80,"PWM TESTING...",14);
+   467  07B3  3001               	movlw	((STR_1-__stringbase))&0ffh
+   468  07B4  00F7               	movwf	(??_main+0)+0
+   469  07B5  0877               	movf	(??_main+0)+0,w
+   470  07B6  00F2               	movwf	(?_disp)
+   471  07B7  300E               	movlw	(0Eh)
+   472  07B8  00F8               	movwf	(??_main+1)+0
+   473  07B9  0878               	movf	(??_main+1)+0,w
+   474  07BA  00F3               	movwf	0+(?_disp)+01h
+   475  07BB  3080               	movlw	(080h)
+   476  07BC  120A  118A  270C   	fcall	_disp
+              120A  118A         
+   477  07C1  2FC2               	goto	l2709
+   478                           	line	27
+   479                           ;basic.c: 27: while(1)
+   480                           	
+   481  07C2                     l699:	
+   482                           	line	29
+   483                           	
+   484  07C2                     l2709:	
+   485                           ;basic.c: 28: {
+   486                           ;basic.c: 29: for(int k=0,j=255; k<255,j>0; k++,j--)
+   487  07C2  01F9               	clrf	(main@k)
+   488  07C3  01FA               	clrf	(main@k+1)
+   489                           	
+   490  07C4                     l2711:	
+   491  07C4  30FF               	movlw	low(0FFh)
+   492  07C5  00FB               	movwf	(main@j)
+   493  07C6  3000               	movlw	high(0FFh)
+   494  07C7  00FC               	movwf	((main@j))+1
+   495  07C8  2FED               	goto	l2727
+   496                           	line	30
+   497                           	
+   498  07C9                     l701:	
+   499                           	line	31
+   500                           ;basic.c: 30: {
+   501                           ;basic.c: 31: TMR2ON = 1; CCPR1L = k; TMR2ON = 0;
+   502  07C9  1283               	bcf	status, 5	;RP0=0, select bank0
+   503  07CA  1303               	bcf	status, 6	;RP1=0, select bank0
+   504  07CB  1512               	bsf	(146/8),(146)&7
+   505                           	
+   506  07CC                     l2713:	
+   507  07CC  0879               	movf	(main@k),w
+   508  07CD  0095               	movwf	(21)	;volatile
+   509                           	
+   510  07CE                     l2715:	
+   511  07CE  1112               	bcf	(146/8),(146)&7
+   512                           	line	32
+   513                           	
+   514  07CF                     l2717:	
+   515                           ;basic.c: 32: TMR2ON = 1; CCPR2L = j; TMR2ON = 0;
+   516  07CF  1512               	bsf	(146/8),(146)&7
+   517  07D0  087B               	movf	(main@j),w
+   518  07D1  009B               	movwf	(27)	;volatile
+   519                           	
+   520  07D2                     l2719:	
+   521  07D2  1112               	bcf	(146/8),(146)&7
+   522                           	line	33
+   523                           	
+   524  07D3                     l2721:	
+   525                           ;basic.c: 33: delay(5000);
+   526  07D3  3000               	movlw	0
+   527  07D4  00F3               	movwf	(?_delay+3)
+   528  07D5  3000               	movlw	0
+   529  07D6  00F2               	movwf	(?_delay+2)
+   530  07D7  3013               	movlw	013h
+   531  07D8  00F1               	movwf	(?_delay+1)
+   532  07D9  3088               	movlw	088h
+   533  07DA  00F0               	movwf	(?_delay)
+   534                           
+   535  07DB  120A  118A  26EB   	fcall	_delay
+              120A  118A         
+   536                           	line	29
+   537                           	
+   538  07E0                     l2723:	
+   539  07E0  3001               	movlw	low(01h)
+   540  07E1  07F9               	addwf	(main@k),f
+   541  07E2  1803               	skipnc
+   542  07E3  0AFA               	incf	(main@k+1),f
+   543  07E4  3000               	movlw	high(01h)
+   544  07E5  07FA               	addwf	(main@k+1),f
+   545                           	
+   546  07E6                     l2725:	
+   547  07E6  30FF               	movlw	low(-1)
+   548  07E7  07FB               	addwf	(main@j),f
+   549  07E8  1803               	skipnc
+   550  07E9  0AFC               	incf	(main@j+1),f
+   551  07EA  30FF               	movlw	high(-1)
+   552  07EB  07FC               	addwf	(main@j+1),f
+   553  07EC  2FED               	goto	l2727
+   554                           	
+   555  07ED                     l700:	
+   556                           	
+   557  07ED                     l2727:	
+   558  07ED  087C               	movf	(main@j+1),w
+   559  07EE  3A80               	xorlw	80h
+   560  07EF  00FF               	movwf	btemp+1
+   561  07F0  3080               	movlw	(high(01h))^80h
+   562  07F1  027F               	subwf	btemp+1,w
+   563  07F2  1D03               	skipz
+   564  07F3  2FF6               	goto	u2265
+   565  07F4  3001               	movlw	low(01h)
+   566  07F5  027B               	subwf	(main@j),w
+   567  07F6                     u2265:
+   568                           
+   569  07F6  1803               	skipnc
+   570  07F7  2FF9               	goto	u2261
+   571  07F8  2FFA               	goto	u2260
+   572  07F9                     u2261:
+   573  07F9  2FC9               	goto	l701
+   574  07FA                     u2260:
+   575  07FA  2FC2               	goto	l2709
+   576                           	
+   577  07FB                     l702:	
+   578  07FB  2FC2               	goto	l2709
+   579                           	line	35
+   580                           	
+   581  07FC                     l703:	
+   582                           	line	27
+   583  07FC  2FC2               	goto	l2709
+   584                           	
+   585  07FD                     l704:	
+   586                           	line	36
+   587                           	
+   588  07FD                     l705:	
+   589                           	global	start
+   590  07FD  120A  118A  2800   	ljmp	start
+   591                           	opt stack 0
+   592                           GLOBAL	__end_of_main
+   593  0800                     	__end_of_main:
+   594 ;; =============== function _main ends ============
+   595                           
+   596                           	signat	_main,88
+   597                           	global	_disp
+   598                           psect	text107,local,class=CODE,delta=2
+   599                           global __ptext107
+   600  070C                     __ptext107:
+   601                           
+   602 ;; *************** function _disp *****************
+   603 ;; Defined at:
+   604 ;;		line 74 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   605 ;; Parameters:    Size  Location     Type
+   606 ;;  a               1    wreg     unsigned char 
+   607 ;;  b               1    2[COMMON] PTR const unsigned char 
+   608 ;;		 -> STR_1(15), 
+   609 ;;  c               1    3[COMMON] unsigned char 
+   610 ;; Auto vars:     Size  Location     Type
+   611 ;;  a               1    4[COMMON] unsigned char 
+   612 ;;  k               2    5[COMMON] int 
+   613 ;; Return value:  Size  Location     Type
+   614 ;;		None               void
+   615 ;; Registers used:
+   616 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   617 ;; Tracked objects:
+   618 ;;		On entry : 0/0
+   619 ;;		On exit  : 0/0
+   620 ;;		Unchanged: 0/0
+   621 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   622 ;;      Params:         2       0       0       0       0
+   623 ;;      Locals:         3       0       0       0       0
+   624 ;;      Temps:          0       0       0       0       0
+   625 ;;      Totals:         5       0       0       0       0
+   626 ;;Total ram usage:        5 bytes
+   627 ;; Hardware stack levels used:    1
+   628 ;; Hardware stack levels required when called:    1
+   629 ;; This function calls:
+   630 ;;		_cmd
+   631 ;;		_write
+   632 ;; This function is called by:
+   633 ;;		_main
+   634 ;; This function uses a non-reentrant model
+   635 ;;
+   636                           psect	text107
+   637                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   638                           	line	74
+   639                           	global	__size_of_disp
+   640  002C                     	__size_of_disp	equ	__end_of_disp-_disp
+   641                           	
+   642  070C                     _disp:	
+   643                           	opt	stack 6
+   644                           ; Regs used in _disp: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   645                           ;disp@a stored from wreg
+   646  070C  00F4               	movwf	(disp@a)
+   647                           	line	75
+   648                           	
+   649  070D                     l2685:	
+   650                           ;basic.c: 75: for(int k=0;k<=c;k++)
+   651  070D  01F5               	clrf	(disp@k)
+   652  070E  01F6               	clrf	(disp@k+1)
+   653  070F  2F2B               	goto	l2693
+   654                           	line	76
+   655                           	
+   656  0710                     l718:	
+   657                           	line	77
+   658                           	
+   659  0710                     l2687:	
+   660                           ;basic.c: 76: {
+   661                           ;basic.c: 77: cmd(a+k);
+   662  0710  0875               	movf	(disp@k),w
+   663  0711  0774               	addwf	(disp@a),w
+   664  0712  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   665                           	line	78
+   666                           	
+   667  0717                     l2689:	
+   668                           ;basic.c: 78: write(b[k]);
+   669  0717  0875               	movf	(disp@k),w
+   670  0718  0772               	addwf	(disp@b),w
+   671  0719  0084               	movwf	fsr0
+   672  071A  120A  118A  2003   	fcall	stringdir
+              120A  118A         
+   673  071F  120A  118A  276A   	fcall	_write
+              120A  118A         
+   674                           	line	75
+   675                           	
+   676  0724                     l2691:	
+   677  0724  3001               	movlw	low(01h)
+   678  0725  07F5               	addwf	(disp@k),f
+   679  0726  1803               	skipnc
+   680  0727  0AF6               	incf	(disp@k+1),f
+   681  0728  3000               	movlw	high(01h)
+   682  0729  07F6               	addwf	(disp@k+1),f
+   683  072A  2F2B               	goto	l2693
+   684                           	
+   685  072B                     l717:	
+   686                           	
+   687  072B                     l2693:	
+   688  072B  0876               	movf	(disp@k+1),w
+   689  072C  3A80               	xorlw	80h
+   690  072D  3C80               	sublw	080h
+   691  072E  1D03               	skipz
+   692  072F  2F32               	goto	u2255
+   693  0730  0875               	movf	(disp@k),w
+   694  0731  0273               	subwf	(disp@c),w
+   695  0732                     u2255:
+   696                           
+   697  0732  1803               	skipnc
+   698  0733  2F35               	goto	u2251
+   699  0734  2F36               	goto	u2250
+   700  0735                     u2251:
+   701  0735  2F10               	goto	l2687
+   702  0736                     u2250:
+   703  0736  2F37               	goto	l720
+   704                           	
+   705  0737                     l719:	
+   706                           	line	80
+   707                           	
+   708  0737                     l720:	
+   709  0737  0008               	return
+   710                           	opt stack 0
+   711                           GLOBAL	__end_of_disp
+   712  0738                     	__end_of_disp:
+   713 ;; =============== function _disp ends ============
+   714                           
+   715                           	signat	_disp,12408
+   716                           	global	_init
+   717                           psect	text108,local,class=CODE,delta=2
+   718                           global __ptext108
+   719  06CC                     __ptext108:
+   720                           
+   721 ;; *************** function _init *****************
+   722 ;; Defined at:
+   723 ;;		line 39 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   724 ;; Parameters:    Size  Location     Type
+   725 ;;		None
+   726 ;; Auto vars:     Size  Location     Type
+   727 ;;		None
+   728 ;; Return value:  Size  Location     Type
+   729 ;;		None               void
+   730 ;; Registers used:
+   731 ;;		wreg, status,2, status,0, pclath, cstack
+   732 ;; Tracked objects:
+   733 ;;		On entry : 0/0
+   734 ;;		On exit  : 0/0
+   735 ;;		Unchanged: 0/0
+   736 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   737 ;;      Params:         0       0       0       0       0
+   738 ;;      Locals:         0       0       0       0       0
+   739 ;;      Temps:          0       0       0       0       0
+   740 ;;      Totals:         0       0       0       0       0
+   741 ;;Total ram usage:        0 bytes
+   742 ;; Hardware stack levels used:    1
+   743 ;; Hardware stack levels required when called:    1
+   744 ;; This function calls:
+   745 ;;		_cmd
+   746 ;; This function is called by:
+   747 ;;		_main
+   748 ;; This function uses a non-reentrant model
+   749 ;;
+   750                           psect	text108
+   751                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   752                           	line	39
+   753                           	global	__size_of_init
+   754  001F                     	__size_of_init	equ	__end_of_init-_init
+   755                           	
+   756  06CC                     _init:	
+   757                           	opt	stack 6
+   758                           ; Regs used in _init: [wreg+status,2+status,0+pclath+cstack]
+   759                           	line	40
+   760                           	
+   761  06CC                     l2683:	
+   762                           ;basic.c: 40: cmd(0x02);
+   763  06CC  3002               	movlw	(02h)
+   764  06CD  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   765                           	line	41
+   766                           ;basic.c: 41: cmd(0x28);
+   767  06D2  3028               	movlw	(028h)
+   768  06D3  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   769                           	line	42
+   770                           ;basic.c: 42: cmd(0x06);
+   771  06D8  3006               	movlw	(06h)
+   772  06D9  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   773                           	line	43
+   774                           ;basic.c: 43: cmd(0x0C);
+   775  06DE  300C               	movlw	(0Ch)
+   776  06DF  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   777                           	line	44
+   778                           ;basic.c: 44: cmd(0x01);
+   779  06E4  3001               	movlw	(01h)
+   780  06E5  120A  118A  2738   	fcall	_cmd
+              120A  118A         
+   781                           	line	45
+   782                           	
+   783  06EA                     l708:	
+   784  06EA  0008               	return
+   785                           	opt stack 0
+   786                           GLOBAL	__end_of_init
+   787  06EB                     	__end_of_init:
+   788 ;; =============== function _init ends ============
+   789                           
+   790                           	signat	_init,88
+   791                           	global	_write
+   792                           psect	text109,local,class=CODE,delta=2
+   793                           global __ptext109
+   794  076A                     __ptext109:
+   795                           
+   796 ;; *************** function _write *****************
+   797 ;; Defined at:
+   798 ;;		line 61 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   799 ;; Parameters:    Size  Location     Type
+   800 ;;  b               1    wreg     unsigned char 
+   801 ;; Auto vars:     Size  Location     Type
+   802 ;;  b               1    1[COMMON] unsigned char 
+   803 ;; Return value:  Size  Location     Type
+   804 ;;		None               void
+   805 ;; Registers used:
+   806 ;;		wreg, status,2, status,0
+   807 ;; Tracked objects:
+   808 ;;		On entry : 0/0
+   809 ;;		On exit  : 0/0
+   810 ;;		Unchanged: 0/0
+   811 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   812 ;;      Params:         0       0       0       0       0
+   813 ;;      Locals:         1       0       0       0       0
+   814 ;;      Temps:          1       0       0       0       0
+   815 ;;      Totals:         2       0       0       0       0
+   816 ;;Total ram usage:        2 bytes
+   817 ;; Hardware stack levels used:    1
+   818 ;; This function calls:
+   819 ;;		Nothing
+   820 ;; This function is called by:
+   821 ;;		_disp
+   822 ;; This function uses a non-reentrant model
+   823 ;;
+   824                           psect	text109
+   825                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   826                           	line	61
+   827                           	global	__size_of_write
+   828  0034                     	__size_of_write	equ	__end_of_write-_write
+   829                           	
+   830  076A                     _write:	
+   831                           	opt	stack 6
+   832                           ; Regs used in _write: [wreg+status,2+status,0]
+   833                           ;write@b stored from wreg
+   834  076A  00F1               	movwf	(write@b)
+   835                           	line	62
+   836                           	
+   837  076B                     l2657:	
+   838                           ;basic.c: 62: m = PORTD & 0x0f;
+   839  076B  1283               	bcf	status, 5	;RP0=0, select bank0
+   840  076C  1303               	bcf	status, 6	;RP1=0, select bank0
+   841  076D  0808               	movf	(8),w
+   842  076E  390F               	andlw	0Fh
+   843  076F  00F0               	movwf	(??_write+0)+0
+   844  0770  0870               	movf	(??_write+0)+0,w
+   845  0771  00FD               	movwf	(_m)
+   846                           	line	63
+   847                           	
+   848  0772                     l2659:	
+   849                           ;basic.c: 63: PORTD = (b & 0xf0)|m;
+   850  0772  0871               	movf	(write@b),w
+   851  0773  39F0               	andlw	0F0h
+   852  0774  047D               	iorwf	(_m),w
+   853  0775  0088               	movwf	(8)	;volatile
+   854                           	line	64
+   855                           	
+   856  0776                     l2661:	
+   857                           ;basic.c: 64: RD1=1;RD0=1;
+   858  0776  1488               	bsf	(65/8),(65)&7
+   859                           	
+   860  0777                     l2663:	
+   861  0777  1408               	bsf	(64/8),(64)&7
+   862                           	line	65
+   863                           	
+   864  0778                     l2665:	
+   865                           ;basic.c: 65: _delay(1000);
+   866                           	opt asmopt_off
+   867  0778  30F9               movlw	249
+   868  0779  00F0               movwf	(??_write+0)+0,f
+   869  077A                     u2277:
+   870  077A  0064               	clrwdt
+   871  077B  0BF0               decfsz	(??_write+0)+0,f
+   872  077C  2F7A               	goto	u2277
+   873  077D  2F7E               	nop2	;nop
+   874  077E  0064               	clrwdt
+   875                           opt asmopt_on
+   876                           
+   877                           	line	66
+   878                           	
+   879  077F                     l2667:	
+   880                           ;basic.c: 66: RD1=0;RD0=0;
+   881  077F  1283               	bcf	status, 5	;RP0=0, select bank0
+   882  0780  1303               	bcf	status, 6	;RP1=0, select bank0
+   883  0781  1088               	bcf	(65/8),(65)&7
+   884                           	
+   885  0782                     l2669:	
+   886  0782  1008               	bcf	(64/8),(64)&7
+   887                           	line	67
+   888                           	
+   889  0783                     l2671:	
+   890                           ;basic.c: 67: PORTD = ((b<<4) & 0xf0)|m;
+   891  0783  0871               	movf	(write@b),w
+   892  0784  00F0               	movwf	(??_write+0)+0
+   893  0785  3003               	movlw	(04h)-1
+   894  0786                     u2245:
+   895  0786  1003               	clrc
+   896  0787  0DF0               	rlf	(??_write+0)+0,f
+   897  0788  3EFF               	addlw	-1
+   898  0789  1D03               	skipz
+   899  078A  2F86               	goto	u2245
+   900  078B  1003               	clrc
+   901  078C  0D70               	rlf	(??_write+0)+0,w
+   902  078D  39F0               	andlw	0F0h
+   903  078E  047D               	iorwf	(_m),w
+   904  078F  0088               	movwf	(8)	;volatile
+   905                           	line	68
+   906                           	
+   907  0790                     l2673:	
+   908                           ;basic.c: 68: RD1=1;RD0=1;
+   909  0790  1488               	bsf	(65/8),(65)&7
+   910                           	
+   911  0791                     l2675:	
+   912  0791  1408               	bsf	(64/8),(64)&7
+   913                           	line	69
+   914                           	
+   915  0792                     l2677:	
+   916                           ;basic.c: 69: _delay(1000);
+   917                           	opt asmopt_off
+   918  0792  30F9               movlw	249
+   919  0793  00F0               movwf	(??_write+0)+0,f
+   920  0794                     u2287:
+   921  0794  0064               	clrwdt
+   922  0795  0BF0               decfsz	(??_write+0)+0,f
+   923  0796  2F94               	goto	u2287
+   924  0797  2F98               	nop2	;nop
+   925  0798  0064               	clrwdt
+   926                           opt asmopt_on
+   927                           
+   928                           	line	70
+   929                           	
+   930  0799                     l2679:	
+   931                           ;basic.c: 70: RD1=0;RD0=0;
+   932  0799  1283               	bcf	status, 5	;RP0=0, select bank0
+   933  079A  1303               	bcf	status, 6	;RP1=0, select bank0
+   934  079B  1088               	bcf	(65/8),(65)&7
+   935                           	
+   936  079C                     l2681:	
+   937  079C  1008               	bcf	(64/8),(64)&7
+   938                           	line	71
+   939                           	
+   940  079D                     l714:	
+   941  079D  0008               	return
+   942                           	opt stack 0
+   943                           GLOBAL	__end_of_write
+   944  079E                     	__end_of_write:
+   945 ;; =============== function _write ends ============
+   946                           
+   947                           	signat	_write,4216
+   948                           	global	_cmd
+   949                           psect	text110,local,class=CODE,delta=2
+   950                           global __ptext110
+   951  0738                     __ptext110:
+   952                           
+   953 ;; *************** function _cmd *****************
+   954 ;; Defined at:
+   955 ;;		line 48 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   956 ;; Parameters:    Size  Location     Type
+   957 ;;  a               1    wreg     unsigned char 
+   958 ;; Auto vars:     Size  Location     Type
+   959 ;;  a               1    1[COMMON] unsigned char 
+   960 ;; Return value:  Size  Location     Type
+   961 ;;		None               void
+   962 ;; Registers used:
+   963 ;;		wreg, status,2, status,0
+   964 ;; Tracked objects:
+   965 ;;		On entry : 0/0
+   966 ;;		On exit  : 0/0
+   967 ;;		Unchanged: 0/0
+   968 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   969 ;;      Params:         0       0       0       0       0
+   970 ;;      Locals:         1       0       0       0       0
+   971 ;;      Temps:          1       0       0       0       0
+   972 ;;      Totals:         2       0       0       0       0
+   973 ;;Total ram usage:        2 bytes
+   974 ;; Hardware stack levels used:    1
+   975 ;; This function calls:
+   976 ;;		Nothing
+   977 ;; This function is called by:
+   978 ;;		_init
+   979 ;;		_disp
+   980 ;; This function uses a non-reentrant model
+   981 ;;
+   982                           psect	text110
+   983                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+   984                           	line	48
+   985                           	global	__size_of_cmd
+   986  0032                     	__size_of_cmd	equ	__end_of_cmd-_cmd
+   987                           	
+   988  0738                     _cmd:	
+   989                           	opt	stack 6
+   990                           ; Regs used in _cmd: [wreg+status,2+status,0]
+   991                           ;cmd@a stored from wreg
+   992  0738  00F1               	movwf	(cmd@a)
+   993                           	line	49
+   994                           	
+   995  0739                     l2635:	
+   996                           ;basic.c: 49: m = PORTD & 0x0f;
+   997  0739  1283               	bcf	status, 5	;RP0=0, select bank0
+   998  073A  1303               	bcf	status, 6	;RP1=0, select bank0
+   999  073B  0808               	movf	(8),w
+  1000  073C  390F               	andlw	0Fh
+  1001  073D  00F0               	movwf	(??_cmd+0)+0
+  1002  073E  0870               	movf	(??_cmd+0)+0,w
+  1003  073F  00FD               	movwf	(_m)
+  1004                           	line	50
+  1005                           	
+  1006  0740                     l2637:	
+  1007                           ;basic.c: 50: PORTD = (a & 0xf0)|m;
+  1008  0740  0871               	movf	(cmd@a),w
+  1009  0741  39F0               	andlw	0F0h
+  1010  0742  047D               	iorwf	(_m),w
+  1011  0743  0088               	movwf	(8)	;volatile
+  1012                           	line	51
+  1013                           	
+  1014  0744                     l2639:	
+  1015                           ;basic.c: 51: RD1=1;RD0=0;
+  1016  0744  1488               	bsf	(65/8),(65)&7
+  1017                           	
+  1018  0745                     l2641:	
+  1019  0745  1008               	bcf	(64/8),(64)&7
+  1020                           	line	52
+  1021                           	
+  1022  0746                     l2643:	
+  1023                           ;basic.c: 52: _delay(1000);
+  1024                           	opt asmopt_off
+  1025  0746  30F9               movlw	249
+  1026  0747  00F0               movwf	(??_cmd+0)+0,f
+  1027  0748                     u2297:
+  1028  0748  0064               	clrwdt
+  1029  0749  0BF0               decfsz	(??_cmd+0)+0,f
+  1030  074A  2F48               	goto	u2297
+  1031  074B  2F4C               	nop2	;nop
+  1032  074C  0064               	clrwdt
+  1033                           opt asmopt_on
+  1034                           
+  1035                           	line	53
+  1036                           	
+  1037  074D                     l2645:	
+  1038                           ;basic.c: 53: RD1=0;
+  1039  074D  1283               	bcf	status, 5	;RP0=0, select bank0
+  1040  074E  1303               	bcf	status, 6	;RP1=0, select bank0
+  1041  074F  1088               	bcf	(65/8),(65)&7
+  1042                           	line	54
+  1043                           	
+  1044  0750                     l2647:	
+  1045                           ;basic.c: 54: PORTD = ((a<<4) & 0xf0)|m;
+  1046  0750  0871               	movf	(cmd@a),w
+  1047  0751  00F0               	movwf	(??_cmd+0)+0
+  1048  0752  3003               	movlw	(04h)-1
+  1049  0753                     u2235:
+  1050  0753  1003               	clrc
+  1051  0754  0DF0               	rlf	(??_cmd+0)+0,f
+  1052  0755  3EFF               	addlw	-1
+  1053  0756  1D03               	skipz
+  1054  0757  2F53               	goto	u2235
+  1055  0758  1003               	clrc
+  1056  0759  0D70               	rlf	(??_cmd+0)+0,w
+  1057  075A  39F0               	andlw	0F0h
+  1058  075B  047D               	iorwf	(_m),w
+  1059  075C  0088               	movwf	(8)	;volatile
+  1060                           	line	55
+  1061                           	
+  1062  075D                     l2649:	
+  1063                           ;basic.c: 55: RD1=1;RD0=0;
+  1064  075D  1488               	bsf	(65/8),(65)&7
+  1065                           	
+  1066  075E                     l2651:	
+  1067  075E  1008               	bcf	(64/8),(64)&7
+  1068                           	line	56
+  1069                           	
+  1070  075F                     l2653:	
+  1071                           ;basic.c: 56: _delay(1000);
+  1072                           	opt asmopt_off
+  1073  075F  30F9               movlw	249
+  1074  0760  00F0               movwf	(??_cmd+0)+0,f
+  1075  0761                     u2307:
+  1076  0761  0064               	clrwdt
+  1077  0762  0BF0               decfsz	(??_cmd+0)+0,f
+  1078  0763  2F61               	goto	u2307
+  1079  0764  2F65               	nop2	;nop
+  1080  0765  0064               	clrwdt
+  1081                           opt asmopt_on
+  1082                           
+  1083                           	line	57
+  1084                           	
+  1085  0766                     l2655:	
+  1086                           ;basic.c: 57: RD1=0;;
+  1087  0766  1283               	bcf	status, 5	;RP0=0, select bank0
+  1088  0767  1303               	bcf	status, 6	;RP1=0, select bank0
+  1089  0768  1088               	bcf	(65/8),(65)&7
+  1090                           	line	58
+  1091                           	
+  1092  0769                     l711:	
+  1093  0769  0008               	return
+  1094                           	opt stack 0
+  1095                           GLOBAL	__end_of_cmd
+  1096  076A                     	__end_of_cmd:
+  1097 ;; =============== function _cmd ends ============
+  1098                           
+  1099                           	signat	_cmd,4216
+  1100                           	global	_delay
+  1101                           psect	text111,local,class=CODE,delta=2
+  1102                           global __ptext111
+  1103  06EB                     __ptext111:
+  1104                           
+  1105 ;; *************** function _delay *****************
+  1106 ;; Defined at:
+  1107 ;;		line 83 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+  1108 ;; Parameters:    Size  Location     Type
+  1109 ;;  k               4    0[COMMON] long 
+  1110 ;; Auto vars:     Size  Location     Type
+  1111 ;;		None
+  1112 ;; Return value:  Size  Location     Type
+  1113 ;;		None               void
+  1114 ;; Registers used:
+  1115 ;;		wreg
+  1116 ;; Tracked objects:
+  1117 ;;		On entry : 0/0
+  1118 ;;		On exit  : 0/0
+  1119 ;;		Unchanged: 0/0
+  1120 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1121 ;;      Params:         4       0       0       0       0
+  1122 ;;      Locals:         0       0       0       0       0
+  1123 ;;      Temps:          0       0       0       0       0
+  1124 ;;      Totals:         4       0       0       0       0
+  1125 ;;Total ram usage:        4 bytes
+  1126 ;; Hardware stack levels used:    1
+  1127 ;; This function calls:
+  1128 ;;		Nothing
+  1129 ;; This function is called by:
+  1130 ;;		_main
+  1131 ;; This function uses a non-reentrant model
+  1132 ;;
+  1133                           psect	text111
+  1134                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\PWM\basic.c"
+  1135                           	line	83
+  1136                           	global	__size_of_delay
+  1137  0021                     	__size_of_delay	equ	__end_of_delay-_delay
+  1138                           	
+  1139  06EB                     _delay:	
+  1140                           	opt	stack 7
+  1141                           ; Regs used in _delay: [wreg]
+  1142                           	line	84
+  1143                           	
+  1144  06EB                     l1773:	
+  1145                           ;basic.c: 84: while(k--);
+  1146  06EB  2EED               	goto	l1775
+  1147                           	
+  1148  06EC                     l724:	
+  1149  06EC  2EED               	goto	l1775
+  1150                           	
+  1151  06ED                     l723:	
+  1152                           	
+  1153  06ED                     l1775:	
+  1154  06ED  30FF               	movlw	0FFh
+  1155  06EE  07F0               	addwf	(delay@k),f
+  1156  06EF  30FF               	movlw	0FFh
+  1157  06F0  1C03               	skipc
+  1158  06F1  07F1               	addwf	(delay@k+1),f
+  1159  06F2  30FF               	movlw	0FFh
+  1160  06F3  1C03               	skipc
+  1161  06F4  07F2               	addwf	(delay@k+2),f
+  1162  06F5  30FF               	movlw	0FFh
+  1163  06F6  1C03               	skipc
+  1164  06F7  07F3               	addwf	(delay@k+3),f
+  1165  06F8  30FF               	movlw	0FFh
+  1166  06F9  0673               	xorwf	((delay@k+3)),w
+  1167  06FA  1D03               	skipz
+  1168  06FB  2F06               	goto	u15
+  1169  06FC  30FF               	movlw	0FFh
+  1170  06FD  0672               	xorwf	((delay@k+2)),w
+  1171  06FE  1D03               	skipz
+  1172  06FF  2F06               	goto	u15
+  1173  0700  30FF               	movlw	0FFh
+  1174  0701  0671               	xorwf	((delay@k+1)),w
+  1175  0702  1D03               	skipz
+  1176  0703  2F06               	goto	u15
+  1177  0704  30FF               	movlw	0FFh
+  1178  0705  0670               	xorwf	((delay@k)),w
+  1179  0706                     u15:
+  1180  0706  1D03               	skipz
+  1181  0707  2F09               	goto	u11
+  1182  0708  2F0A               	goto	u10
+  1183  0709                     u11:
+  1184  0709  2EED               	goto	l1775
+  1185  070A                     u10:
+  1186  070A  2F0B               	goto	l726
+  1187                           	
+  1188  070B                     l725:	
+  1189                           	line	85
+  1190                           	
+  1191  070B                     l726:	
+  1192  070B  0008               	return
+  1193                           	opt stack 0
+  1194                           GLOBAL	__end_of_delay
+  1195  070C                     	__end_of_delay:
+  1196 ;; =============== function _delay ends ============
+  1197                           
+  1198                           	signat	_delay,4216
+  1199                           psect	text112,local,class=CODE,delta=2
+  1200                           global __ptext112
+  1201  0000                     __ptext112:
+  1202                           	global	btemp
+  1203  007E                     	btemp set 07Eh
+  1204                           
+  1205                           	DABS	1,126,2	;btemp
+  1206                           	global	wtemp0
+  1207  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.82 build 9453 
+Symbol Table                                                                                   Sat Jan 27 16:17:56 2024
+
+                   _m 007D                     pc 0002                    _RD 0C60                    u10 070A  
+                  u11 0709                    u15 0706                    _WR 0C61                    fsr 0004  
+                 l700 07ED                   l701 07C9                   l702 07FB                   l711 0769  
+                 l703 07FC                   l720 0737                   l704 07FD                   l705 07FD  
+                 l714 079D                   l723 06ED                   l724 06EC                   l708 06EA  
+                 l725 070B                   l717 072B                   l726 070B                   l718 0710  
+                 l719 0737                   l699 07C2                   _GIE 005F                   _RD0 0040  
+                 _RD1 0041                   _PR2 0092                   _cmd 0738                   fsr0 0004  
+                 indf 0000                  ?_cmd 0070                  l2701 07A8                  l2711 07C4  
+                l2703 07AD                  l2641 0745                  l2721 07D3                  l2713 07CC  
+                l2705 07AF                  l2651 075E                  l2643 0746                  l2635 0739  
+                l2723 07E0                  l2715 07CE                  l2707 07B3                  l1773 06EB  
+                l2653 075F                  l2645 074D                  l2637 0740                  l2661 0776  
+                l2725 07E6                  l2717 07CF                  l2709 07C2                  l1775 06ED  
+                l2655 0766                  l2647 0750                  l2639 0744                  l2671 0783  
+                l2663 0777                  l2719 07D2                  l2727 07ED                  l2649 075D  
+                l2681 079C                  l2673 0790                  l2665 0778                  l2657 076B  
+                l2675 0791                  l2667 077F                  l2659 0772                  l2683 06CC  
+                l2691 0724                  l2677 0792                  l2669 0782                  l2693 072B  
+                l2685 070D                  l2679 0799                  l2687 0710                  l2695 079E  
+                l2689 0717                  l2697 07A1                  l2699 07A3                  STR_1 0009  
+                u2250 0736                  u2307 0761                  u2235 0753                  u2251 0735  
+                u2260 07FA                  u2245 0786                  u2261 07F9                  u2255 0732  
+                u2265 07F6                  u2277 077A                  u2287 0794                  u2297 0748  
+                _WREN 0C62                  cmd@a 0071                  _disp 070C                  _main 079E  
+                _init 06CC                  btemp 007E                  start 0000                 ??_cmd 0070  
+               ?_disp 0072                 ?_main 0070                 ?_init 0070                 _EEADR 010D  
+               _CARRY 0018                 _PORTD 0008                 _TRISC 0087                 _TRISD 0088  
+               _delay 06EB                 _digit 0020                 disp@a 0074                 disp@b 0072  
+               disp@c 0073                 disp@k 0075                 main@j 007B                 main@k 0079  
+               _write 076A                 pclath 000A                 status 0003                 wtemp0 007E  
+        __end_of_disp 0738          __end_of_main 0800          __end_of_init 06EB                ??_disp 0074  
+              ??_main 0077                ??_init 0072                ?_delay 0070                _EEDATA 010C  
+              _CCPR1L 0015                _CCPR2L 001B                _EECON1 018C                _EECON2 018D  
+              ?_write 0070                _TMR2ON 0092                delay@k 0070                write@b 0071  
+      __pcstackCOMMON 0070          __pidataBANK0 069D         __end_of_delay 070C         __end_of_write 079E  
+             ??_delay 0074               ??_write 0070            __pnvCOMMON 007D            __pmaintext 079E  
+             _CCP1CON 0017               _CCP2CON 001D          __size_of_cmd 0032  end_of_initialization 06B5  
+             init_ram 06BD   start_initialization 06A7           __end_of_cmd 076A           __pdataBANK0 0020  
+           __ptext110 0738             __ptext111 06EB             __ptext112 0000             __ptext107 070C  
+           __ptext108 06CC             __ptext109 076A             __pstrings 0003        __size_of_delay 0021  
+      __size_of_write 0034           __stringbase 0008             init_fetch 06B9         __size_of_disp 002C  
+       __size_of_main 0062         __size_of_init 001F             stringcode 0003              stringdir 0003  
+            stringtab 0003  
