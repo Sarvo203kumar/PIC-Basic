@@ -1,0 +1,6 @@
+_init: CODE, 1776 0 31
+_main: CODE, 1953 0 95
+_write: CODE, 1901 0 52
+_cmd: CODE, 1851 0 50
+_disp: CODE, 1807 0 44
+Total: 272
