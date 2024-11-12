@@ -1,0 +1,270 @@
+_RD C60 0 ABS
+_WR C61 0 ABS
+_rx 6B0 0 CODE
+_tx 6BB 0 CODE
+__S0 2008 0 ABS
+__S1 7E 0 ABS
+__S2 0 0 ABS
+_GIE 5F 0 ABS
+Lcd8_Display@n 76 0 COMMON
+__Hintentry 0 0 CODE
+__Lintentry 0 0 CODE
+tx@a 70 0 COMMON
+_val 7D 0 COMMON
+?_rx 70 0 COMMON
+?_tx 70 0 COMMON
+Lcd8_Display@Lcd_i 7B 0 COMMON
+?_Lcd8_Write 73 0 COMMON
+_RCIF 65 0 ABS
+_TXIF 64 0 ABS
+_WREN C62 0 ABS
+_main 78F 0 CODE
+btemp 7E 0 ABS
+??_rx 70 0 COMMON
+??_tx 70 0 COMMON
+_exit 0 0 CODE
+start 0 0 CODE
+??_Lcd8_Write 74 0 COMMON
+Lcd8_Write@lr 73 0 COMMON
+_RCREG 1A 0 ABS
+_RCSTA 18 0 ABS
+_TXREG 19 0 ABS
+reset_vec 0 0 CODE
+_TRISD 88 0 ABS
+_SPBRG 99 0 ABS
+_TXSTA 98 0 ABS
+_EEADR 10D 0 ABS
+_PORTD 8 0 ABS
+Delay@del 70 0 COMMON
+wtemp0 7E 0 ABS
+_CARRY 18 0 ABS
+__Hconfig 2008 0 CONFIG
+__Lconfig 2007 0 CONFIG
+__Hram 0 0 ABS
+__Lram 0 0 ABS
+?_main 70 0 COMMON
+_Delay 6D8 0 CODE
+_txstr 722 0 CODE
+__Hfunctab 0 0 CODE
+__Lfunctab 0 0 CODE
+_EECON1 18C 0 ABS
+_TRISC4 43C 0 ABS
+__end_of_Lcd8_Display 78F 0 CODE
+_EECON2 18D 0 ABS
+_TRISC5 43D 0 ABS
+_TRISC6 43E 0 ABS
+__size_of_Lcd8_Command 0 0 ABS
+_TRISC7 43F 0 ABS
+__Hcommon 0 0 ABS
+__Lcommon 0 0 ABS
+__Heeprom_data 0 0 EEDATA
+__Leeprom_data 0 0 EEDATA
+__size_of_Lcd8_Init 0 0 ABS
+Lcd8_Write@com 74 0 COMMON
+_EEDATA 10C 0 ABS
+Lcd8_Display@word 75 0 COMMON
+?_ser_int 70 0 COMMON
+__Habs1 0 0 ABS
+__Labs1 0 0 ABS
+__Hsfr0 0 0 ABS
+__Lsfr0 0 0 ABS
+_Lcd8_Display 766 0 CODE
+__Hsfr1 0 0 ABS
+__Lsfr1 0 0 ABS
+__Hsfr2 0 0 ABS
+__Lsfr2 0 0 ABS
+__Hsfr3 0 0 ABS
+__Lsfr3 0 0 ABS
+__ptext160 6D8 0 CODE
+__end_of_ser_int 6D8 0 CODE
+__ptext151 0 0 CODE
+__ptext161 0 0 CODE
+__ptext152 766 0 CODE
+__end_of_Lcd8_Init 705 0 CODE
+__Hcode 0 0 ABS
+__Lcode 0 0 ABS
+__ptext153 743 0 CODE
+txstr@s 72 0 COMMON
+??_Lcd8_Init 73 0 COMMON
+_Lcd_en 3D 0 ABS
+__ptext154 6EC 0 CODE
+??_main 7C 0 COMMON
+__ptext155 722 0 CODE
+?_Delay 70 0 COMMON
+__Hinit 0 0 CODE
+_Lcd_rs 3C 0 ABS
+__Linit 0 0 CODE
+__end_of_main 800 0 CODE
+__Htext 0 0 ABS
+__Ltext 0 0 ABS
+__ptext156 705 0 CODE
+?_txstr 70 0 COMMON
+Lcd8_Display@com 7A 0 COMMON
+__ptext157 6BB 0 CODE
+end_of_initialization 6AC 0 CODE
+_Lcd8_Init 6EC 0 CODE
+__ptext158 6B0 0 CODE
+__ptext159 6C7 0 CODE
+?_Lcd8_Command 70 0 COMMON
+__Hstrings 0 0 ABS
+__Lstrings 0 0 ABS
+__pstrings 3 0 STRING
+??_ser_int 70 0 COMMON
+__Hbank0 0 0 ABS
+__Lbank0 0 0 ABS
+__Hbank1 0 0 ABS
+__Lbank1 0 0 ABS
+__Hbank2 0 0 ABS
+__Lbank2 0 0 ABS
+?_Lcd8_Display 75 0 COMMON
+__Hbank3 0 0 ABS
+__Lbank3 0 0 ABS
+__end_of_txstr 743 0 CODE
+__Hpowerup 0 0 CODE
+__Lpowerup 0 0 CODE
+__Hclrtext 0 0 ABS
+__Lclrtext 0 0 ABS
+_Lcd8_Write 743 0 CODE
+__size_of_Delay 0 0 ABS
+Lcd8_Command@com 72 0 COMMON
+__Hidloc 0 0 IDLOC
+__Lidloc 0 0 IDLOC
+??_Delay 72 0 COMMON
+__Hcinit 0 0 ABS
+__Lcinit 0 0 ABS
+_ser_int 6C7 0 CODE
+__size_of_main 0 0 ABS
+??_txstr 71 0 COMMON
+?_Lcd8_Init 70 0 COMMON
+_Lcd8_Command 705 0 CODE
+??_Lcd8_Command 72 0 COMMON
+__HbssCOMMON 0 0 ABS
+__LbssCOMMON 0 0 ABS
+__pbssCOMMON 7D 0 COMMON
+__size_of_rx 0 0 ABS
+__Hend_init 3 0 CODE
+__Lend_init 0 0 CODE
+__end_of_Delay 6EC 0 CODE
+__size_of_tx 0 0 ABS
+__Hreset_vec 0 0 CODE
+__Lreset_vec 0 0 CODE
+__size_of_Lcd8_Write 0 0 ABS
+intlevel0 0 0 CODE
+??_Lcd8_Display 78 0 COMMON
+intlevel1 0 0 CODE
+__end_of_Lcd8_Write 766 0 CODE
+intlevel2 0 0 CODE
+__size_of_txstr 0 0 ABS
+intlevel3 0 0 CODE
+intlevel4 0 0 CODE
+intlevel5 0 0 CODE
+__end_of_rx 6BB 0 CODE
+__size_of_Lcd8_Display 0 0 ABS
+__HcstackCOMMON 0 0 ABS
+__LcstackCOMMON 0 0 ABS
+__pcstackCOMMON 70 0 COMMON
+__end_of_tx 6C7 0 CODE
+__size_of_ser_int 0 0 ABS
+start_initialization 6AB 0 CODE
+__Hmaintext 0 0 ABS
+__Lmaintext 0 0 ABS
+__pmaintext 78F 0 CODE
+__end_of_Lcd8_Command 722 0 CODE
+%segments
+reset_vec 0 5 CODE 0
+config 400E 400F CONFIG 400E
+cstackCOMMON 70 7D COMMON 70
+maintext F1E FFF CODE F1E
+strings 6 89 STRING 6
+text152 ECC F1D CODE ECC
+text153 E86 ECB CODE E86
+text155 E44 E85 CODE E44
+text156 E0A E43 CODE E0A
+text154 DD8 E09 CODE DD8
+text160 DB0 DD7 CODE DB0
+text159 D8E DAF CODE D8E
+text157 D76 D8D CODE D76
+text158 D60 D75 CODE D60
+cinit D56 D5F CODE D56
+%locals
+startup.obj
+startup.as
+64 0 0 CODE
+serial.obj
+D:\pic controller,PIC16F877A\serialdisplay\serial.c
+7 2007 0 CONFIG
+serial.as
+212 6AB 0 CODE
+219 6AC 0 CODE
+220 6AD 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\serial.c
+19 78F 0 CODE
+20 792 0 CODE
+21 793 0 CODE
+22 794 0 CODE
+23 799 0 CODE
+24 7A2 0 CODE
+25 7B0 0 CODE
+26 7BE 0 CODE
+27 7C7 0 CODE
+30 7CD 0 CODE
+32 7D0 0 CODE
+33 7D1 0 CODE
+34 7D6 0 CODE
+39 7DD 0 CODE
+40 7E7 0 CODE
+41 7ED 0 CODE
+36 7FC 0 CODE
+45 7FD 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\piclcd4.h
+55 766 0 CODE
+57 769 0 CODE
+55 77B 0 CODE
+59 78E 0 CODE
+40 743 0 CODE
+41 744 0 CODE
+43 74A 0 CODE
+44 74E 0 CODE
+45 74F 0 CODE
+46 750 0 CODE
+47 759 0 CODE
+48 75C 0 CODE
+49 765 0 CODE
+23 6EC 0 CODE
+24 6F2 0 CODE
+25 6F8 0 CODE
+26 6FE 0 CODE
+27 704 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\serial.c
+70 722 0 CODE
+71 723 0 CODE
+72 724 0 CODE
+71 735 0 CODE
+74 742 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\piclcd4.h
+30 705 0 CODE
+31 706 0 CODE
+32 70A 0 CODE
+33 70B 0 CODE
+34 70C 0 CODE
+35 715 0 CODE
+36 718 0 CODE
+37 721 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\serial.c
+56 6BB 0 CODE
+57 6BC 0 CODE
+58 6C0 0 CODE
+59 6C5 0 CODE
+60 6C6 0 CODE
+64 6B0 0 CODE
+65 6B7 0 CODE
+66 6B8 0 CODE
+67 6BA 0 CODE
+49 6C7 0 CODE
+50 6CB 0 CODE
+51 6CF 0 CODE
+52 6D3 0 CODE
+53 6D7 0 CODE
+D:\pic controller,PIC16F877A\serialdisplay\piclcd4.h
+108 6D8 0 CODE
+109 6EB 0 CODE

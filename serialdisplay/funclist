@@ -1,0 +1,11 @@
+_Lcd8_Display: CODE, 1894 0 41
+_ser_int: CODE, 1735 0 17
+_Lcd8_Init: CODE, 1772 0 25
+_main: CODE, 1935 0 113
+_txstr: CODE, 1826 0 33
+_Delay: CODE, 1752 0 20
+_Lcd8_Write: CODE, 1859 0 35
+_rx: CODE, 1712 0 11
+_tx: CODE, 1723 0 12
+_Lcd8_Command: CODE, 1797 0 29
+Total: 336
