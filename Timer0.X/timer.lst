@@ -1,0 +1,808 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.82 build 9453 
+                                                                                               Sat Jan 27 12:20:39 2024
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 9453
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 9453"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F877A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           	FNCALL	_main,_seq
+    43                           	FNCALL	_seq,_timerdelay
+    44                           	FNROOT	_main
+    45                           	global	_PORTD
+    46                           psect	text88,local,class=CODE,delta=2
+    47                           global __ptext88
+    48  0000                     __ptext88:
+    49  0008                     _PORTD	set	8
+    50                           	global	_T1CON
+    51  0010                     _T1CON	set	16
+    52                           	global	_TMR1H
+    53  000F                     _TMR1H	set	15
+    54                           	global	_TMR1L
+    55  000E                     _TMR1L	set	14
+    56                           	global	_CARRY
+    57  0018                     _CARRY	set	24
+    58                           	global	_GIE
+    59  005F                     _GIE	set	95
+    60                           	global	_PEIE
+    61  005E                     _PEIE	set	94
+    62                           	global	_RC0
+    63  0038                     _RC0	set	56
+    64                           	global	_TMR1IF
+    65  0060                     _TMR1IF	set	96
+    66                           	global	_TMR1ON
+    67  0080                     _TMR1ON	set	128
+    68                           	global	_TRISD
+    69  0088                     _TRISD	set	136
+    70                           	global	_TRISC0
+    71  0438                     _TRISC0	set	1080
+    72                           	global	_EEADR
+    73  010D                     _EEADR	set	269
+    74                           	global	_EEDATA
+    75  010C                     _EEDATA	set	268
+    76                           	global	_EECON1
+    77  018C                     _EECON1	set	396
+    78                           	global	_EECON2
+    79  018D                     _EECON2	set	397
+    80                           	global	_RD
+    81  0C60                     _RD	set	3168
+    82                           	global	_WR
+    83  0C61                     _WR	set	3169
+    84                           	global	_WREN
+    85  0C62                     _WREN	set	3170
+    86                           	file	"timer.as"
+    87                           	line	#
+    88                           psect cinit,class=CODE,delta=2
+    89                           global start_initialization
+    90  072A                     start_initialization:
+    91                           
+    92                           psect cinit,class=CODE,delta=2
+    93                           global end_of_initialization
+    94                           
+    95                           ;End of C runtime variable initialization code
+    96                           
+    97  072A                     end_of_initialization:
+    98  072A  0183               clrf status
+    99  072B  120A  118A  2F2E   ljmp _main	;jump to C main() function
+   100                           psect	cstackCOMMON,class=COMMON,space=1
+   101                           global __pcstackCOMMON
+   102  0070                     __pcstackCOMMON:
+   103                           	global	?_timerdelay
+   104  0070                     ?_timerdelay:	; 0 bytes @ 0x0
+   105                           	global	??_timerdelay
+   106  0070                     ??_timerdelay:	; 0 bytes @ 0x0
+   107                           	global	?_seq
+   108  0070                     ?_seq:	; 0 bytes @ 0x0
+   109                           	global	?_main
+   110  0070                     ?_main:	; 0 bytes @ 0x0
+   111                           	global	timerdelay@i
+   112  0070                     timerdelay@i:	; 2 bytes @ 0x0
+   113  0070                     	ds	2
+   114                           	global	??_seq
+   115  0072                     ??_seq:	; 0 bytes @ 0x2
+   116  0072                     	ds	1
+   117                           	global	seq@get
+   118  0073                     seq@get:	; 1 bytes @ 0x3
+   119  0073                     	ds	1
+   120                           	global	seq@j
+   121  0074                     seq@j:	; 2 bytes @ 0x4
+   122  0074                     	ds	2
+   123                           	global	seq@j_1233
+   124  0076                     seq@j_1233:	; 2 bytes @ 0x6
+   125  0076                     	ds	2
+   126                           	global	??_main
+   127  0078                     ??_main:	; 0 bytes @ 0x8
+   128 ;;Data sizes: Strings 0, constant 0, data 0, bss 0, persistent 0 stack 0
+   129 ;;Auto spaces:   Size  Autos    Used
+   130 ;; COMMON          14      8       8
+   131 ;; BANK0           80      0       0
+   132 ;; BANK1           80      0       0
+   133 ;; BANK3           96      0       0
+   134 ;; BANK2           96      0       0
+   135                           
+   136 ;;
+   137 ;; Pointer list with targets:
+   138                           
+   139                           
+   140                           
+   141 ;;
+   142 ;; Critical Paths under _main in COMMON
+   143 ;;
+   144 ;;   _main->_seq
+   145 ;;   _seq->_timerdelay
+   146 ;;
+   147 ;; Critical Paths under _main in BANK0
+   148 ;;
+   149 ;;   None.
+   150 ;;
+   151 ;; Critical Paths under _main in BANK1
+   152 ;;
+   153 ;;   None.
+   154 ;;
+   155 ;; Critical Paths under _main in BANK3
+   156 ;;
+   157 ;;   None.
+   158 ;;
+   159 ;; Critical Paths under _main in BANK2
+   160 ;;
+   161 ;;   None.
+   162                           
+   163 ;;
+   164 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   165 ;;
+   166                           
+   167 ;;
+   168 ;;Call Graph Tables:
+   169 ;;
+   170 ;; ---------------------------------------------------------------------------------
+   171 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   172 ;; ---------------------------------------------------------------------------------
+   173 ;; (0) _main                                                 0     0      0     150
+   174 ;;                                _seq
+   175 ;; ---------------------------------------------------------------------------------
+   176 ;; (1) _seq                                                  6     6      0     150
+   177 ;;                                              2 COMMON     6     6      0
+   178 ;;                         _timerdelay
+   179 ;; ---------------------------------------------------------------------------------
+   180 ;; (2) _timerdelay                                           2     2      0      30
+   181 ;;                                              0 COMMON     2     2      0
+   182 ;; ---------------------------------------------------------------------------------
+   183 ;; Estimated maximum stack depth 2
+   184 ;; ---------------------------------------------------------------------------------
+   185                           
+   186 ;; Call Graph Graphs:
+   187                           
+   188 ;; _main (ROOT)
+   189 ;;   _seq
+   190 ;;     _timerdelay
+   191 ;;
+   192                           
+   193 ;; Address spaces:
+   194                           
+   195 ;;Name               Size   Autos  Total    Cost      Usage
+   196 ;;BITCOMMON            E      0       0       0        0.0%
+   197 ;;EEDATA             100      0       0       0        0.0%
+   198 ;;NULL                 0      0       0       0        0.0%
+   199 ;;CODE                 0      0       0       0        0.0%
+   200 ;;COMMON               E      8       8       1       57.1%
+   201 ;;BITSFR0              0      0       0       1        0.0%
+   202 ;;SFR0                 0      0       0       1        0.0%
+   203 ;;BITSFR1              0      0       0       2        0.0%
+   204 ;;SFR1                 0      0       0       2        0.0%
+   205 ;;STACK                0      0       2       2        0.0%
+   206 ;;ABS                  0      0       0       3        0.0%
+   207 ;;BITBANK0            50      0       0       4        0.0%
+   208 ;;BITSFR3              0      0       0       4        0.0%
+   209 ;;SFR3                 0      0       0       4        0.0%
+   210 ;;BANK0               50      0       0       5        0.0%
+   211 ;;BITSFR2              0      0       0       5        0.0%
+   212 ;;SFR2                 0      0       0       5        0.0%
+   213 ;;BITBANK1            50      0       0       6        0.0%
+   214 ;;BANK1               50      0       0       7        0.0%
+   215 ;;BITBANK3            60      0       0       8        0.0%
+   216 ;;BANK3               60      0       0       9        0.0%
+   217 ;;BITBANK2            60      0       0      10        0.0%
+   218 ;;BANK2               60      0       0      11        0.0%
+   219 ;;DATA                 0      0       0      12        0.0%
+   220                           
+   221                           	global	_main
+   222                           psect	maintext,global,class=CODE,delta=2
+   223                           global __pmaintext
+   224  072E                     __pmaintext:
+   225                           
+   226 ;; *************** function _main *****************
+   227 ;; Defined at:
+   228 ;;		line 20 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   229 ;; Parameters:    Size  Location     Type
+   230 ;;		None
+   231 ;; Auto vars:     Size  Location     Type
+   232 ;;		None
+   233 ;; Return value:  Size  Location     Type
+   234 ;;		None               void
+   235 ;; Registers used:
+   236 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+   237 ;; Tracked objects:
+   238 ;;		On entry : 17F/0
+   239 ;;		On exit  : 0/0
+   240 ;;		Unchanged: 0/0
+   241 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   242 ;;      Params:         0       0       0       0       0
+   243 ;;      Locals:         0       0       0       0       0
+   244 ;;      Temps:          0       0       0       0       0
+   245 ;;      Totals:         0       0       0       0       0
+   246 ;;Total ram usage:        0 bytes
+   247 ;; Hardware stack levels required when called:    2
+   248 ;; This function calls:
+   249 ;;		_seq
+   250 ;; This function is called by:
+   251 ;;		Startup code after reset
+   252 ;; This function uses a non-reentrant model
+   253 ;;
+   254                           psect	maintext
+   255                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   256                           	line	20
+   257                           	global	__size_of_main
+   258  0037                     	__size_of_main	equ	__end_of_main-_main
+   259                           	
+   260  072E                     _main:	
+   261                           	opt	stack 6
+   262                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+   263                           	line	21
+   264                           	
+   265  072E                     l2658:	
+   266                           ;main.c: 21: TRISC0=1;
+   267  072E  1683               	bsf	status, 5	;RP0=1, select bank1
+   268  072F  1303               	bcf	status, 6	;RP1=0, select bank1
+   269  0730  1407               	bsf	(1080/8)^080h,(1080)&7
+   270                           	line	22
+   271                           	
+   272  0731                     l2660:	
+   273                           ;main.c: 22: TRISD=0X00;
+   274  0731  0188               	clrf	(136)^080h	;volatile
+   275                           	line	23
+   276                           ;main.c: 23: PORTD=0X00;
+   277  0732  1283               	bcf	status, 5	;RP0=0, select bank0
+   278  0733  1303               	bcf	status, 6	;RP1=0, select bank0
+   279  0734  0188               	clrf	(8)	;volatile
+   280  0735  2F36               	goto	l2662
+   281                           	line	24
+   282                           ;main.c: 24: while(1)
+   283                           	
+   284  0736                     l694:	
+   285                           	line	26
+   286                           	
+   287  0736                     l2662:	
+   288                           ;main.c: 25: {
+   289                           ;main.c: 26: if(RC0==0)
+   290  0736  1807               	btfsc	(56/8),(56)&7
+   291  0737  2F39               	goto	u2311
+   292  0738  2F3A               	goto	u2310
+   293  0739                     u2311:
+   294  0739  2F36               	goto	l2662
+   295  073A                     u2310:
+   296                           	line	28
+   297                           	
+   298  073A                     l2664:	
+   299                           ;main.c: 27: {
+   300                           ;main.c: 28: seq(1);
+   301  073A  3001               	movlw	(01h)
+   302  073B  120A  118A  27A0   	fcall	_seq
+              120A  118A         
+   303                           	line	29
+   304                           ;main.c: 29: seq(3);
+   305  0740  3003               	movlw	(03h)
+   306  0741  120A  118A  27A0   	fcall	_seq
+              120A  118A         
+   307                           	line	30
+   308                           ;main.c: 30: seq(7);
+   309  0746  3007               	movlw	(07h)
+   310  0747  120A  118A  27A0   	fcall	_seq
+              120A  118A         
+   311                           	line	31
+   312                           ;main.c: 31: seq(15);
+   313  074C  300F               	movlw	(0Fh)
+   314  074D  120A  118A  27A0   	fcall	_seq
+              120A  118A         
+   315                           	line	32
+   316                           ;main.c: 32: while(RC0==1)
+   317  0752  2F58               	goto	l2668
+   318                           	
+   319  0753                     l697:	
+   320                           	line	34
+   321                           	
+   322  0753                     l2666:	
+   323                           ;main.c: 33: {
+   324                           ;main.c: 34: PORTD=0xFF;
+   325  0753  30FF               	movlw	(0FFh)
+   326  0754  1283               	bcf	status, 5	;RP0=0, select bank0
+   327  0755  1303               	bcf	status, 6	;RP1=0, select bank0
+   328  0756  0088               	movwf	(8)	;volatile
+   329  0757  2F58               	goto	l2668
+   330                           	line	35
+   331                           	
+   332  0758                     l696:	
+   333                           	line	32
+   334                           	
+   335  0758                     l2668:	
+   336  0758  1283               	bcf	status, 5	;RP0=0, select bank0
+   337  0759  1303               	bcf	status, 6	;RP1=0, select bank0
+   338  075A  1807               	btfsc	(56/8),(56)&7
+   339  075B  2F5D               	goto	u2321
+   340  075C  2F5E               	goto	u2320
+   341  075D                     u2321:
+   342  075D  2F53               	goto	l2666
+   343  075E                     u2320:
+   344  075E  2F36               	goto	l2662
+   345                           	
+   346  075F                     l698:	
+   347  075F  2F36               	goto	l2662
+   348                           	line	36
+   349                           	
+   350  0760                     l695:	
+   351  0760  2F36               	goto	l2662
+   352                           	line	37
+   353                           	
+   354  0761                     l699:	
+   355                           	line	24
+   356  0761  2F36               	goto	l2662
+   357                           	
+   358  0762                     l700:	
+   359                           	line	38
+   360                           	
+   361  0762                     l701:	
+   362                           	global	start
+   363  0762  120A  118A  2800   	ljmp	start
+   364                           	opt stack 0
+   365                           GLOBAL	__end_of_main
+   366  0765                     	__end_of_main:
+   367 ;; =============== function _main ends ============
+   368                           
+   369                           	signat	_main,88
+   370                           	global	_seq
+   371                           psect	text89,local,class=CODE,delta=2
+   372                           global __ptext89
+   373  07A0                     __ptext89:
+   374                           
+   375 ;; *************** function _seq *****************
+   376 ;; Defined at:
+   377 ;;		line 5 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   378 ;; Parameters:    Size  Location     Type
+   379 ;;  get             1    wreg     unsigned char 
+   380 ;; Auto vars:     Size  Location     Type
+   381 ;;  get             1    3[COMMON] unsigned char 
+   382 ;;  j               2    6[COMMON] int 
+   383 ;;  j               2    4[COMMON] int 
+   384 ;; Return value:  Size  Location     Type
+   385 ;;		None               void
+   386 ;; Registers used:
+   387 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+   388 ;; Tracked objects:
+   389 ;;		On entry : 0/0
+   390 ;;		On exit  : 0/0
+   391 ;;		Unchanged: 0/0
+   392 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   393 ;;      Params:         0       0       0       0       0
+   394 ;;      Locals:         5       0       0       0       0
+   395 ;;      Temps:          1       0       0       0       0
+   396 ;;      Totals:         6       0       0       0       0
+   397 ;;Total ram usage:        6 bytes
+   398 ;; Hardware stack levels used:    1
+   399 ;; Hardware stack levels required when called:    1
+   400 ;; This function calls:
+   401 ;;		_timerdelay
+   402 ;; This function is called by:
+   403 ;;		_main
+   404 ;; This function uses a non-reentrant model
+   405 ;;
+   406                           psect	text89
+   407                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   408                           	line	5
+   409                           	global	__size_of_seq
+   410  0060                     	__size_of_seq	equ	__end_of_seq-_seq
+   411                           	
+   412  07A0                     _seq:	
+   413                           	opt	stack 6
+   414                           ; Regs used in _seq: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+   415                           ;seq@get stored from wreg
+   416                           	line	7
+   417  07A0  00F3               	movwf	(seq@get)
+   418                           	
+   419  07A1                     l2630:	
+   420                           ;main.c: 6: {
+   421                           ;main.c: 7: for(int j=0;j<=7;j++)
+   422  07A1  01F4               	clrf	(seq@j)
+   423  07A2  01F5               	clrf	(seq@j+1)
+   424                           	
+   425  07A3                     l2632:	
+   426  07A3  0875               	movf	(seq@j+1),w
+   427  07A4  3A80               	xorlw	80h
+   428  07A5  00FF               	movwf	btemp+1
+   429  07A6  3080               	movlw	(high(08h))^80h
+   430  07A7  027F               	subwf	btemp+1,w
+   431  07A8  1D03               	skipz
+   432  07A9  2FAC               	goto	u2255
+   433  07AA  3008               	movlw	low(08h)
+   434  07AB  0274               	subwf	(seq@j),w
+   435  07AC                     u2255:
+   436                           
+   437  07AC  1C03               	skipc
+   438  07AD  2FAF               	goto	u2251
+   439  07AE  2FB0               	goto	u2250
+   440  07AF                     u2251:
+   441  07AF  2FB2               	goto	l2636
+   442  07B0                     u2250:
+   443  07B0  2FD8               	goto	l2644
+   444                           	
+   445  07B1                     l2634:	
+   446  07B1  2FD8               	goto	l2644
+   447                           	line	8
+   448                           	
+   449  07B2                     l687:	
+   450                           	line	9
+   451                           	
+   452  07B2                     l2636:	
+   453                           ;main.c: 8: {
+   454                           ;main.c: 9: PORTD=get<<j;
+   455  07B2  0873               	movf	(seq@get),w
+   456  07B3  00F2               	movwf	(??_seq+0)+0
+   457  07B4  0A74               	incf	(seq@j),w
+   458  07B5  2FB8               	goto	u2264
+   459  07B6                     u2265:
+   460  07B6  1003               	clrc
+   461  07B7  0DF2               	rlf	(??_seq+0)+0,f
+   462  07B8                     u2264:
+   463  07B8  3EFF               	addlw	-1
+   464  07B9  1D03               	skipz
+   465  07BA  2FB6               	goto	u2265
+   466  07BB  0872               	movf	0+(??_seq+0)+0,w
+   467  07BC  1283               	bcf	status, 5	;RP0=0, select bank0
+   468  07BD  1303               	bcf	status, 6	;RP1=0, select bank0
+   469  07BE  0088               	movwf	(8)	;volatile
+   470                           	line	10
+   471                           	
+   472  07BF                     l2638:	
+   473                           ;main.c: 10: timerdelay();
+   474  07BF  120A  118A  2765   	fcall	_timerdelay
+              120A  118A         
+   475                           	line	7
+   476                           	
+   477  07C4                     l2640:	
+   478  07C4  3001               	movlw	low(01h)
+   479  07C5  07F4               	addwf	(seq@j),f
+   480  07C6  1803               	skipnc
+   481  07C7  0AF5               	incf	(seq@j+1),f
+   482  07C8  3000               	movlw	high(01h)
+   483  07C9  07F5               	addwf	(seq@j+1),f
+   484                           	
+   485  07CA                     l2642:	
+   486  07CA  0875               	movf	(seq@j+1),w
+   487  07CB  3A80               	xorlw	80h
+   488  07CC  00FF               	movwf	btemp+1
+   489  07CD  3080               	movlw	(high(08h))^80h
+   490  07CE  027F               	subwf	btemp+1,w
+   491  07CF  1D03               	skipz
+   492  07D0  2FD3               	goto	u2275
+   493  07D1  3008               	movlw	low(08h)
+   494  07D2  0274               	subwf	(seq@j),w
+   495  07D3                     u2275:
+   496                           
+   497  07D3  1C03               	skipc
+   498  07D4  2FD6               	goto	u2271
+   499  07D5  2FD7               	goto	u2270
+   500  07D6                     u2271:
+   501  07D6  2FB2               	goto	l2636
+   502  07D7                     u2270:
+   503  07D7  2FD8               	goto	l2644
+   504                           	
+   505  07D8                     l688:	
+   506                           	line	12
+   507                           	
+   508  07D8                     l2644:	
+   509                           ;main.c: 11: }
+   510                           ;main.c: 12: for(int j=7;j>=0;j--)
+   511  07D8  3007               	movlw	low(07h)
+   512  07D9  00F6               	movwf	(seq@j_1233)
+   513  07DA  3000               	movlw	high(07h)
+   514  07DB  00F7               	movwf	((seq@j_1233))+1
+   515                           	
+   516  07DC                     l2646:	
+   517  07DC  1FF7               	btfss	(seq@j_1233+1),7
+   518  07DD  2FDF               	goto	u2281
+   519  07DE  2FE0               	goto	u2280
+   520  07DF                     u2281:
+   521  07DF  2FE2               	goto	l2650
+   522  07E0                     u2280:
+   523  07E0  2FFF               	goto	l691
+   524                           	
+   525  07E1                     l2648:	
+   526  07E1  2FFF               	goto	l691
+   527                           	line	13
+   528                           	
+   529  07E2                     l689:	
+   530                           	line	14
+   531                           	
+   532  07E2                     l2650:	
+   533                           ;main.c: 13: {
+   534                           ;main.c: 14: PORTD=get<<j;
+   535  07E2  0873               	movf	(seq@get),w
+   536  07E3  00F2               	movwf	(??_seq+0)+0
+   537  07E4  0A76               	incf	(seq@j_1233),w
+   538  07E5  2FE8               	goto	u2294
+   539  07E6                     u2295:
+   540  07E6  1003               	clrc
+   541  07E7  0DF2               	rlf	(??_seq+0)+0,f
+   542  07E8                     u2294:
+   543  07E8  3EFF               	addlw	-1
+   544  07E9  1D03               	skipz
+   545  07EA  2FE6               	goto	u2295
+   546  07EB  0872               	movf	0+(??_seq+0)+0,w
+   547  07EC  1283               	bcf	status, 5	;RP0=0, select bank0
+   548  07ED  1303               	bcf	status, 6	;RP1=0, select bank0
+   549  07EE  0088               	movwf	(8)	;volatile
+   550                           	line	15
+   551                           	
+   552  07EF                     l2652:	
+   553                           ;main.c: 15: timerdelay();
+   554  07EF  120A  118A  2765   	fcall	_timerdelay
+              120A  118A         
+   555                           	line	12
+   556                           	
+   557  07F4                     l2654:	
+   558  07F4  30FF               	movlw	low(-1)
+   559  07F5  07F6               	addwf	(seq@j_1233),f
+   560  07F6  1803               	skipnc
+   561  07F7  0AF7               	incf	(seq@j_1233+1),f
+   562  07F8  30FF               	movlw	high(-1)
+   563  07F9  07F7               	addwf	(seq@j_1233+1),f
+   564                           	
+   565  07FA                     l2656:	
+   566  07FA  1FF7               	btfss	(seq@j_1233+1),7
+   567  07FB  2FFD               	goto	u2301
+   568  07FC  2FFE               	goto	u2300
+   569  07FD                     u2301:
+   570  07FD  2FE2               	goto	l2650
+   571  07FE                     u2300:
+   572  07FE  2FFF               	goto	l691
+   573                           	
+   574  07FF                     l690:	
+   575                           	line	18
+   576                           	
+   577  07FF                     l691:	
+   578  07FF  0008               	return
+   579                           	opt stack 0
+   580                           GLOBAL	__end_of_seq
+   581  0800                     	__end_of_seq:
+   582 ;; =============== function _seq ends ============
+   583                           
+   584                           	signat	_seq,4216
+   585                           	global	_timerdelay
+   586                           psect	text90,local,class=CODE,delta=2
+   587                           global __ptext90
+   588  0765                     __ptext90:
+   589                           
+   590 ;; *************** function _timerdelay *****************
+   591 ;; Defined at:
+   592 ;;		line 40 in file "C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   593 ;; Parameters:    Size  Location     Type
+   594 ;;		None
+   595 ;; Auto vars:     Size  Location     Type
+   596 ;;  i               2    0[COMMON] int 
+   597 ;; Return value:  Size  Location     Type
+   598 ;;		None               void
+   599 ;; Registers used:
+   600 ;;		wreg, btemp+1
+   601 ;; Tracked objects:
+   602 ;;		On entry : 0/0
+   603 ;;		On exit  : 0/0
+   604 ;;		Unchanged: 0/0
+   605 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   606 ;;      Params:         0       0       0       0       0
+   607 ;;      Locals:         2       0       0       0       0
+   608 ;;      Temps:          0       0       0       0       0
+   609 ;;      Totals:         2       0       0       0       0
+   610 ;;Total ram usage:        2 bytes
+   611 ;; Hardware stack levels used:    1
+   612 ;; This function calls:
+   613 ;;		Nothing
+   614 ;; This function is called by:
+   615 ;;		_seq
+   616 ;; This function uses a non-reentrant model
+   617 ;;
+   618                           psect	text90
+   619                           	file	"C:\Users\HP\Desktop\pic controller,PIC16F877A\Timer0.X\main.c"
+   620                           	line	40
+   621                           	global	__size_of_timerdelay
+   622  003B                     	__size_of_timerdelay	equ	__end_of_timerdelay-_timerdelay
+   623                           	
+   624  0765                     _timerdelay:	
+   625                           	opt	stack 6
+   626                           ; Regs used in _timerdelay: [wreg+btemp+1]
+   627                           	line	41
+   628                           	
+   629  0765                     l1756:	
+   630                           ;main.c: 41: T1CON=0x31;
+   631  0765  3031               	movlw	(031h)
+   632  0766  1283               	bcf	status, 5	;RP0=0, select bank0
+   633  0767  1303               	bcf	status, 6	;RP1=0, select bank0
+   634  0768  0090               	movwf	(16)	;volatile
+   635                           	line	42
+   636                           ;main.c: 42: TMR1H=0x0B;
+   637  0769  300B               	movlw	(0Bh)
+   638  076A  008F               	movwf	(15)	;volatile
+   639                           	line	43
+   640                           ;main.c: 43: TMR1L=0xDB;
+   641  076B  30DB               	movlw	(0DBh)
+   642  076C  008E               	movwf	(14)	;volatile
+   643                           	line	44
+   644                           	
+   645  076D                     l1758:	
+   646                           ;main.c: 44: GIE=1;
+   647  076D  178B               	bsf	(95/8),(95)&7
+   648                           	line	45
+   649                           	
+   650  076E                     l1760:	
+   651                           ;main.c: 45: PEIE=1;
+   652  076E  170B               	bsf	(94/8),(94)&7
+   653                           	line	46
+   654                           	
+   655  076F                     l1762:	
+   656                           ;main.c: 46: TMR1ON = 1;
+   657  076F  1410               	bsf	(128/8),(128)&7
+   658                           	line	47
+   659                           ;main.c: 47: for(int i=1;i<=5;i++)
+   660  0770  3001               	movlw	low(01h)
+   661  0771  00F0               	movwf	(timerdelay@i)
+   662  0772  3000               	movlw	high(01h)
+   663  0773  00F1               	movwf	((timerdelay@i))+1
+   664                           	
+   665  0774                     l1764:	
+   666  0774  0871               	movf	(timerdelay@i+1),w
+   667  0775  3A80               	xorlw	80h
+   668  0776  00FF               	movwf	btemp+1
+   669  0777  3080               	movlw	(high(06h))^80h
+   670  0778  027F               	subwf	btemp+1,w
+   671  0779  1D03               	skipz
+   672  077A  2F7D               	goto	u15
+   673  077B  3006               	movlw	low(06h)
+   674  077C  0270               	subwf	(timerdelay@i),w
+   675  077D                     u15:
+   676                           
+   677  077D  1C03               	skipc
+   678  077E  2F80               	goto	u11
+   679  077F  2F81               	goto	u10
+   680  0780                     u11:
+   681  0780  2F84               	goto	l706
+   682  0781                     u10:
+   683  0781  2F9F               	goto	l709
+   684                           	
+   685  0782                     l1766:	
+   686  0782  2F9F               	goto	l709
+   687                           	line	48
+   688                           	
+   689  0783                     l704:	
+   690                           	line	49
+   691                           ;main.c: 48: {
+   692                           ;main.c: 49: while(!TMR1IF);
+   693  0783  2F84               	goto	l706
+   694                           	
+   695  0784                     l707:	
+   696                           	
+   697  0784                     l706:	
+   698  0784  1283               	bcf	status, 5	;RP0=0, select bank0
+   699  0785  1303               	bcf	status, 6	;RP1=0, select bank0
+   700  0786  1C0C               	btfss	(96/8),(96)&7
+   701  0787  2F89               	goto	u21
+   702  0788  2F8A               	goto	u20
+   703  0789                     u21:
+   704  0789  2F84               	goto	l706
+   705  078A                     u20:
+   706                           	
+   707  078A                     l708:	
+   708                           	line	50
+   709                           ;main.c: 50: TMR1IF=0;
+   710  078A  100C               	bcf	(96/8),(96)&7
+   711                           	line	47
+   712                           	
+   713  078B                     l1768:	
+   714  078B  3001               	movlw	low(01h)
+   715  078C  07F0               	addwf	(timerdelay@i),f
+   716  078D  1803               	skipnc
+   717  078E  0AF1               	incf	(timerdelay@i+1),f
+   718  078F  3000               	movlw	high(01h)
+   719  0790  07F1               	addwf	(timerdelay@i+1),f
+   720                           	
+   721  0791                     l1770:	
+   722  0791  0871               	movf	(timerdelay@i+1),w
+   723  0792  3A80               	xorlw	80h
+   724  0793  00FF               	movwf	btemp+1
+   725  0794  3080               	movlw	(high(06h))^80h
+   726  0795  027F               	subwf	btemp+1,w
+   727  0796  1D03               	skipz
+   728  0797  2F9A               	goto	u35
+   729  0798  3006               	movlw	low(06h)
+   730  0799  0270               	subwf	(timerdelay@i),w
+   731  079A                     u35:
+   732                           
+   733  079A  1C03               	skipc
+   734  079B  2F9D               	goto	u31
+   735  079C  2F9E               	goto	u30
+   736  079D                     u31:
+   737  079D  2F84               	goto	l706
+   738  079E                     u30:
+   739  079E  2F9F               	goto	l709
+   740                           	
+   741  079F                     l705:	
+   742                           	line	52
+   743                           	
+   744  079F                     l709:	
+   745  079F  0008               	return
+   746                           	opt stack 0
+   747                           GLOBAL	__end_of_timerdelay
+   748  07A0                     	__end_of_timerdelay:
+   749 ;; =============== function _timerdelay ends ============
+   750                           
+   751                           	signat	_timerdelay,88
+   752                           psect	text91,local,class=CODE,delta=2
+   753                           global __ptext91
+   754  0000                     __ptext91:
+   755                           	global	btemp
+   756  007E                     	btemp set 07Eh
+   757                           
+   758                           	DABS	1,126,2	;btemp
+   759                           	global	wtemp0
+   760  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.82 build 9453 
+Symbol Table                                                                                   Sat Jan 27 12:20:39 2024
+
+                  _RD 0C60                    u10 0781                    u11 0780                    u20 078A  
+                  u21 0789                    u30 079E                    u31 079D                    u15 077D  
+                  u35 079A                    _WR 0C61                   l700 0762                   l701 0762  
+                 l704 0783                   l705 079F                   l706 0784                   l707 0784  
+                 l708 078A                   l709 079F                   l690 07FF                   l691 07FF  
+                 l694 0736                   l687 07B2                   l695 0760                   l688 07D8  
+                 l696 0758                   l689 07E2                   l697 0753                   l698 075F  
+                 l699 0761                   _GIE 005F                   _RC0 0038                   _seq 07A0  
+                l2630 07A1                  l1760 076E                  l2640 07C4                  l2632 07A3  
+                l1770 0791                  l1762 076F                  l2650 07E2                  l2642 07CA  
+                l2634 07B1                  l1764 0774                  l1756 0765                  l2652 07EF  
+                l2644 07D8                  l2636 07B2                  l2660 0731                  l1766 0782  
+                l1758 076D                  l2654 07F4                  l2646 07DC                  l2638 07BF  
+                l2662 0736                  l1768 078B                  l2656 07FA                  l2648 07E1  
+                l2664 073A                  l2666 0753                  l2658 072E                  l2668 0758  
+                ?_seq 0070                  u2300 07FE                  u2301 07FD                  u2310 073A  
+                u2311 0739                  u2320 075E                  u2321 075D                  u2250 07B0  
+                u2251 07AF                  u2270 07D7                  u2271 07D6                  u2255 07AC  
+                u2280 07E0                  u2264 07B8                  u2281 07DF                  u2265 07B6  
+                u2275 07D3                  u2294 07E8                  u2295 07E6                  _PEIE 005E  
+                _WREN 0C62                  _main 072E                  btemp 007E                  seq@j 0074  
+                start 0000                 ??_seq 0072                 ?_main 0070                 _EEADR 010D  
+               _CARRY 0018                 _T1CON 0010                 _TMR1H 000F                 _TMR1L 000E  
+               _PORTD 0008                 _TRISD 0088                 status 0003                 wtemp0 007E  
+        __end_of_main 0765                ??_main 0078                _EEDATA 010C                _EECON1 018C  
+              _EECON2 018D                _TMR1IF 0060                _TMR1ON 0080                _TRISC0 0438  
+              seq@get 0073        __pcstackCOMMON 0070            __pmaintext 072E          __size_of_seq 0060  
+end_of_initialization 072A            _timerdelay 0765           timerdelay@i 0070   start_initialization 072A  
+         __end_of_seq 0800           ?_timerdelay 0070   __size_of_timerdelay 003B             seq@j_1233 0076  
+            __ptext90 0765              __ptext91 0000              __ptext88 0000              __ptext89 07A0  
+       __size_of_main 0037          ??_timerdelay 0070    __end_of_timerdelay 07A0  
