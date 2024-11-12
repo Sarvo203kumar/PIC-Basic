@@ -1,0 +1,104 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B-01C CCP_2
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-026 u1
+027-02B U2
+02C-035 p
+036     k
+037-040 v1
+041     i
+042     d1
+043     d2
+044     z1
+045     z2
+046     @TRIS_C
+047-064 MAIN.m
+065-066 strcmp.s1
+065     gotoxy.x
+065     key.@SCRATCH1
+065     MAIN.@SCRATCH1
+066     gotoxy.y
+066     @delay_ms3.P1
+066     lcd_str.a
+066     MAIN.@SCRATCH2
+067-068 strcmp.s2
+067     lcd_str.a1
+067     gotoxy.@SCRATCH1
+068     lcd_cmd.b
+068     lcd_str.@SCRATCH1
+069     lcd_cmd.b1
+069     strcmp.@SCRATCH1
+06A     lcd_cmd.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+00DC  lcd_init
+00AF  lcd_cmd
+00EE  lcd_str
+0121  gotoxy
+0147  lcd_clear
+014E  key
+0282  strcmp
+0132  @delay_ms3
+02C6  MAIN
+0004  @const177
+0017  @const178
+002B  @const180
+003F  @const183
+0054  @const185
+0066  @const186
+007A  @const188
+008C  @const189
+00A0  @const190
+02C6  @cinit
+027B  k
+030A  l1
+034A  l
+
+Project Directory:
+    C:\Users\USER\Desktop\T2\New folder\
+
+Project Files:
+    main.c
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16f877.h
+    lcd_4bit.c
+    keypad.c
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+
+Units:
+    main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta
